@@ -34,7 +34,7 @@ https://github.com/martian2035-dev/law_crawl/releases/download/data/laws_content
 
 ## 流水线
 
-- `.github/workflows/crawl.yml`：北京时间每天 02:30 运行，也可在 Actions 页面手动触发。流程：取回已发布的数据 →
+- `.github/workflows/crawl.yml`：北京时间每天 20:30 运行，也可在 Actions 页面手动触发。流程：取回已发布的数据 →
   检查各数据源能否访问 → 目录比对、取缺的正文、同步部门规章 → 发布数据 → 回写 `manifest.json`。
   一次运行最长约 4.5 小时，切成 45 分钟一段，每段结束发布一次数据，作业中途被取消最多丢一段的进度。
   正文没取完的下次接着取；全部取完后每次只处理新增的法规。

@@ -2,7 +2,7 @@ name: 采集法规与规章
 
 on:
   schedule:
-    - cron: "30 18 * * *" # 北京时间每天 02:30
+    - cron: "30 12 * * *" # 北京时间每天 20:30，凌晨前跑完，使用方可在凌晨取到当天的数据
   workflow_dispatch:
     inputs:
       total_hours:
