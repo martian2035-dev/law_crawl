@@ -1,4 +1,4 @@
-"""国家法律法规数据库客户端与法规正文批量预取测试，网络请求全部用模拟传输层"""
+"""Tests for the national database client and bulk text fetching; every network request goes through a mock transport."""
 
 import io
 
@@ -22,7 +22,7 @@ def docx_bytes(text: str) -> bytes:
     return buffer.getvalue()
 
 
-# --- 国家法律法规数据库 ---
+# --- National database client ---
 
 def flk(handler) -> httpx.Client:
     return httpx.Client(transport=httpx.MockTransport(handler))
@@ -35,7 +35,7 @@ def test_fetch_enums_returns_data():
 
 def test_fetch_enums_rejects_error_code():
     with flk(lambda _request: httpx.Response(200, json={"code": 500, "msg": "error"})) as client:
-        with pytest.raises(flk_client.LawSourceUnavailable, match="枚举"):
+        with pytest.raises(flk_client.LawSourceUnavailable, match="enumeration"):
             flk_client.fetch_enums(client)
 
 
@@ -84,10 +84,10 @@ def test_fetch_docx_downloads_file_from_storage():
 @pytest.mark.parametrize(
     ("file_url", "message"),
     [
-        (None, "没有返回正文文件地址"),
-        ("http://flkoss.obs-bj2.cucloud.cn/prod/law.docx", "域名范围"),
-        ("https://169.254.169.254/latest/meta-data", "域名范围"),
-        ("https://evil.example.com/law.docx", "域名范围"),
+        (None, "no address for the text file"),
+        ("http://flkoss.obs-bj2.cucloud.cn/prod/law.docx", "outside the allowed hosts"),
+        ("https://169.254.169.254/latest/meta-data", "outside the allowed hosts"),
+        ("https://evil.example.com/law.docx", "outside the allowed hosts"),
     ],
 )
 def test_fetch_docx_rejects_missing_or_untrusted_file_url(file_url, message):
@@ -98,15 +98,15 @@ def test_fetch_docx_rejects_missing_or_untrusted_file_url(file_url, message):
 def test_fetch_docx_rejects_oversized_file(monkeypatch):
     monkeypatch.setattr(flk_client, "MAX_DOCX_BYTES", 3)
 
-    with flk(docx_handler(FILE_URL, b"too large")) as client, pytest.raises(flk_client.LawSourceUnavailable, match="大小上限"):
+    with flk(docx_handler(FILE_URL, b"too large")) as client, pytest.raises(flk_client.LawSourceUnavailable, match="size limit"):
         flk_client.fetch_docx(client, LAW_ID)
 
 
-# --- 法规正文批量预取 ---
+# --- Bulk text fetching ---
 
 @pytest.fixture
 def prefetch_env(tmp_path, monkeypatch):
-    """三部法规的临时元数据库与空的正文缓存；预取不等待、不联网。"""
+    """A temporary catalogue database with three laws and an empty text cache; fetching neither waits nor touches the network."""
     laws = [
         {"id": "c" * 32, "title": "某市条例", "top_category": "地方法规", "status": "有效"},
         {"id": "b" * 32, "title": "旧法", "top_category": "法律", "status": "已废止"},
@@ -148,7 +148,7 @@ def test_sync_content_respects_limit_and_resumes(prefetch_env, monkeypatch):
 
 def test_sync_content_stops_after_consecutive_failures(prefetch_env, monkeypatch):
     def failing(_client, _law_id):
-        raise flk_client.LawSourceUnavailable("无法连接官方数据库：ConnectError")
+        raise flk_client.LawSourceUnavailable("cannot connect to the national database: ConnectError")
 
     monkeypatch.setattr(laws_sync.flk_client, "fetch_docx", failing)
     monkeypatch.setattr(laws_sync, "MAX_CONSECUTIVE_FAILURES", 1)
@@ -166,7 +166,7 @@ def test_sync_content_pauses_and_recovers_from_a_temporary_outage(prefetch_env, 
     def flaky(_client, law_id):
         calls.append(law_id)
         if len(calls) <= 2:
-            raise flk_client.LawSourceUnavailable("无法连接官方数据库：ProxyError")
+            raise flk_client.LawSourceUnavailable("cannot connect to the national database: ProxyError")
         return docx_bytes("第一条\u3000内容。")
 
     monkeypatch.setattr(laws_sync.flk_client, "fetch_docx", flaky)

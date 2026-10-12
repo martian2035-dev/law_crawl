@@ -1,1 +1,1 @@
-"""法律、法规、规章目录与正文的采集。"""
+"""Collects the catalogue and texts of Chinese laws, regulations and ministry rules."""

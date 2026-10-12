@@ -1,4 +1,4 @@
-"""法规正文：从 docx 提取段落，并按编、章、节、条划分段落类型。"""
+"""Law texts: extract paragraphs from a docx and classify them as part / chapter / section headings and articles."""
 
 from __future__ import annotations
 
@@ -19,35 +19,45 @@ IDEOGRAPHIC_SPACE = "\u3000"
 LINE_BREAK_PATTERN = re.compile(r"[\n\v\f]+")
 
 
+# Reasons a text cannot be parsed. They are stored verbatim in laws_content.db (unreadable.reason), so like the
+# other data values they stay in Chinese.
+REASON_NOT_DOCX = "正文文件不是有效的 docx"  # the text file is not a valid docx
+REASON_NO_ARTICLES = "网页里没有找到条文"  # no articles found in the web page
+REASON_PAGE_GONE = "规章页面不存在（HTTP 404）"  # the rule page does not exist
+
+
 class LawTextError(ValueError):
-    """正文文件无法解析。"""
+    """The text file cannot be parsed."""
 
 
 def normalize_paragraph(text: str) -> str:
-    """去掉首尾空白，把全角空格、制表符等连续空白压成一个全角空格（条号与条文之间的分隔）。"""
+    """Strip the ends and collapse runs of whitespace (ideographic spaces, tabs, ...) into one ideographic space,
+    the separator between an article number and its text."""
     return re.sub(r"[\s\u3000]+", IDEOGRAPHIC_SPACE, text.strip())
 
 
 def extract_paragraphs(docx_bytes: bytes) -> list[str]:
-    """docx 中的非空段落文字（按文档顺序，不含表格）。
+    """Non-empty paragraph texts of a docx, in document order, tables excluded.
 
-    有的文件一章只用一个段落、条与条之间用软换行（Shift+Enter）分隔，所以段内的换行也当作分段。"""
+    Some files put a whole chapter in one paragraph and separate the articles with soft line breaks
+    (Shift+Enter), so line breaks inside a paragraph also split paragraphs."""
     try:
         document = Document(io.BytesIO(docx_bytes))
     except (zipfile.BadZipFile, KeyError, ValueError) as error:
-        raise LawTextError("正文文件不是有效的 docx") from error
+        raise LawTextError(REASON_NOT_DOCX) from error
     lines = (line for paragraph in document.paragraphs for line in LINE_BREAK_PATTERN.split(paragraph.text))
     return [paragraph for paragraph in map(normalize_paragraph, lines) if paragraph]
 
 
 def format_heading(paragraph: str) -> str:
-    """章节标题写成“第一章 总则”：编号与名称之间一个空格，名称内部的排版空格去掉。"""
+    """Write a heading as "第一章 总则": one space between number and name, typesetting spaces inside the name removed."""
     number, _, name = paragraph.partition(IDEOGRAPHIC_SPACE)
     return f"{number} {name.replace(IDEOGRAPHIC_SPACE, '')}".strip()
 
 
 def classify_blocks(paragraphs: list[str]) -> list[dict]:
-    """把段落划分为标题（编章节）、条文、普通段落；条文拆出条号。"""
+    """Classify paragraphs as headings (part / chapter / section), articles and plain text; an article gets its
+    number split off."""
     blocks = []
     for paragraph in paragraphs:
         article = ARTICLE_PATTERN.match(paragraph)
@@ -63,10 +73,12 @@ def classify_blocks(paragraphs: list[str]) -> list[dict]:
 
 
 def drop_table_of_contents(blocks: list[dict]) -> list[dict]:
-    """去掉正文前的“目录”及其列出的章节标题（这些标题在正文中会再次出现）。
+    """Drop the table of contents ("目录") before the text, together with the headings it lists (they appear
+    again in the text).
 
-    目录后面紧跟一串章节标题，其中先是目录列出的各章，随后是正文第一章的标题；
-    目录到“第一个重复出现的标题”为止。目录所列标题没有全部在后文出现时不认定为目录。
+    The contents title is followed by a run of headings: first the chapters it lists, then the heading of the
+    first chapter of the text. The table of contents ends at the first heading that repeats. When not all the
+    listed headings appear later, the block is not treated as a table of contents.
     """
     for index, block in enumerate(blocks):
         if block["type"] != BLOCK_TEXT or block["text"].replace(IDEOGRAPHIC_SPACE, "") != TOC_TITLE:

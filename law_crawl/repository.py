@@ -1,9 +1,10 @@
-"""法律法规数据存取。
+"""Storage for the collected data.
 
-- laws.db：法规目录（标题、类别、制定机关、地区、日期、时效性、来源），由 law_crawl.sync 生成；
-- laws_content.db：法规正文（zlib 压缩的段落文本），由 law_crawl.sync 批量取回。
+- laws.db: the catalogue (title, category, issuer, region, dates, validity status, source), built by law_crawl.sync;
+- laws_content.db: the texts (zlib-compressed paragraph text), fetched in bulk by law_crawl.sync.
 
-两个文件都在数据目录（law_crawl.paths.DATA_DIR）下，由流水线发布到仓库的 Release，不进版本库。
+Both files live in the data directory (law_crawl.paths.DATA_DIR). The pipeline publishes them to the repository's
+Release; they are not committed.
 """
 
 from __future__ import annotations
@@ -22,6 +23,7 @@ from law_crawl.paths import DATA_DIR
 LAWS_DIR = DATA_DIR
 METADATA_DB_PATH = LAWS_DIR / "laws.db"
 CONTENT_DB_PATH = LAWS_DIR / "laws_content.db"
+# Validity status and category values are stored as published by the sources, in Chinese
 STATUS_EFFECTIVE = "有效"
 STATUS_PENDING = "尚未生效"
 STATUS_AMENDED = "已修改"
@@ -71,12 +73,12 @@ CREATE INDEX idx_law_changes_detected_on ON law_changes(detected_on);
 """
 LAW_COLUMNS = ("id", "title", "title_key", "top_category", "category", "issuer", "region",
                "publish_date", "effective_date", "status", "is_listed", "source", "source_url")
-# 列的默认值：写库时法规字典缺这些键、或读旧版库缺这些列时使用
+# Column defaults, used when a law dict lacks these keys on write or an older database lacks these columns on read
 LAW_COLUMN_DEFAULTS = {"is_listed": 1, "source": "flk", "source_url": ""}
-# 来源：flk 为国家法律法规数据库，其余为各部门官网的规章库（见 ministry_rules.py）
+# Source: flk is the national database; the others are the rule libraries on ministry sites (see ministry_rules.py)
 SOURCE_FLK = "flk"
 CHANGE_COLUMNS = ("law_id", "title", "change_type", "old_value", "new_value", "detected_on")
-# 变更类型：官方库新增、时效性变化、官方库不再收录、重新收录
+# Change types: newly listed, validity status changed, no longer listed, listed again
 CHANGE_ADDED = "added"
 CHANGE_STATUS = "status"
 CHANGE_REMOVED = "removed"
@@ -84,16 +86,17 @@ CHANGE_RESTORED = "restored"
 
 
 def title_key(text: str) -> str:
-    """标题检索用归一化：全角转半角、去掉空白和标点、转小写。"""
+    """Normalise a title for searching: full-width to half-width, whitespace and punctuation removed, lower case."""
     return PUNCTUATION_PATTERN.sub("", unicodedata.normalize("NFKC", text or "")).lower()
 
 
 def create_metadata_db(
     path: Path, laws: Iterable[dict], meta: dict[str, str], changes: Iterable[dict] = ()
 ) -> None:
-    """新建元数据库并写入全部法规、说明信息与变更记录；path 已存在时先删除。
+    """Create the catalogue database with all laws, the meta table and the change records; an existing file at
+    path is removed first.
 
-    法规字典缺 is_listed、source、source_url 时取 LAW_COLUMN_DEFAULTS 的默认值。"""
+    Law dicts lacking is_listed, source or source_url get the defaults in LAW_COLUMN_DEFAULTS."""
     path.parent.mkdir(parents=True, exist_ok=True)
     path.unlink(missing_ok=True)
     with closing(sqlite3.connect(str(path))) as connection, connection:
@@ -114,7 +117,8 @@ def create_metadata_db(
 
 
 def read_all_laws(path: Path) -> list[dict]:
-    """元数据库中的全部法规（列同 LAW_COLUMNS）；旧版库缺的列取 LAW_COLUMN_DEFAULTS。库不存在时返回空列表。"""
+    """Every law in the catalogue database (columns as in LAW_COLUMNS); columns missing from an older database get
+    LAW_COLUMN_DEFAULTS. Returns an empty list when the file does not exist."""
     if not path.exists():
         return []
     with closing(connect_metadata(path)) as connection:
@@ -124,7 +128,7 @@ def read_all_laws(path: Path) -> list[dict]:
 
 
 def read_all_changes(path: Path) -> list[dict]:
-    """元数据库中的全部变更记录（按发现先后）；库或表不存在时返回空列表。"""
+    """Every change record in the catalogue database, oldest first; an empty list when the file or table is missing."""
     if not path.exists():
         return []
     with closing(connect_metadata(path)) as connection:
@@ -135,7 +139,7 @@ def read_all_changes(path: Path) -> list[dict]:
 
 
 def recent_changes(connection: sqlite3.Connection, limit: int) -> list[dict]:
-    """最近发现的变更，新的在前。"""
+    """The most recently detected changes, newest first."""
     rows = connection.execute(
         f"SELECT {', '.join(CHANGE_COLUMNS)} FROM law_changes ORDER BY id DESC LIMIT ?", (limit,)
     )
@@ -143,7 +147,7 @@ def recent_changes(connection: sqlite3.Connection, limit: int) -> list[dict]:
 
 
 def connect_metadata(path: Path | None = None) -> sqlite3.Connection:
-    """以只读方式打开元数据库（默认 METADATA_DB_PATH）。"""
+    """Open the catalogue database read-only (METADATA_DB_PATH by default)."""
     connection = sqlite3.connect(f"file:{path or METADATA_DB_PATH}?mode=ro", uri=True)
     connection.row_factory = sqlite3.Row
     return connection
@@ -152,7 +156,7 @@ def connect_metadata(path: Path | None = None) -> sqlite3.Connection:
 def build_filters(
     query: str, category: str | None, region: str | None, status_scope: str
 ) -> tuple[str, list[str]]:
-    """检索条件的 WHERE 子句与参数；空格分隔的多个关键词须同时出现在标题中。"""
+    """WHERE clause and parameters for a search; space-separated keywords must all appear in the title."""
     clauses, params = [], []
     for keyword in (title_key(part) for part in (query or "").split()):
         if keyword:
@@ -166,7 +170,7 @@ def build_filters(
         clauses.append("region = ?")
         params.append(region)
     if status_scope != STATUS_SCOPE_ALL:
-        # 现行范围：时效性为有效或尚未生效，且官方库仍在收录
+        # "Current" scope: the status is in force or not yet in force, and the source still lists the law
         clauses.append(f"status IN ({', '.join('?' * len(CURRENT_STATUSES))}) AND is_listed = 1")
         params.extend(CURRENT_STATUSES)
     return (" WHERE " + " AND ".join(clauses)) if clauses else "", params
@@ -183,7 +187,8 @@ def search_laws(
 ) -> dict:
     where, params = build_filters(query, category, region, status_scope)
     total = connection.execute(f"SELECT COUNT(*) FROM laws{where}", params).fetchone()[0]
-    # 有关键词时先按效力层级（法律在前、地方法规在后），同层级标题短的在前；否则按公布日期倒序
+    # With keywords: by legal rank first (laws before local regulations), shorter titles first within a rank;
+    # otherwise newest publication first
     order = f"{CATEGORY_RANK_SQL}, LENGTH(title), publish_date DESC" if (query or "").strip() else "publish_date DESC, title"
     rows = connection.execute(
         f"SELECT id, title, top_category, category, issuer, region, publish_date, effective_date, status, is_listed, source "
@@ -194,7 +199,7 @@ def search_laws(
 
 
 def count_facets(connection: sqlite3.Connection, query: str, category: str | None, status_scope: str) -> dict:
-    """各类别的条数，以及所选类别下各地区的条数（都受关键词和时效范围限制）。"""
+    """Row count per category, and per region within the chosen category (both limited by keywords and status scope)."""
     where, params = build_filters(query, None, None, status_scope)
     categories = connection.execute(
         f"SELECT top_category AS name, COUNT(*) AS count FROM laws{where} GROUP BY top_category ORDER BY count DESC",
@@ -228,7 +233,7 @@ def count_by_status(connection: sqlite3.Connection) -> list[dict]:
 
 
 class ContentCache:
-    """法规正文缓存：每部法规一行，正文为 zlib 压缩的段落文本（换行分隔）。"""
+    """Text cache: one row per law; the text is zlib-compressed paragraph text, one paragraph per line."""
 
     def __init__(self, path: Path = CONTENT_DB_PATH) -> None:
         self.path = path
@@ -267,7 +272,8 @@ class ContentCache:
             return {row[0] for row in connection.execute("SELECT id FROM contents")}
 
     def mark_unreadable(self, law_id: str, reason: str) -> None:
-        """记下正文文件无法解析的法规（如官方只提供旧版 doc），批量预取时不再重复下载。"""
+        """Record a law whose text file cannot be parsed (e.g. only a legacy .doc is offered) so that bulk fetching
+        does not download it again."""
         recorded_at = dt.datetime.now(dt.UTC).isoformat(timespec="seconds")
         with closing(self.connect()) as connection, connection:
             connection.execute("INSERT OR REPLACE INTO unreadable VALUES (?, ?, ?)", (law_id, reason, recorded_at))

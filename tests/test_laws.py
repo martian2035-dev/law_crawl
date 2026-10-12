@@ -1,4 +1,4 @@
-"""法律法规查询（正文解析、标题检索、正文缓存、同步、接口）测试"""
+"""Tests for law data (text parsing, title search, text cache, sync)."""
 
 import io
 
@@ -47,7 +47,7 @@ def make_law(law_id: str, title: str, **overrides) -> dict:
 
 @pytest.fixture
 def sample_db(tmp_path, monkeypatch):
-    """含 4 部法规的临时元数据库，并让服务层改用它。"""
+    """A temporary catalogue database with four laws, which the service layer is pointed at."""
     path = tmp_path / "laws.db"
     laws = [
         make_law(SAFETY_LAW_ID, "中华人民共和国安全生产法"),
@@ -62,7 +62,7 @@ def sample_db(tmp_path, monkeypatch):
     return path
 
 
-# --- 正文解析 ---
+# --- Text parsing ---
 
 def test_extract_paragraphs_skips_blank_and_normalizes_spaces():
     docx = build_docx(["  中华人民共和国安全生产法 ", "", "第一条　　为了加强安全生产工作，制定本法。"])
@@ -117,7 +117,7 @@ def test_classify_blocks_drops_table_of_contents():
     assert all(block["text"] != "目　录" for block in blocks)
 
 
-# --- 标题检索 ---
+# --- Title search ---
 
 def test_title_key_ignores_punctuation_and_width():
     assert repository.title_key("《中华人民共和国 安全生产法》（２０２１）") == "中华人民共和国安全生产法2021"
@@ -126,7 +126,7 @@ def test_title_key_ignores_punctuation_and_width():
 def test_search_defaults_to_current_laws(sample_db):
     result = service.search("安全生产")
 
-    # 法律排在地方法规之前
+    # laws rank before local regulations
     assert [item["id"] for item in result["items"]] == [SAFETY_LAW_ID, LOCAL_LAW_ID]
     assert result["total"] == 2
 
@@ -179,7 +179,7 @@ def test_info_reports_snapshot(sample_db):
     assert "国家法律法规数据库" in info["source"]
 
 
-# --- 法规正文 ---
+# --- Law texts ---
 
 class FakeDocxFetcher:
     def __init__(self, paragraphs: list[str]) -> None:
@@ -231,7 +231,7 @@ def test_fetches_from_source_are_spaced_out(sample_db, tmp_path, monkeypatch):
     assert len(waits) == 1 and 0 < waits[0] <= service.MIN_FETCH_INTERVAL_SECONDS
 
 
-# --- 同步 ---
+# --- Sync ---
 
 CATEGORY_TREE = {
     "children": [
@@ -294,10 +294,7 @@ def test_collect_laws_assigns_region_and_status(monkeypatch):
     assert laws[OLD_LAW_ID]["region"] == "山东" and laws[OLD_LAW_ID]["status"] == ""
 
 
-# --- 接口 ---
-
-
-# --- 增量同步 ---
+# --- Incremental sync ---
 
 def test_merge_first_build_records_no_additions():
     merged, changes = laws_sync.merge_with_previous([], [make_law(SAFETY_LAW_ID, "安全生产法")], "2026-10-13")
@@ -343,7 +340,7 @@ def test_merge_does_not_repeat_removed_for_already_unlisted_law():
 
 @pytest.fixture
 def sync_env(tmp_path, monkeypatch):
-    """让目录同步写到临时库，并允许很少的条数。"""
+    """Make the catalogue sync write to a temporary database and accept a very small catalogue."""
     monkeypatch.setattr(repository, "METADATA_DB_PATH", tmp_path / "laws.db")
     monkeypatch.setattr(laws_sync, "MIN_EXPECTED_LAWS", 1)
     monkeypatch.setattr(laws_sync, "MAX_REMOVED_RATIO", 0.5)
@@ -424,7 +421,7 @@ def test_sync_content_records_unreadable_files_and_skips_them_next_time(sample_d
     assert cache.cached_ids() == {LOCAL_LAW_ID, OLD_LAW_ID, DECISION_ID}
 
 
-# --- 访问限制与并发保护 ---
+# --- Rate limiting and concurrency guards ---
 
 
 def test_only_one_sync_process_runs_at_a_time(tmp_path, monkeypatch):
@@ -529,7 +526,7 @@ def test_challenge_page_is_reported_as_blocked():
 
     page = "<html><noscript><h1>Please enable JavaScript and refresh the page.</h1></noscript></html>"
     with httpx.Client(transport=httpx.MockTransport(lambda _request: httpx.Response(200, text=page))) as http:
-        with pytest.raises(flk_client.LawSourceBlocked, match="浏览器验证"):
+        with pytest.raises(flk_client.LawSourceBlocked, match="browser challenge"):
             flk_client.fetch_enums(http)
 
 

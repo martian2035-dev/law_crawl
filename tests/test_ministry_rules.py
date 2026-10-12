@@ -1,4 +1,4 @@
-"""部门规章（规章库列表解析、按来源比对、正文取回、详情接口）测试，页面样例按官网结构自拟"""
+"""Tests for ministry rules (parsing rule library lists, per-source diffing, fetching texts, the content endpoint); the sample pages are made up after the structure of the official sites."""
 
 import datetime as dt
 import io
@@ -158,13 +158,13 @@ def test_fetch_rules_reports_site_errors():
 @pytest.mark.parametrize("url", ["https://other.example.com/a.docx", "http://rules.example.gov.cn/a.docx"])
 def test_fetch_rule_docx_only_downloads_from_the_ministry_site(url):
     with httpx.Client(transport=httpx.MockTransport(site_handler)) as client:
-        with pytest.raises(ministry_rules.MinistrySourceUnavailable, match="不在该部门官网"):
+        with pytest.raises(ministry_rules.MinistrySourceUnavailable, match="not on the ministry's own site"):
             ministry_rules.fetch_rule_docx(client, url, SOURCE)
 
 
 @pytest.fixture
 def synced(tmp_path, monkeypatch):
-    """已有一部国家法律法规数据库法规的元数据库；部门站点用模拟传输层。"""
+    """A catalogue database that already holds one law from the national database; the ministry site is a mock transport."""
     path = tmp_path / "laws.db"
     flk_law = {"id": FLK_LAW_ID, "title": "某法", "title_key": "某法", "top_category": "法律", "category": "法律",
                "issuer": "全国人大常委会", "region": "", "publish_date": "2020-01-01", "effective_date": "", "status": "有效"}
@@ -187,7 +187,7 @@ def test_sync_ministries_adds_rules_without_touching_other_sources(synced):
     assert (laws["某法"]["source"], laws["甲类物质管理办法"]["source"]) == ("flk", "test")
     assert service.get_recent_changes() == []
     assert service.get_info()["total"] == 4
-    # 有 docx 的两部取回了正文
+    # the rule texts were fetched as part of the sync
     assert len(synced.cached_ids()) == 3
 
 
@@ -253,7 +253,7 @@ def test_rule_whose_page_has_no_articles_is_remembered_as_unreadable(synced, mon
 
     assert rule["id"] in synced.unreadable_ids()
     document = service.get_document(rule["id"])
-    assert document["content"] is None and "尚未收录" in document["content_error"]
+    assert document["content"] is None and "not been collected" in document["content_error"]
 
 
 def test_search_ranks_ministry_rules_between_national_and_local(synced):
@@ -264,7 +264,7 @@ def test_search_ranks_ministry_rules_between_national_and_local(synced):
     assert {item["name"]: item["count"] for item in facets} == {"法律": 1, "部门规章": 3}
 
 
-# --- 表格版式、接口类来源 ---
+# --- Table layout, endpoint-based sources ---
 
 TABLE_PAGE = """<table><tr><th>序号</th><th class="title">标题</th><th>下载</th></tr>
 <tr><td>1</td><td class="eve"><p class="bt"><a href="./202609/t20260921_1.shtml" target="_blank">己类技术服务管理规定</a></p>
@@ -323,7 +323,7 @@ def test_fetch_unit_rules_pages_through_the_content_api(monkeypatch):
 
 def test_fetch_unit_rules_reports_unexpected_response():
     with httpx.Client(transport=httpx.MockTransport(lambda _request: httpx.Response(200, text="<html>升级维护</html>"))) as client:
-        with pytest.raises(ministry_rules.MinistrySourceUnavailable, match="无法解析"):
+        with pytest.raises(ministry_rules.MinistrySourceUnavailable, match="cannot be parsed"):
             ministry_rules.fetch_rules(client, MOHURD_SOURCE, TODAY)
 
 

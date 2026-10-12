@@ -1,4 +1,4 @@
-"""从规章详情网页取正文（定位正文容器、排除页眉页脚、条号补空格）测试，页面样例自拟"""
+"""Tests for extracting a rule's text from its detail page (finding the text container, leaving out headers and footers, spacing after article numbers); the sample pages are made up."""
 
 import pytest
 

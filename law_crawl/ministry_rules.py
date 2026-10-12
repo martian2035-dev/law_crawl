@@ -1,16 +1,23 @@
-"""部门规章：从各部门官网的“规章库”栏目采集现行有效规章。
+"""Ministry rules: collect the rules in force from the "rule library" section of each ministry's official site.
 
-国家法律法规数据库不收录部门规章，国家规章库的检索接口又不宜直接调用，所以按部门逐个适配其官网的规章库。
+The national database does not carry ministry rules, and the search endpoint of the national rule library is not
+meant to be called directly, so each ministry's own rule library gets its own adapter.
 
-- 生态环境部、交通运输部、应急管理部：分页的静态列表，每条给出标题、详情页、括注
-  （“某年某月某日某部令第 N 号公布（发布），……自某年某月某日起施行”）和文字版文件；
-- 住房和城乡建设部、市场监管总局：栏目页面由脚本调用内容接口取回列表片段，片段结构与上面相同
-  （市场监管总局的规章分“总局组建后制定、组建前制定、联合制定”三个栏目）；
-- 国家能源局：没有规章库，只有“能源法律法规专栏”，其中“规章及规范性文件”一章是 2017 年整理的
-  一批链接，没有公布日期和时效性，按标题粗分为部门规章和规范性文件，时效性标为待核实。
+- Ministry of Ecology and Environment, Ministry of Transport, Ministry of Emergency Management: paginated static
+  lists; each item gives the title, the detail page, an enactment note (which order promulgated the rule on which
+  date, and the date it takes effect) and a text file;
+- Ministry of Housing and Urban-Rural Development, State Administration for Market Regulation: the section page
+  loads list fragments from a content endpoint; the fragments have the same structure as above (the market
+  regulator splits its rules into three sections: made after its formation, made before it, and made jointly);
+- National Energy Administration: no rule library, only an "energy laws and regulations" page whose "rules and
+  normative documents" chapters are a set of links compiled in 2017, without publication dates or validity
+  status. Items are roughly split into ministry rules and normative documents by title, and their status is
+  marked as unverified.
 
-正文优先取 docx 文字版；没有 docx 的（应急管理部是 wps、市场监管总局是 doc）改从详情网页取（见 html_text.py）。
-接入新部门：结构与上述某一类相同时在 SOURCES 里加一项；不同的另写取数函数。
+Texts come from the docx when one is offered; otherwise (the emergency ministry offers .wps, the market regulator
+.doc) from the detail page (see html_text.py).
+Adding a ministry: add an entry to SOURCES when its site matches one of the kinds above; otherwise write a new
+fetch function.
 """
 
 from __future__ import annotations
@@ -28,9 +35,10 @@ from urllib.parse import urljoin, urlparse
 import httpx
 
 from law_crawl import repository
-from law_crawl.docx_text import LawTextError
+from law_crawl.docx_text import REASON_PAGE_GONE, LawTextError
 from law_crawl.flk_client import MAX_DOCX_BYTES
 
+# Category, issuer and status values are data: they stay in Chinese
 TOP_CATEGORY = "部门规章"
 REQUEST_INTERVAL_SECONDS = 1.5
 REQUEST_TIMEOUT_SECONDS = 30
@@ -39,13 +47,14 @@ HEADERS = {
     "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
     "(KHTML, like Gecko) Chrome/126.0 Safari/537.36",
 }
-# 列表项：有的站点用 <li>，有的用表格行
+# List items: <li> on some sites, table rows on others
 ITEM_SPLIT_PATTERN = re.compile(r"<(?:li|tr)\b", re.IGNORECASE)
 DETAIL_LINK_PATTERN = re.compile(r"""<a[^>]+href=["']([^"']+\.s?html?)["'][^>]*>(.*?)</a>""", re.DOTALL | re.IGNORECASE)
-# 括注：紧跟在标题后的一个元素，整段以“（”开头、以“）”结尾。括注里会引用其他规章的名称，
-# 有的页面直接写成 <某某规定>（未转义的尖括号），所以不能按“不含 <”来截取
+# Enactment note: the element right after the title, starting with "（" and ending with "）". Notes quote the
+# names of other rules, and some pages write them as <name> with unescaped angle brackets, so the note cannot be
+# cut at the first "<"
 NOTE_PATTERN = re.compile(r">\s*([（(].*?[）)])\s*</(?:p|i|span|div)>", re.DOTALL)
-# 括注里应当出现的字样，用来排除恰好带括号的其他文字
+# Words a note must contain, to rule out other text that merely happens to be in parentheses
 NOTE_KEYWORD_PATTERN = re.compile(r"\d{4}年|公布|发布")
 COMMENT_PATTERN = re.compile(r"<!--.*?-->", re.DOTALL)
 DOCX_LINK_PATTERN = re.compile(r"""href=["']([^"']+\.docx)["']""", re.IGNORECASE)
@@ -55,23 +64,24 @@ EFFECTIVE_PATTERN = re.compile(r"自(\d{4})年(\d{1,2})月(\d{1,2})日起(?:施�
 
 @dataclass(frozen=True)
 class RuleSource:
-    """一个部门的规章库。"""
+    """The rule library of one ministry."""
 
-    key: str  # 写入 laws.source
-    ministry: str
-    list_url: str  # 列表第 1 页（接口类来源为规章库页面地址，用作 Referer 和相对地址的基准）
-    min_expected: int  # 少于这个数视为页面结构变了，不更新
+    key: str  # written to laws.source
+    ministry: str  # written to laws.issuer
+    list_url: str  # first list page (endpoint-based sources: the library page, used as Referer and base for relative links)
+    min_expected: int  # fewer rules than this means the page layout changed: no update
     fetch: Callable[[httpx.Client, RuleSource, dt.date], list[dict]]
-    next_page_url: str = ""  # 静态列表第 2 页起的地址，{index} 从 1 开始
-    columns: tuple[UnitColumn, ...] = ()  # 内容接口类来源的栏目
-    content_hosts: tuple[str, ...] = ()  # 除 list_url 所在主机外，还允许从这些主机取正文
+    next_page_url: str = ""  # static list pages from the second on; {index} starts at 1
+    columns: tuple[UnitColumn, ...] = ()  # sections of an endpoint-based source
+    content_hosts: tuple[str, ...] = ()  # hosts, besides that of list_url, texts may be fetched from
 
 
 @dataclass(frozen=True)
 class UnitColumn:
-    """内容接口（jpaas 发布系统的 page/build/unit）的一个栏目；参数取自栏目页面里写明的 queryData。"""
+    """One section served by the content endpoint (page/build/unit of the jpaas publishing system); the parameters
+    are the queryData written in the section page."""
 
-    page_url: str  # 栏目页面地址，用作 Referer 和相对链接的基准
+    page_url: str  # section page address, used as Referer and base for relative links
     web_id: str
     tpl_set_id: str
     tag_id: str
@@ -79,11 +89,11 @@ class UnitColumn:
 
 
 class MinistrySourceUnavailable(Exception):
-    """部门官网暂时无法提供数据（网络故障、页面结构变化）。"""
+    """The ministry site cannot serve data right now (network failure or changed page layout)."""
 
 
 def rule_id(detail_url: str) -> str:
-    """规章编号：详情页地址的 MD5（32 位十六进制，与国家法律法规数据库的编号格式一致）。"""
+    """Rule id: MD5 of the detail page address (32 hex digits, the same format as ids in the national database)."""
     return hashlib.md5(detail_url.encode("utf-8"), usedforsecurity=False).hexdigest()
 
 
@@ -98,9 +108,10 @@ def to_iso(match: re.Match | None) -> str:
 
 
 def parse_note(note: str) -> tuple[str, str]:
-    """由括注取（公布日期, 施行日期）。
+    """(publication date, effective date) from an enactment note.
 
-    公布日期取“自……起施行”以外的第一个日期（最初公布的日期）；括注只写了令号、没写公布日期时为空串。"""
+    The publication date is the first date outside the "自……起施行" (effective from) clause, i.e. the original
+    publication; an empty string when the note gives only an order number."""
     effective = EFFECTIVE_PATTERN.search(note)
     return to_iso(DATE_PATTERN.search(EFFECTIVE_PATTERN.sub("", note))), to_iso(effective)
 
@@ -110,10 +121,10 @@ def clean_text(fragment: str) -> str:
 
 
 def parse_rule_list(page: str, page_url: str) -> list[dict]:
-    """列表页中的规章：标题、详情页地址、括注、docx 地址（没有时为空串）。
+    """Rules in a list page: title, detail page address, enactment note, docx address (empty when absent).
 
-    只认同时带详情链接和“（……公布……）”这类括注的列表项，导航等其他列表项不会被当成规章；
-    注释掉的模板条目先去除。
+    Only items with both a detail link and a note like "（……公布……）" count, so navigation and other list items
+    are not mistaken for rules; template items that are commented out are removed first.
     """
     rules = []
     for chunk in ITEM_SPLIT_PATTERN.split(COMMENT_PATTERN.sub("", page))[1:]:
@@ -134,7 +145,7 @@ def parse_rule_list(page: str, page_url: str) -> list[dict]:
 
 
 def to_law(rule: dict, source: RuleSource, today: dt.date) -> dict:
-    """规章 → 法规元数据库的一行（另带 docx_url、text_url 供取正文用，不入库）。"""
+    """Rule -> catalogue row (plus docx_url and text_url for fetching the text; those two are not stored)."""
     publish_date, effective_date = parse_note(rule["note"])
     pending = bool(effective_date) and effective_date > today.isoformat()
     return {
@@ -147,7 +158,7 @@ def to_law(rule: dict, source: RuleSource, today: dt.date) -> dict:
         "region": "",
         "publish_date": publish_date,
         "effective_date": effective_date,
-        # 规章库只列现行有效的规章；施行日期未到的标为尚未生效
+        # Rule libraries list only rules in force; one whose effective date is still ahead is marked not yet in force
         "status": repository.STATUS_PENDING if pending else repository.STATUS_EFFECTIVE,
         "source": source.key,
         "source_url": rule["url"],
@@ -161,15 +172,15 @@ def new_client() -> httpx.Client:
 
 
 def fetch_page(client: httpx.Client, url: str) -> str | None:
-    """取一页列表；404 返回 None（翻到头了）。"""
+    """Fetch one list page; None on 404 (past the last page)."""
     try:
         response = client.get(url)
     except httpx.HTTPError as error:
-        raise MinistrySourceUnavailable(f"无法连接 {urlparse(url).hostname}：{type(error).__name__}") from error
+        raise MinistrySourceUnavailable(f"cannot connect to {urlparse(url).hostname}: {type(error).__name__}") from error
     if response.status_code == 404:
         return None
     if response.status_code != 200:
-        raise MinistrySourceUnavailable(f"{urlparse(url).hostname} 返回错误（HTTP {response.status_code}）")
+        raise MinistrySourceUnavailable(f"{urlparse(url).hostname} returned an error (HTTP {response.status_code})")
     try:
         return response.content.decode("utf-8")
     except UnicodeDecodeError:
@@ -177,12 +188,12 @@ def fetch_page(client: httpx.Client, url: str) -> str | None:
 
 
 def fetch_rules(client: httpx.Client, source: RuleSource, today: dt.date | None = None) -> list[dict]:
-    """取回一个部门规章库的全部规章。"""
+    """Fetch every rule of one ministry's rule library."""
     return source.fetch(client, source, today or dt.date.today())
 
 
 def fetch_static_rules(client: httpx.Client, source: RuleSource, today: dt.date) -> list[dict]:
-    """静态列表：逐页取回（按详情页地址去重）。"""
+    """Static list: fetched page by page, de-duplicated by detail page address."""
     laws: dict[str, dict] = {}
     for index in range(MAX_PAGES):
         url = source.list_url if index == 0 else source.next_page_url.format(index=index)
@@ -203,32 +214,32 @@ def is_source_host(url: str, source: RuleSource) -> bool:
 
 
 def fetch_rule_page(client: httpx.Client, url: str, source: RuleSource) -> str:
-    """取规章详情网页；只取该部门官网（规章库所在主机及 content_hosts）上的页面。"""
+    """Fetch a rule's detail page; only pages on the ministry's own site (the library host and content_hosts)."""
     if not is_source_host(url, source):
-        raise MinistrySourceUnavailable("规章页面地址不在该部门官网上")
+        raise MinistrySourceUnavailable("the rule page address is not on the ministry's own site")
     page = fetch_page(client, url)
     if page is None:
-        # 页面已被撤下：按“无法解析”处理，记下来以后不再重复请求
-        raise LawTextError("规章页面不存在（HTTP 404）")
+        # The page was taken down: handle it as unreadable, so it is recorded and not requested again
+        raise LawTextError(REASON_PAGE_GONE)
     return page
 
 
 def fetch_rule_docx(client: httpx.Client, docx_url: str, source: RuleSource) -> bytes:
-    """下载规章的 docx 文字版；只从该部门官网下载。"""
+    """Download a rule's docx text; only from the ministry's own site."""
     if not is_source_host(docx_url, source):
-        raise MinistrySourceUnavailable("规章文件地址不在该部门官网上")
+        raise MinistrySourceUnavailable("the rule file address is not on the ministry's own site")
     try:
         response = client.get(docx_url)
     except httpx.HTTPError as error:
-        raise MinistrySourceUnavailable(f"规章文件下载失败：{type(error).__name__}") from error
+        raise MinistrySourceUnavailable(f"rule file download failed: {type(error).__name__}") from error
     if response.status_code != 200:
-        raise MinistrySourceUnavailable(f"规章文件下载失败（HTTP {response.status_code}）")
+        raise MinistrySourceUnavailable(f"rule file download failed (HTTP {response.status_code})")
     if len(response.content) > MAX_DOCX_BYTES:
-        raise MinistrySourceUnavailable("规章文件超过大小上限")
+        raise MinistrySourceUnavailable("the rule file exceeds the size limit")
     return response.content
 
 
-# --- 内容接口类来源（住房和城乡建设部、市场监管总局） ---
+# --- Endpoint-based sources (housing ministry, market regulator) ---
 
 UNIT_API_PATH = "/api-gateway/jpaas-publish-server/front/page/build/unit"
 UNIT_PAGE_SIZE = 50
@@ -239,17 +250,17 @@ def fetch_json(client: httpx.Client, method: str, url: str, **kwargs) -> dict:
     try:
         response = client.request(method, url, **kwargs)
     except httpx.HTTPError as error:
-        raise MinistrySourceUnavailable(f"无法连接 {host}：{type(error).__name__}") from error
+        raise MinistrySourceUnavailable(f"cannot connect to {host}: {type(error).__name__}") from error
     if response.status_code != 200:
-        raise MinistrySourceUnavailable(f"{host} 返回错误（HTTP {response.status_code}）")
+        raise MinistrySourceUnavailable(f"{host} returned an error (HTTP {response.status_code})")
     try:
         return response.json()
     except ValueError as error:
-        raise MinistrySourceUnavailable(f"{host} 返回内容无法解析") from error
+        raise MinistrySourceUnavailable(f"{host} returned a response that cannot be parsed") from error
 
 
 def fetch_unit_column(client: httpx.Client, column: UnitColumn, page_number: int) -> str:
-    """取栏目某一页的列表片段（HTML）。"""
+    """Fetch the list fragment (HTML) of one page of a section."""
     params = {
         "parseType": "bulidstatic",
         "webId": column.web_id,
@@ -267,7 +278,7 @@ def fetch_unit_column(client: httpx.Client, column: UnitColumn, page_number: int
 
 
 def fetch_unit_rules(client: httpx.Client, source: RuleSource, today: dt.date) -> list[dict]:
-    """内容接口类来源：逐栏目、逐页取回列表片段（结构同静态列表）。"""
+    """Endpoint-based source: list fragments fetched section by section, page by page (same structure as static lists)."""
     laws: dict[str, dict] = {}
     for column in source.columns:
         for page_number in range(1, MAX_PAGES + 1):
@@ -281,7 +292,7 @@ def fetch_unit_rules(client: httpx.Client, source: RuleSource, today: dt.date) -
     return list(laws.values())
 
 
-# --- 国家能源局：能源法律法规专栏的“规章及规范性文件” ---
+# --- National Energy Administration: "rules and normative documents" on its energy law page ---
 
 NORMATIVE_CATEGORY = "规范性文件"
 STATUS_UNVERIFIED = "时效待核实"
@@ -290,12 +301,13 @@ NEA_SECTION_PATTERN = re.compile(
 )
 NEA_ITEM_PATTERN = re.compile(r'''<li>\s*<a href="([^"]+)"[^>]*>(.*?)</a>''', re.DOTALL)
 NEA_RULE_SECTION_KEYWORD = "规章"
-# 标题带这些字样的是通知、意见一类的规范性文件，其余按部门规章归类
+# Titles with these words are notices, opinions and other normative documents; the rest count as ministry rules
 NORMATIVE_TITLE_PATTERN = re.compile(r"关于|通知|意见|公告|批复|函$")
 
 
 def fetch_nea_rules(client: httpx.Client, source: RuleSource, today: dt.date) -> list[dict]:
-    """国家能源局专栏：各篇“规章及规范性文件”一章下的链接。专栏不给公布日期和时效性，两项留空 / 标为待核实。"""
+    """National Energy Administration page: the links under each part's "rules and normative documents" chapter.
+    The page gives neither publication date nor validity status: the dates stay empty, the status is unverified."""
     page = fetch_page(client, source.list_url) or ""
     laws: dict[str, dict] = {}
     for section_title, body in NEA_SECTION_PATTERN.findall(COMMENT_PATTERN.sub("", page)):
@@ -326,10 +338,12 @@ def fetch_nea_rules(client: httpx.Client, source: RuleSource, today: dt.date) ->
     return list(laws.values())
 
 
+# The three sections of the market regulator's rule library: rules made after the administration was formed,
+# rules made before it, and rules made jointly with other bodies
 SAMR_COLUMN_IDS = (
-    ("https://www.samr.gov.cn/zw/zfxxgk/zc/gz/zjh/index.html", "2d373319375346bcac7595202c75f9f8"),  # 总局组建后制定
-    ("https://www.samr.gov.cn/zw/zfxxgk/zc/gz/zjq/index.html", "8e50033366ea45da85de522ae76ac53b"),  # 总局组建前制定
-    ("https://www.samr.gov.cn/zw/zfxxgk/zc/gz/lhzd/index.html", "e43c3cf1470a4fa194ebaa6404382c5d"),  # 联合制定
+    ("https://www.samr.gov.cn/zw/zfxxgk/zc/gz/zjh/index.html", "2d373319375346bcac7595202c75f9f8"),
+    ("https://www.samr.gov.cn/zw/zfxxgk/zc/gz/zjq/index.html", "8e50033366ea45da85de522ae76ac53b"),
+    ("https://www.samr.gov.cn/zw/zfxxgk/zc/gz/lhzd/index.html", "e43c3cf1470a4fa194ebaa6404382c5d"),
 )
 
 SOURCES = (

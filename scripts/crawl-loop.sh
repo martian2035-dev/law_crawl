@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
-# 流水线里的采集循环：把一次运行的时间切成若干段，每段结束就把数据发布到 Release，
-# 这样作业中途被取消或超时，最多只丢最后一段的进度。
+# The crawl loop used by the pipeline: one run is cut into chunks, and the data is published to the Release after
+# every chunk, so a job that is cancelled or times out loses the last chunk at most.
 #
-# 第一段跑 update（目录比对 + 正文 + 部门规章），之后各段只取正文。出现下列情况之一就停止：
-#   - 用完总时长（CRAWL_TOTAL_SECONDS，默认 4.5 小时；GitHub 单个作业最长 6 小时）；
-#   - 数据源要求浏览器验证（退出码 2）：说明访问过于频繁，今天不再继续；
-#   - 一段下来没有取到新的正文：已经取完，或数据源不可用。
+# The first chunk runs `update` (catalogue diff + texts + ministry rules); later chunks only fetch texts. The loop
+# stops when one of these happens:
+#   - the total time is used up (CRAWL_TOTAL_SECONDS, 4.5 hours by default; a GitHub job may run for 6 hours);
+#   - a source demands a browser challenge (exit code 2): requests were too frequent, so no more today;
+#   - a chunk fetched no new text: everything is fetched, or the source is unavailable.
 set -uo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
@@ -35,13 +36,13 @@ while :; do
   status=$?
   first=0
   [ "$status" -gt "$worst" ] && worst=$status
-  scripts/release-data.sh upload || echo "[crawl-loop] 本段数据发布失败，下一段结束时再试"
+  scripts/release-data.sh upload || echo "[crawl-loop] publishing this chunk failed; retrying after the next chunk"
   after=$(content_count)
-  echo "[crawl-loop] 本段结束：退出码 $status，已有正文 $before → $after"
-  [ "$status" = "$EXIT_BLOCKED" ] && { echo "[crawl-loop] 数据源要求浏览器验证，今天到此为止"; break; }
-  [ "$after" = "$before" ] && { echo "[crawl-loop] 本段没有新增正文，停止"; break; }
+  echo "[crawl-loop] chunk finished: exit code $status, texts $before -> $after"
+  [ "$status" = "$EXIT_BLOCKED" ] && { echo "[crawl-loop] a source demands a browser challenge; stopping for today"; break; }
+  [ "$after" = "$before" ] && { echo "[crawl-loop] no new text in this chunk; stopping"; break; }
 done
 
-# 浏览器验证是预期内的情况，不让流水线显示为失败；其余非零退出码照常报错
+# A browser challenge is an expected outcome and must not fail the pipeline; other non-zero exit codes still do
 [ "$worst" = "$EXIT_BLOCKED" ] && exit 0
 exit "$worst"

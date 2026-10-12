@@ -1,25 +1,31 @@
-"""法律、法规、规章的采集。
+"""Collecting laws, regulations and ministry rules.
 
-    python -m law_crawl update            # 定时增量：目录比对 + 取缺的正文 + 部门规章
-    python -m law_crawl metadata          # 只同步国家法律法规数据库的目录 → data/laws.db
-    python -m law_crawl content --limit 500 --budget-seconds 1800   # 只取正文 → data/laws_content.db（可多次续跑）
-    python -m law_crawl ministries        # 只同步各部门规章库
-    python -m law_crawl probe             # 各数据源各发一个请求，看当前网络能否访问
-    python -m law_crawl manifest          # 输出数据清单（条数、快照日期），供流水线写入 manifest.json
+    python -m law_crawl update            # scheduled run: catalogue diff + missing texts + ministry rules
+    python -m law_crawl metadata          # only sync the national catalogue -> data/laws.db
+    python -m law_crawl content --limit 500 --budget-seconds 1800   # only fetch texts -> data/laws_content.db (resumable)
+    python -m law_crawl ministries        # only sync the ministry rule libraries
+    python -m law_crawl probe             # one request per source, to see whether this network can reach them
+    python -m law_crawl manifest          # print the data manifest (counts, snapshot date) for manifest.json
 
-目录同步（metadata）：国家法律法规数据库（flk.npc.gov.cn）没有“最近变更”接口，旧法规的时效性会变而公布日期不变，
-所以每次都全量拉目录（约 125 次请求）再与现有库比对：新增的、时效性变了的、不再收录的各记一条变更
-（law_changes 表）；不再收录的法规保留在库里并标记 is_listed = 0，不删除。写入临时库并校验后替换正式库。
+Catalogue (metadata): the National Database of Laws and Regulations (flk.npc.gov.cn) has no "recent changes"
+endpoint, and the validity status of an old law can change while its publication date stays the same. So every
+run downloads the whole catalogue (about 125 requests) and diffs it against the existing database: additions,
+status changes and delistings are each recorded in the law_changes table; a delisted law is kept and flagged
+is_listed = 0, never deleted. The result is written to a temporary file and swapped in after validation.
 
-正文（content）：按“全国性法规优先、现行优先”的顺序取回尚未缓存的法规正文，到达条数或时间上限后停止，下次运行
-接着取。连续失败时先暂停几分钟再继续，多次暂停仍不恢复才停止；遇到浏览器验证则立即停止。官方只提供旧版 doc 等
-无法解析的文件会被记下来，之后不再重复下载。
+Texts (content): fetches the texts not yet cached, national laws first and laws in force first, and stops at the
+count or time limit; the next run picks up where this one stopped. After a streak of failures it pauses for a few
+minutes and carries on, giving up only if several pauses do not help; a browser challenge stops it immediately.
+Files that cannot be parsed (for example when only a legacy .doc is offered) are recorded and not downloaded again.
 
-部门规章（ministries）：国家法律法规数据库不收录部门规章，按部门从其官网的规章库采集（见 ministry_rules.py），
-与上面的法规存在同一个库里，用 source 列区分来源。
+Ministry rules (ministries): the national database does not carry ministry rules, so they are collected ministry
+by ministry from the rule library on each official site (see ministry_rules.py). They live in the same database
+as the laws above; the source column tells them apart.
 
-访问限制：国家法律法规数据库在访问频繁时会返回浏览器验证页并拒绝服务。采集遇到验证页立即停止（退出码 2），
-同一来源同一时刻只允许一个进程，请求间隔见下面的常量。不要调高频率，也不要绕过验证。
+Rate limiting: the national database answers with a browser challenge page and refuses service when it is hit
+too often. The crawler stops as soon as it sees that page (exit code 2), allows one process per source at a
+time, and waits between requests (see the constants below). Do not raise the request rate or work around the
+challenge.
 """
 
 from __future__ import annotations
@@ -49,24 +55,28 @@ REGION_DATA_PATH = Path(__file__).with_name("china_region_centers.json")
 
 logger = logging.getLogger("laws_sync")
 
-# 请求间隔：官方库在访问频繁时会弹出浏览器验证并拒绝服务，宁可慢
+# Delay between requests: the national database shows a browser challenge and refuses service when it is hit
+# too often, so stay slow
 REQUEST_INTERVAL_SECONDS = 1.0
 CONTENT_INTERVAL_SECONDS = 2.0
-# 进程锁：国家法律法规数据库的取数与各部门规章库的取数各一把，互不妨碍；改写元数据库时另有一把短时间持有的锁
+# Process locks: one for the national database and one for the ministry sites, so the two can run side by side;
+# a third, short-lived lock is held while the catalogue database is rewritten
 LOCK_NATIONAL = "laws_sync.lock"
 LOCK_MINISTRIES = "laws_sync_ministries.lock"
 LOCK_METADATA_WRITE = "laws_metadata_write.lock"
 EXIT_BLOCKED = 2
 MAX_CONSECUTIVE_FAILURES = 10
-# 连续失败多半是网络临时中断：先停一会儿再继续，累计停够次数仍不恢复才放弃
+# A streak of failures is usually a short network outage: pause, then carry on; give up only after several pauses
 FAILURE_PAUSE_SECONDS = 300
 MAX_FAILURE_PAUSES = 6
 PROGRESS_EVERY = 200
 DEFAULT_UPDATE_CONTENT_LIMIT = 100000
 DEFAULT_UPDATE_BUDGET_SECONDS = 6 * 3600
 MIN_EXPECTED_LAWS = 20000
-# 一次同步中“官方库不再收录”的法规超过这个比例时视为数据源异常，不替换现有库
+# When more than this share of the laws disappears from the catalogue in one run, treat it as a source fault and
+# keep the existing database
 MAX_REMOVED_RATIO = 0.05
+# Names used by the national database (issuer group, categories): data values, kept in Chinese
 LOCAL_ISSUER_GROUP = "地方人大及其常委会"
 LOCAL_CATEGORY = "地方法规"
 OTHER_CATEGORY = "其他"
@@ -77,16 +87,16 @@ STATUS_BY_CODE = {
     2: repository.STATUS_AMENDED,
     1: repository.STATUS_REPEALED,
 }
-# 批量预取正文时的类别先后
+# Category order when fetching texts in bulk
 CATEGORY_PRIORITY = ("宪法", "法律", "行政法规", "监察法规", "司法解释", "部门规章", "规范性文件", "地方法规")
 
 
 class AlreadyRunning(Exception):
-    """另一个同步进程持有锁。"""
+    """Another sync process holds the lock."""
 
 
 def category_names(category_tree: dict) -> dict[int, tuple[str, str]]:
-    """分类代码 → （一级类别, 本级类别名）。"""
+    """Category code -> (top-level category, name of this category)."""
     names: dict[int, tuple[str, str]] = {}
 
     def walk(node: dict, top: str | None) -> None:
@@ -100,7 +110,7 @@ def category_names(category_tree: dict) -> dict[int, tuple[str, str]]:
 
 
 def province_issuers(issuer_tree: dict) -> list[tuple[int, str]]:
-    """省级地方制定机关：（代码, 地区名）。"""
+    """Province-level local issuers: (code, region name)."""
     for group in issuer_tree.get("children") or []:
         if group["name"] == LOCAL_ISSUER_GROUP:
             return [(child["codeId"], child["name"]) for child in group.get("children") or []]
@@ -109,14 +119,17 @@ def province_issuers(issuer_tree: dict) -> list[tuple[int, str]]:
 
 @lru_cache(maxsize=1)
 def load_regions() -> dict:
-    """行政区名称数据（省 → 市 → 区县），用来由制定机关名称判断地方法规所属地区。"""
+    """Administrative division names (province -> city -> county), used to tell the region of a local regulation
+    from the name of its issuer."""
     return json.loads(REGION_DATA_PATH.read_text(encoding="utf-8"))
 
 
 def place_index(province_names: list[str]) -> list[tuple[str, str]]:
-    """（地名, 地区名）对照，长地名在前：省、设区的市、自治州、自治县（旗）→ 官方库的地区名。
+    """(place name, region name) pairs, longest place name first: provinces, prefecture-level cities, autonomous
+    prefectures and autonomous counties (banners) -> the region name used by the national database.
 
-    官方库按省级制定机关筛选时不含部分设区的市，这些法规的地区由制定机关名称的开头确定。
+    Filtering the database by province-level issuer misses some prefecture-level cities; for those laws the
+    region is taken from the beginning of the issuer's name.
     """
     places: dict[str, str] = {}
     for province in load_regions()["provinces"]:
@@ -137,7 +150,7 @@ def region_by_issuer(issuer: str, places: list[tuple[str, str]]) -> str:
 
 
 def fetch_all_rows(client: httpx.Client, issuer_codes: list[int] | None = None) -> list[dict]:
-    """翻页取回某个筛选条件下的全部列表行。"""
+    """Page through the list and return every row matching the filter."""
     rows: list[dict] = []
     page = 1
     while True:
@@ -150,7 +163,8 @@ def fetch_all_rows(client: httpx.Client, issuer_codes: list[int] | None = None) 
 
 
 def to_law(row: dict, categories: dict[int, tuple[str, str]], region: str) -> dict:
-    """列表行 → 元数据库的一行。分类代码不在分类树中时，有地区的归入地方法规，否则归入其他。"""
+    """List row -> catalogue row. A category code missing from the category tree falls back to the local-regulation
+    category when the law has a region, and to "other" otherwise."""
     fallback = row.get("flxz") or (LOCAL_CATEGORY if region else OTHER_CATEGORY)
     top_category, category = categories.get(row.get("flfgCodeId"), (fallback, fallback))
     title = (row.get("title") or "").strip()
@@ -169,16 +183,16 @@ def to_law(row: dict, categories: dict[int, tuple[str, str]], region: str) -> di
 
 
 def collect_laws(client: httpx.Client) -> list[dict]:
-    """取回全部法规元数据，并确定地方法规所属地区。"""
+    """Fetch the metadata of every law and work out the region of local regulations."""
     enums = flk_client.fetch_enums(client)
     categories = category_names(enums["flfgfl"])
     rows = fetch_all_rows(client)
-    logger.info("取回法规 %d 条，开始按地区归类", len(rows))
+    logger.info("Fetched %d catalogue rows; assigning regions", len(rows))
     regions: dict[str, str] = {}
     for code, name in province_issuers(enums["zdjgfl"]):
         province_rows = fetch_all_rows(client, [code])
         regions.update({row["bbbs"]: name for row in province_rows})
-        logger.info("  %s %d 条", name, len(province_rows))
+        logger.info("  %s: %d", name, len(province_rows))
         time.sleep(REQUEST_INTERVAL_SECONDS)
     places = place_index([name for _, name in province_issuers(enums["zdjgfl"])])
     unique_rows = {row["bbbs"]: row for row in rows if row.get("bbbs") and row.get("title")}
@@ -191,10 +205,12 @@ def collect_laws(client: httpx.Client) -> list[dict]:
 def merge_with_previous(
     previous: list[dict], current: list[dict], today: str, source: str = repository.SOURCE_FLK
 ) -> tuple[list[dict], list[dict]]:
-    """把某个来源本次取回的目录与现有库合并，返回（合并后的全部法规, 本次发现的变更）。
+    """Merge the catalogue just fetched from one source into the existing database and return
+    (all laws after the merge, the changes found in this run).
 
-    只比对同一来源的法规，其他来源的原样保留。该来源在现有库中没有任何记录（首次收录）时不逐条记“新增”。
-    来源不再收录的法规保留并标记 is_listed = 0。
+    Only laws of the same source are compared; those of other sources are kept untouched. When the source has
+    no rows yet (first import) no per-law "added" change is recorded. Laws the source no longer lists are kept
+    and flagged is_listed = 0.
     """
     previous = [{**repository.LAW_COLUMN_DEFAULTS, **law} for law in previous]
     others = [law for law in previous if law["source"] != source]
@@ -229,7 +245,7 @@ def merge_with_previous(
 
 
 def repository_meta(path) -> dict[str, str]:
-    """现有元数据库的说明信息；库不存在时为空。"""
+    """The meta table of the existing catalogue database; empty when the file does not exist."""
     if not path.exists():
         return {}
     with closing(repository.connect_metadata(path)) as connection:
@@ -245,11 +261,12 @@ def count_changes(changes: list[dict]) -> dict[str, int]:
 
 
 def sync_metadata(today: dt.date | None = None) -> int:
-    """全量拉取目录并与现有库合并；数据源异常（条数过少、大批消失）时不替换现有库。"""
+    """Download the whole catalogue and merge it into the existing database; the existing database is kept when
+    the source looks faulty (too few rows, or a large share of the laws gone)."""
     with flk_client.new_client() as client:
         current = collect_laws(client)
     if len(current) < MIN_EXPECTED_LAWS:
-        logger.error("只取回 %d 条，少于预期的 %d 条，不替换现有数据库", len(current), MIN_EXPECTED_LAWS)
+        logger.error("Only %d rows fetched, fewer than the expected %d; keeping the existing database", len(current), MIN_EXPECTED_LAWS)
         return 1
     with metadata_write_lock():
         target = repository.METADATA_DB_PATH
@@ -259,7 +276,8 @@ def sync_metadata(today: dt.date | None = None) -> int:
         listed_before = sum(1 for law in previous if law["is_listed"] and law["source"] == repository.SOURCE_FLK)
         if listed_before and counts[repository.CHANGE_REMOVED] > listed_before * MAX_REMOVED_RATIO:
             logger.error(
-                "官方库不再收录的法规有 %d 部，超过现有 %d 部的 %.0f%%，视为数据源异常，不替换现有数据库",
+                "%d laws are no longer listed, out of %d currently listed (limit %.0f%%); treating this as a source fault and "
+                "keeping the existing database",
                 counts[repository.CHANGE_REMOVED], listed_before, MAX_REMOVED_RATIO * 100,
             )
             return 1
@@ -274,7 +292,7 @@ def sync_metadata(today: dt.date | None = None) -> int:
         repository.create_metadata_db(temporary, merged, meta, [*repository.read_all_changes(target), *changes])
         os.replace(temporary, target)
     logger.info(
-        "目录已更新：现收录 %d 部，新增 %d，时效性变化 %d，不再收录 %d，重新收录 %d",
+        "Catalogue updated: %d listed, %d added, %d status changes, %d delisted, %d relisted",
         len(current), counts[repository.CHANGE_ADDED], counts[repository.CHANGE_STATUS],
         counts[repository.CHANGE_REMOVED], counts[repository.CHANGE_RESTORED],
     )
@@ -284,7 +302,7 @@ def sync_metadata(today: dt.date | None = None) -> int:
 
 
 def pending_content_ids(cache: ContentCache, category: str | None) -> list[str]:
-    """尚未缓存正文的法规编号，全国性法规、现行法规在前。"""
+    """Ids of the laws whose text is not cached yet, national laws and laws in force first."""
     with closing(repository.connect_metadata()) as connection:
         rows: list[sqlite3.Row] = connection.execute(
             "SELECT id, top_category, status FROM laws WHERE source = ?" + (" AND top_category = ?" if category else ""),
@@ -302,7 +320,7 @@ def pending_content_ids(cache: ContentCache, category: str | None) -> list[str]:
 def sync_content(limit: int, budget_seconds: float, category: str | None) -> int:
     cache = ContentCache()
     pending = pending_content_ids(cache, category)
-    logger.info("待取正文 %d 部，本次最多 %d 部、%d 秒", len(pending), limit, budget_seconds)
+    logger.info("%d texts pending; this run fetches at most %d within %d seconds", len(pending), limit, budget_seconds)
     started = time.monotonic()
     fetched = failed = unreadable = consecutive_failures = pauses = 0
     stopped_by_failures = False
@@ -315,38 +333,41 @@ def sync_content(limit: int, budget_seconds: float, category: str | None) -> int
                 fetched += 1
                 consecutive_failures = 0
             except LawTextError as error:
-                # 文件取到了但不是 docx：记下来以后跳过，不算数据源故障
+                # The file arrived but is not a docx: record it so it is skipped from now on; not a source failure
                 cache.mark_unreadable(law_id, str(error))
                 unreadable += 1
                 consecutive_failures = 0
             except flk_client.LawSourceBlocked:
-                logger.info("本次取回 %d 部后遇到浏览器验证，停止", fetched)
+                logger.info("Browser challenge after fetching %d texts; stopping", fetched)
                 raise
             except flk_client.LawSourceUnavailable as error:
                 failed += 1
                 consecutive_failures += 1
-                logger.warning("  %s 正文未取到：%s", law_id, error)
+                logger.warning("  %s: text not fetched: %s", law_id, error)
                 if consecutive_failures >= MAX_CONSECUTIVE_FAILURES:
                     if pauses >= MAX_FAILURE_PAUSES:
-                        logger.error("连续 %d 部失败，暂停 %d 次后仍未恢复，停止", consecutive_failures, pauses)
+                        logger.error("%d failures in a row and no recovery after %d pauses; stopping", consecutive_failures, pauses)
                         stopped_by_failures = True
                         break
                     pauses += 1
                     consecutive_failures = 0
-                    logger.warning("连续 %d 部失败，暂停 %d 秒后继续（第 %d 次）", MAX_CONSECUTIVE_FAILURES, FAILURE_PAUSE_SECONDS, pauses)
+                    logger.warning(
+                        "%d failures in a row; pausing %d seconds before continuing (pause %d)",
+                        MAX_CONSECUTIVE_FAILURES, FAILURE_PAUSE_SECONDS, pauses,
+                    )
                     time.sleep(FAILURE_PAUSE_SECONDS)
             if (fetched + unreadable) % PROGRESS_EVERY == 0 and fetched + unreadable:
-                logger.info("  已处理 %d / %d", fetched + unreadable + failed, min(limit, len(pending)))
+                logger.info("  processed %d / %d", fetched + unreadable + failed, min(limit, len(pending)))
             time.sleep(CONTENT_INTERVAL_SECONDS)
     logger.info(
-        "本次取回 %d 部，无法解析 %d 部，失败 %d 部，剩余 %d 部",
+        "This run: %d fetched, %d unreadable, %d failed, %d remaining",
         fetched, unreadable, failed, len(pending) - fetched - unreadable,
     )
     return 1 if stopped_by_failures else 0
 
 
 def write_ministry_rules(source: ministry_rules.RuleSource, rules: list[dict], today: dt.date) -> dict[str, int]:
-    """把一个部门的规章并入元数据库，返回各类变更的条数。"""
+    """Merge one ministry's rules into the catalogue database and return the number of changes of each type."""
     target = repository.METADATA_DB_PATH
     with metadata_write_lock():
         merged, changes = merge_with_previous(repository.read_all_laws(target), rules, today.isoformat(), source=source.key)
@@ -364,14 +385,15 @@ def write_ministry_rules(source: ministry_rules.RuleSource, rules: list[dict], t
 
 
 def fetch_rule_paragraphs(client: httpx.Client, source: ministry_rules.RuleSource, rule: dict) -> list[str]:
-    """规章正文段落：有 docx 文字版时取 docx，否则从详情网页取。"""
+    """Paragraphs of a rule's text: from the docx when one is offered, otherwise from the detail page."""
     if rule["docx_url"]:
         return extract_paragraphs(ministry_rules.fetch_rule_docx(client, rule["docx_url"], source))
     return extract_article_paragraphs(ministry_rules.fetch_rule_page(client, rule["text_url"], source))
 
 
 def fetch_ministry_contents(client: httpx.Client, source: ministry_rules.RuleSource, rules: list[dict], cache: ContentCache) -> int:
-    """取回还没有缓存正文的规章，返回取回的部数。正文不在该部门官网上的（专栏里链接到其他网站的）不取。"""
+    """Fetch the rules whose text is not cached yet and return how many were fetched. Texts hosted outside the
+    ministry's own site (links to other sites) are skipped."""
     done = cache.cached_ids() | cache.unreadable_ids()
     fetched = 0
     for rule in rules:
@@ -384,16 +406,16 @@ def fetch_ministry_contents(client: httpx.Client, source: ministry_rules.RuleSou
         except LawTextError as error:
             cache.mark_unreadable(rule["id"], str(error))
         except ministry_rules.MinistrySourceUnavailable as error:
-            logger.warning("  %s 正文未取到：%s", rule["title"], error)
+            logger.warning("  %s: text not fetched: %s", rule["title"], error)
         time.sleep(ministry_rules.REQUEST_INTERVAL_SECONDS)
     return fetched
 
 
 def sync_ministries(today: dt.date | None = None) -> int:
-    """同步各部门规章库的规章目录与正文；某个部门失败不影响其他部门。"""
+    """Sync the catalogue and texts of every ministry rule library; one ministry failing does not stop the others."""
     today = today or dt.date.today()
     if not repository.METADATA_DB_PATH.exists():
-        logger.error("法规元数据库不存在，请先运行 metadata")
+        logger.error("The catalogue database does not exist; run `metadata` first")
         return 1
     status = 0
     cache = ContentCache()
@@ -402,37 +424,42 @@ def sync_ministries(today: dt.date | None = None) -> int:
             try:
                 rules = ministry_rules.fetch_rules(client, source, today)
             except ministry_rules.MinistrySourceUnavailable as error:
-                logger.error("%s规章库同步失败：%s", source.ministry, error)
+                logger.error("%s: rule library sync failed: %s", source.key, error)
                 status = 1
                 continue
             if len(rules) < source.min_expected:
-                logger.error("%s规章库只取到 %d 部，少于预期的 %d 部，不更新", source.ministry, len(rules), source.min_expected)
+                logger.error(
+                    "%s: only %d rules fetched, fewer than the expected %d; not updating",
+                    source.key, len(rules), source.min_expected,
+                )
                 status = 1
                 continue
             counts = write_ministry_rules(source, rules, today)
             fetched = fetch_ministry_contents(client, source, rules, cache)
             logger.info(
-                "%s规章库：%d 部，新增 %d，时效性变化 %d，不再收录 %d；本次取回正文 %d 部",
-                source.ministry, len(rules), counts[repository.CHANGE_ADDED], counts[repository.CHANGE_STATUS],
+                "%s: %d rules, %d added, %d status changes, %d delisted; %d texts fetched",
+                source.key, len(rules), counts[repository.CHANGE_ADDED], counts[repository.CHANGE_STATUS],
                 counts[repository.CHANGE_REMOVED], fetched,
             )
     return status
 
 
 def sync_ministries_exclusively() -> int:
-    """同步部门规章；已有进程在同步部门规章时本次跳过。"""
+    """Sync the ministry rules; skipped when another process is already doing so."""
     try:
         with single_instance(LOCK_MINISTRIES):
             return sync_ministries()
     except AlreadyRunning:
-        logger.info("已有进程在同步部门规章，本次跳过这一步")
+        logger.info("Another process is syncing the ministry rules; skipping this step")
         return 0
 
 
 def sync_national(content_limit: int, budget_seconds: float) -> int:
-    """国家法律法规数据库：目录比对，成功后再取缺的正文。遇到浏览器验证返回 EXIT_BLOCKED。
+    """National database: diff the catalogue, then fetch the missing texts. Returns EXIT_BLOCKED on a browser
+    challenge.
 
-    已有进程在取国家法律法规数据库（例如正文全量下载还没跑完）时本次跳过，不算失败。
+    Skipped, and not counted as a failure, when another process is already working on the national database
+    (for example a full text download that has not finished).
     """
     try:
         with single_instance(LOCK_NATIONAL):
@@ -440,20 +467,21 @@ def sync_national(content_limit: int, budget_seconds: float) -> int:
                 return 1
             return sync_content(content_limit, budget_seconds, None) if content_limit > 0 else 0
     except AlreadyRunning:
-        logger.info("已有进程在同步国家法律法规数据库，本次跳过这一步")
+        logger.info("Another process is syncing the national database; skipping this step")
         return 0
     except flk_client.LawSourceBlocked as error:
-        logger.error("国家法律法规数据库同步中止：%s", error)
+        logger.error("National database sync aborted: %s", error)
         return EXIT_BLOCKED
     except flk_client.LawSourceUnavailable as error:
-        logger.error("国家法律法规数据库同步中止：%s", error)
+        logger.error("National database sync aborted: %s", error)
         return 1
 
 
 def update(content_limit: int, budget_seconds: float) -> int:
-    """定时增量：国家法律法规数据库 → 各部门规章库。
+    """Scheduled run: the national database, then the ministry rule libraries.
 
-    两步互不拖累：前一步失败后一步照常执行，最后返回第一个非零的退出码。
+    The two steps are independent: the second runs even when the first fails, and the first non-zero exit code
+    is returned.
     """
     statuses = [sync_national(content_limit, budget_seconds), sync_ministries_exclusively()]
     return next((status for status in statuses if status), 0)
@@ -463,15 +491,15 @@ PROBE_TIMEOUT_SECONDS = 20
 
 
 def probe() -> int:
-    """各数据源各发一个请求，报告当前网络能否访问；全部可达返回 0。"""
+    """Send one request to each source and report whether this network can reach it; 0 when all are reachable."""
     reachable = True
     with flk_client.new_client() as client:
         try:
             flk_client.fetch_enums(client)
-            logger.info("可访问   国家法律法规数据库")
+            logger.info("reachable    flk (%s)", flk_client.BASE_URL)
         except flk_client.LawSourceUnavailable as error:
             reachable = False
-            logger.info("不可访问 国家法律法规数据库：%s", error)
+            logger.info("unreachable  flk (%s): %s", flk_client.BASE_URL, error)
     with ministry_rules.new_client() as client:
         for source in ministry_rules.SOURCES:
             try:
@@ -481,12 +509,12 @@ def probe() -> int:
             except httpx.HTTPError as error:
                 ok, detail = False, type(error).__name__
             reachable = reachable and ok
-            logger.info("%s %s规章库：%s", "可访问  " if ok else "不可访问", source.ministry, detail)
+            logger.info("%s  %s (%s): %s", "reachable  " if ok else "unreachable", source.key, source.list_url, detail)
     return 0 if reachable else 1
 
 
 def build_manifest() -> dict:
-    """数据清单：目录快照日期、各来源条数、已有正文的部数、最近的变更。"""
+    """Data manifest: catalogue snapshot date, row count per source, number of laws with text, recent changes."""
     path = repository.METADATA_DB_PATH
     if not path.exists():
         return {"laws": 0, "with_content": 0}
@@ -509,19 +537,21 @@ def build_manifest() -> dict:
 
 @contextmanager
 def single_instance(lock_name: str = LOCK_NATIONAL):
-    """同一来源同一时刻只允许一个同步进程：两个进程同时取数会让请求频率翻倍，容易触发对方的访问限制。"""
+    """Allow one sync process per source at a time: two processes would double the request rate and could trip
+    the source's rate limiting."""
     repository.LAWS_DIR.mkdir(parents=True, exist_ok=True)
     with open(repository.LAWS_DIR / lock_name, "w", encoding="utf-8") as lock_file:
         try:
             fcntl.flock(lock_file, fcntl.LOCK_EX | fcntl.LOCK_NB)
         except BlockingIOError as error:
-            raise AlreadyRunning("已有一个同类的法规同步进程在运行") from error
+            raise AlreadyRunning("another sync process of the same kind is already running") from error
         yield
 
 
 @contextmanager
 def metadata_write_lock():
-    """改写元数据库（读出 → 合并 → 写回）期间持有，防止两个来源的同步互相覆盖对方刚写入的内容。"""
+    """Held while the catalogue database is rewritten (read -> merge -> write back), so that syncs of two sources
+    cannot overwrite each other's fresh writes."""
     repository.LAWS_DIR.mkdir(parents=True, exist_ok=True)
     with open(repository.LAWS_DIR / LOCK_METADATA_WRITE, "w", encoding="utf-8") as lock_file:
         fcntl.flock(lock_file, fcntl.LOCK_EX)
@@ -529,19 +559,24 @@ def metadata_write_lock():
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="法律法规数据同步")
+    parser = argparse.ArgumentParser(description="Collect Chinese laws, regulations and ministry rules")
     commands = parser.add_subparsers(dest="command", required=True)
-    commands.add_parser("metadata", help="全量同步法规目录并记录变更")
-    content = commands.add_parser("content", help="批量取回法规正文")
-    content.add_argument("--limit", type=int, default=500, help="本次最多取多少部")
-    content.add_argument("--budget-seconds", type=float, default=1800, help="本次最长运行秒数")
-    content.add_argument("--category", default=None, help="只取某一类别，如 法律、行政法规")
-    commands.add_parser("ministries", help="同步各部门规章库的规章")
-    updater = commands.add_parser("update", help="定时增量：目录比对 + 取缺的正文 + 部门规章")
-    updater.add_argument("--content-limit", type=int, default=DEFAULT_UPDATE_CONTENT_LIMIT, help="本次最多取多少部正文，0 表示不取")
-    updater.add_argument("--budget-seconds", type=float, default=DEFAULT_UPDATE_BUDGET_SECONDS, help="取正文的最长秒数")
-    commands.add_parser("probe", help="检查各数据源当前能否访问")
-    commands.add_parser("manifest", help="输出数据清单（JSON）")
+    commands.add_parser("metadata", help="sync the whole national catalogue and record changes")
+    content = commands.add_parser("content", help="fetch law texts in bulk")
+    content.add_argument("--limit", type=int, default=500, help="maximum number of texts to fetch in this run")
+    content.add_argument("--budget-seconds", type=float, default=1800, help="time limit of this run, in seconds")
+    content.add_argument("--category", default=None, help="only fetch one category (a top_category value, e.g. 法律 or 行政法规)")
+    commands.add_parser("ministries", help="sync the ministry rule libraries")
+    updater = commands.add_parser("update", help="scheduled run: catalogue diff + missing texts + ministry rules")
+    updater.add_argument(
+        "--content-limit", type=int, default=DEFAULT_UPDATE_CONTENT_LIMIT,
+        help="maximum number of texts to fetch in this run; 0 fetches none",
+    )
+    updater.add_argument(
+        "--budget-seconds", type=float, default=DEFAULT_UPDATE_BUDGET_SECONDS, help="time limit for fetching texts, in seconds"
+    )
+    commands.add_parser("probe", help="check whether each source is reachable right now")
+    commands.add_parser("manifest", help="print the data manifest (JSON)")
     args = parser.parse_args()
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(message)s", datefmt="%m-%d %H:%M:%S")
     logging.getLogger("httpx").setLevel(logging.WARNING)
@@ -561,13 +596,13 @@ def main() -> int:
                 return sync_metadata()
             return sync_content(args.limit, args.budget_seconds, args.category)
     except AlreadyRunning as error:
-        logger.error("%s，本次不执行", error)
+        logger.error("Not running: %s", error)
         return 1
     except flk_client.LawSourceBlocked as error:
-        logger.error("同步中止：%s", error)
+        logger.error("Sync aborted: %s", error)
         return EXIT_BLOCKED
     except flk_client.LawSourceUnavailable as error:
-        logger.error("同步中止：%s", error)
+        logger.error("Sync aborted: %s", error)
         return 1
 
 

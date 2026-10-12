@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-# 数据文件（data/laws.db、data/laws_content.db）与仓库 Release 之间的上传、下载。
-#   scripts/release-data.sh download   取回已发布的数据（Release 不存在时先建一个空的）
-#   scripts/release-data.sh upload     把当前数据发布到 Release（覆盖同名文件）
-# 需要 gh 命令和环境变量 GH_TOKEN；Release 的标签取环境变量 DATA_TAG，默认 data。
+# Upload and download the data files (data/laws.db, data/laws_content.db) to and from the repository's Release.
+#   scripts/release-data.sh download   fetch the published data (creates an empty Release if there is none)
+#   scripts/release-data.sh upload     publish the current data to the Release (overwrites files of the same name)
+# Needs the gh command and GH_TOKEN. The Release tag comes from DATA_TAG and defaults to "data".
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
@@ -12,8 +12,8 @@ FILES=(laws.db laws_content.db)
 
 ensure_release() {
   gh release view "$TAG" >/dev/null 2>&1 && return
-  gh release create "$TAG" --title "法规数据" \
-    --notes "由流水线维护的数据文件：laws.db（法规目录）、laws_content.db（法规正文）。每次采集后覆盖更新。"
+  gh release create "$TAG" --title "Law data" \
+    --notes "Data files maintained by the pipeline: laws.db (catalogue) and laws_content.db (texts). Overwritten after every crawl. Field values are in Chinese, as published by the sources."
 }
 
 case "${1:-}" in
@@ -22,9 +22,9 @@ case "${1:-}" in
     ensure_release
     for file in "${FILES[@]}"; do
       if gh release download "$TAG" --pattern "$file" --dir "$DATA_DIR" --clobber 2>/dev/null; then
-        echo "[release-data] 已取回 $file（$(du -h "$DATA_DIR/$file" | cut -f1)）"
+        echo "[release-data] downloaded $file ($(du -h "$DATA_DIR/$file" | cut -f1))"
       else
-        echo "[release-data] Release 里还没有 $file，从头开始"
+        echo "[release-data] the Release has no $file yet; starting from scratch"
       fi
     done
     ;;
@@ -33,11 +33,11 @@ case "${1:-}" in
     for file in "${FILES[@]}"; do
       [ -f "$DATA_DIR/$file" ] || continue
       gh release upload "$TAG" "$DATA_DIR/$file" --clobber
-      echo "[release-data] 已发布 $file（$(du -h "$DATA_DIR/$file" | cut -f1)）"
+      echo "[release-data] published $file ($(du -h "$DATA_DIR/$file" | cut -f1))"
     done
     ;;
   *)
-    echo "用法：scripts/release-data.sh download|upload" >&2
+    echo "usage: scripts/release-data.sh download|upload" >&2
     exit 1
     ;;
 esac

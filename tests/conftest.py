@@ -1,4 +1,4 @@
-"""测试数据目录指向临时目录，不碰仓库里的 data/。"""
+"""Point the data directory at a temporary directory so tests never touch data/ in the repository."""
 
 import os
 import tempfile

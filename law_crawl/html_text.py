@@ -1,8 +1,9 @@
-"""从规章详情网页里取正文段落。
+"""Extract the text paragraphs from a rule's detail page.
 
-各部门官网的版式不同，但正文都是一组 <p> 段落放在同一个容器里。做法：找出所有以“第 X 条”开头的段落，
-取它们共同的最内层容器，容器里的全部段落就是正文（含标题、括注、章节标题和各款）。
-页面里找不到条文段落时不猜，直接报错。
+Page layouts differ between ministry sites, but the text is always a group of <p> paragraphs inside one
+container. So: find every paragraph that starts with an article number ("第 X 条"), take their innermost common
+container, and treat all paragraphs in that container as the text (title, enactment note, headings, clauses).
+When the page has no article paragraphs, raise instead of guessing.
 """
 
 from __future__ import annotations
@@ -12,19 +13,20 @@ from html.parser import HTMLParser
 
 from law_crawl.docx_text import (
     ARTICLE_PATTERN,
+    REASON_NO_ARTICLES,
     LawTextError,
     normalize_paragraph,
 )
 
-# 不会有结束标签的元素，不进入嵌套栈
+# Elements that never have an end tag; they are not pushed on the nesting stack
 VOID_TAGS = frozenset({"area", "base", "br", "col", "embed", "hr", "img", "input", "link", "meta", "source", "track", "wbr"})
-# 文字不属于正文的元素
+# Elements whose text is not part of the document
 SKIPPED_TAGS = frozenset({"script", "style"})
 MIN_ARTICLE_PARAGRAPHS = 2
 
 
 class ParagraphCollector(HTMLParser):
-    """收集每个 <p> 的文字，以及它外层各级元素的编号（从外到内）。"""
+    """Collect the text of every <p> together with the ids of its ancestor elements, outermost first."""
 
     def __init__(self) -> None:
         super().__init__(convert_charrefs=True)
@@ -86,7 +88,7 @@ def common_prefix(paths: list[tuple[int, ...]]) -> tuple[int, ...]:
 
 
 def split_label(text: str) -> str:
-    """“第一条为了……”补成“第一条　为了……”：网页上条号与条文之间常常没有空格。"""
+    """Turn "第一条为了……" into "第一条　为了……": web pages often have no space between an article number and its text."""
     match = ARTICLE_PATTERN.match(text)
     if not match or match.end() >= len(text):
         return text
@@ -94,12 +96,12 @@ def split_label(text: str) -> str:
 
 
 def extract_article_paragraphs(page: str) -> list[str]:
-    """详情网页里的正文段落（按页面顺序）。"""
+    """The text paragraphs of a detail page, in page order."""
     collector = ParagraphCollector()
     collector.feed(page)
     collector.close()
     article_paths = [path for path, text in collector.paragraphs if ARTICLE_PATTERN.match(re.sub(r"^　+", "", text))]
     if len(article_paths) < MIN_ARTICLE_PARAGRAPHS:
-        raise LawTextError("网页里没有找到条文")
+        raise LawTextError(REASON_NO_ARTICLES)
     container = common_prefix(article_paths)
     return [split_label(text) for path, text in collector.paragraphs if path[:len(container)] == container]
