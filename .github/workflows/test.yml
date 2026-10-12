@@ -1,0 +1,19 @@
+name: 测试
+
+on:
+  push:
+    paths-ignore: ["manifest.json", "README.md"]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt pytest ruff
+      - run: ruff check law_crawl tests
+      - run: python -m pytest -q

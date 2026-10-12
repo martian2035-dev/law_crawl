@@ -1,0 +1,79 @@
+name: 采集法规与规章
+
+on:
+  schedule:
+    - cron: "30 18 * * *" # 北京时间每天 02:30
+  workflow_dispatch:
+    inputs:
+      total_hours:
+        description: 本次采集的总时长（小时，最多 5）
+        default: "4.5"
+      content_limit:
+        description: 本次最多取多少部正文
+        default: "100000"
+
+permissions:
+  contents: write # 发布 Release、回写 manifest.json
+
+concurrency:
+  group: crawl # 同一时刻只跑一个采集，避免两路请求叠加触发数据源的访问限制
+  cancel-in-progress: false
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    timeout-minutes: 345
+    env:
+      GH_TOKEN: ${{ github.token }}
+      TZ: Asia/Shanghai
+      PYTHONUNBUFFERED: "1"
+      CRAWL_CONTENT_LIMIT: ${{ inputs.content_limit || '100000' }}
+      TOTAL_HOURS: ${{ inputs.total_hours || '4.5' }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: 安装依赖
+        run: pip install -r requirements.txt
+
+      - name: 取回已发布的数据
+        run: scripts/release-data.sh download
+
+      - name: 检查各数据源能否访问
+        run: python -m law_crawl probe || echo "::warning::有数据源当前不可访问，见上面的输出"
+
+      - name: 采集（分段运行，每段结束发布一次数据）
+        run: |
+          hours="$TOTAL_HOURS"
+          export CRAWL_TOTAL_SECONDS=$(python -c "print(int(min(float('$hours'), 5) * 3600))")
+          scripts/crawl-loop.sh
+
+      - name: 发布数据
+        if: always()
+        run: scripts/release-data.sh upload
+
+      - name: 回写数据清单
+        if: always()
+        run: |
+          python -m law_crawl manifest > manifest.json
+          git config user.name "law-crawl-bot"
+          git config user.email "law-crawl-bot@users.noreply.github.com"
+          git add manifest.json
+          git diff --cached --quiet && exit 0
+          git commit -m "chore(data): 更新数据清单 $(date +%F) [skip ci]"
+          git pull --rebase --autostash
+          git push
+
+      - name: 运行摘要
+        if: always()
+        run: |
+          {
+            echo "### 数据清单"
+            echo '```json'
+            python -c "import json; m = json.load(open('manifest.json')); m.pop('recent_changes', None); print(json.dumps(m, ensure_ascii=False, indent=2))"
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
