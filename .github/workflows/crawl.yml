@@ -11,6 +11,10 @@ on:
       content_limit:
         description: Maximum number of texts to fetch per chunk
         default: "100000"
+      retry_unreadable:
+        description: Fetch again the texts recorded as "not a docx" (run once after the converters were added)
+        type: boolean
+        default: false
 
 permissions:
   contents: write # publish the Release, write back manifest.json
@@ -29,6 +33,7 @@ jobs:
       PYTHONUNBUFFERED: "1"
       CRAWL_CONTENT_LIMIT: ${{ inputs.content_limit || '100000' }}
       TOTAL_HOURS: ${{ inputs.total_hours || '4.5' }}
+      RETRY_UNREADABLE: ${{ inputs.retry_unreadable && 'true' || 'false' }}
     steps:
       - uses: actions/checkout@v4
 
@@ -39,6 +44,12 @@ jobs:
 
       - name: Install dependencies
         run: pip install -r requirements.txt
+
+      - name: Install LibreOffice (converts legacy .doc and .rtf texts)
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends libreoffice-writer
+          soffice --version
 
       - name: Download published data
         run: scripts/release-data.sh download

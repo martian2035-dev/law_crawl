@@ -272,11 +272,19 @@ class ContentCache:
             return {row[0] for row in connection.execute("SELECT id FROM contents")}
 
     def mark_unreadable(self, law_id: str, reason: str) -> None:
-        """Record a law whose text file cannot be parsed (e.g. only a legacy .doc is offered) so that bulk fetching
+        """Record a law whose text file cannot be parsed (e.g. a legacy .doc that could not be converted) so that bulk fetching
         does not download it again."""
         recorded_at = dt.datetime.now(dt.UTC).isoformat(timespec="seconds")
         with closing(self.connect()) as connection, connection:
             connection.execute("INSERT OR REPLACE INTO unreadable VALUES (?, ?, ?)", (law_id, reason, recorded_at))
+
+    def forget_unreadable(self, reason: str) -> list[str]:
+        """Delete the unreadable records with the given reason so those laws are fetched again (for example once a
+        converter is installed); returns their ids."""
+        with closing(self.connect()) as connection, connection:
+            ids = [row[0] for row in connection.execute("SELECT id FROM unreadable WHERE reason = ?", (reason,))]
+            connection.execute("DELETE FROM unreadable WHERE reason = ?", (reason,))
+        return ids
 
     def unreadable_ids(self) -> set[str]:
         with closing(self.connect()) as connection:

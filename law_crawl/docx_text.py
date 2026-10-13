@@ -8,6 +8,16 @@ import zipfile
 
 from docx import Document
 
+from law_crawl.doc_convert import (
+    DocConversionFailed,
+    DocConversionUnavailable,
+    doc_to_docx,
+    flat_opc_to_docx,
+    is_flat_opc,
+    is_legacy_doc,
+    normalize_docx_content_type,
+)
+
 BLOCK_HEADING = "heading"
 BLOCK_ARTICLE = "article"
 BLOCK_TEXT = "text"
@@ -22,6 +32,7 @@ LINE_BREAK_PATTERN = re.compile(r"[\n\v\f]+")
 # Reasons a text cannot be parsed. They are stored verbatim in laws_content.db (unreadable.reason), so like the
 # other data values they stay in Chinese.
 REASON_NOT_DOCX = "正文文件不是有效的 docx"  # the text file is not a valid docx
+REASON_CONVERSION_FAILED = "旧版 doc 转换后仍无法解析"  # a legacy doc was converted but still cannot be parsed
 REASON_NO_ARTICLES = "网页里没有找到条文"  # no articles found in the web page
 REASON_PAGE_GONE = "规章页面不存在（HTTP 404）"  # the rule page does not exist
 
@@ -40,11 +51,26 @@ def extract_paragraphs(docx_bytes: bytes) -> list[str]:
     """Non-empty paragraph texts of a docx, in document order, tables excluded.
 
     Some files put a whole chapter in one paragraph and separate the articles with soft line breaks
-    (Shift+Enter), so line breaks inside a paragraph also split paragraphs."""
+    (Shift+Enter), so line breaks inside a paragraph also split paragraphs.
+
+    Files that are not standard docx are converted first (see doc_convert): legacy doc and RTF with LibreOffice,
+    Word XML rebuilt in Python, macro-enabled docx with a corrected content type. Where LibreOffice is missing a
+    legacy doc is recorded as REASON_NOT_DOCX, as before conversion existed; a conversion that ran but failed gets
+    its own reason."""
+    converted = is_legacy_doc(docx_bytes) or is_flat_opc(docx_bytes)
+    if converted:
+        try:
+            docx_bytes = flat_opc_to_docx(docx_bytes) if is_flat_opc(docx_bytes) else doc_to_docx(docx_bytes)
+        except DocConversionUnavailable as error:
+            raise LawTextError(REASON_NOT_DOCX) from error
+        except DocConversionFailed as error:
+            raise LawTextError(REASON_CONVERSION_FAILED) from error
+    else:
+        docx_bytes = normalize_docx_content_type(docx_bytes)
     try:
         document = Document(io.BytesIO(docx_bytes))
     except (zipfile.BadZipFile, KeyError, ValueError) as error:
-        raise LawTextError(REASON_NOT_DOCX) from error
+        raise LawTextError(REASON_CONVERSION_FAILED if converted else REASON_NOT_DOCX) from error
     lines = (line for paragraph in document.paragraphs for line in LINE_BREAK_PATTERN.split(paragraph.text))
     return [paragraph for paragraph in map(normalize_paragraph, lines) if paragraph]
 

@@ -47,7 +47,7 @@ from pathlib import Path
 import httpx
 
 from law_crawl import flk_client, ministry_rules, repository
-from law_crawl.docx_text import LawTextError, extract_paragraphs
+from law_crawl.docx_text import REASON_NOT_DOCX, LawTextError, extract_paragraphs
 from law_crawl.html_text import extract_article_paragraphs
 from law_crawl.repository import ContentCache
 
@@ -317,9 +317,16 @@ def pending_content_ids(cache: ContentCache, category: str | None) -> list[str]:
     return [row["id"] for row in sorted(rows, key=priority) if row["id"] not in cached]
 
 
-def sync_content(limit: int, budget_seconds: float, category: str | None) -> int:
+def sync_content(limit: int, budget_seconds: float, category: str | None, retry_unreadable: bool = False) -> int:
     cache = ContentCache()
+    retry_ids: list[str] = cache.forget_unreadable(REASON_NOT_DOCX) if retry_unreadable else []
+    if retry_unreadable:
+        # Laws recorded as "not a docx" are mostly legacy docs that could not be converted before LibreOffice was
+        # available; fetch them again, ahead of the rest of the queue
+        logger.info("Cleared %d unreadable records (not a docx); fetching them again", len(retry_ids))
     pending = pending_content_ids(cache, category)
+    first = set(retry_ids)
+    pending = [law_id for law_id in pending if law_id in first] + [law_id for law_id in pending if law_id not in first]
     logger.info("%d texts pending; this run fetches at most %d within %d seconds", len(pending), limit, budget_seconds)
     started = time.monotonic()
     fetched = failed = unreadable = consecutive_failures = pauses = 0
@@ -454,7 +461,7 @@ def sync_ministries_exclusively() -> int:
         return 0
 
 
-def sync_national(content_limit: int, budget_seconds: float) -> int:
+def sync_national(content_limit: int, budget_seconds: float, retry_unreadable: bool = False) -> int:
     """National database: diff the catalogue, then fetch the missing texts. Returns EXIT_BLOCKED on a browser
     challenge.
 
@@ -465,7 +472,7 @@ def sync_national(content_limit: int, budget_seconds: float) -> int:
         with single_instance(LOCK_NATIONAL):
             if sync_metadata() != 0:
                 return 1
-            return sync_content(content_limit, budget_seconds, None) if content_limit > 0 else 0
+            return sync_content(content_limit, budget_seconds, None, retry_unreadable) if content_limit > 0 else 0
     except AlreadyRunning:
         logger.info("Another process is syncing the national database; skipping this step")
         return 0
@@ -477,13 +484,13 @@ def sync_national(content_limit: int, budget_seconds: float) -> int:
         return 1
 
 
-def update(content_limit: int, budget_seconds: float) -> int:
+def update(content_limit: int, budget_seconds: float, retry_unreadable: bool = False) -> int:
     """Scheduled run: the national database, then the ministry rule libraries.
 
     The two steps are independent: the second runs even when the first fails, and the first non-zero exit code
     is returned.
     """
-    statuses = [sync_national(content_limit, budget_seconds), sync_ministries_exclusively()]
+    statuses = [sync_national(content_limit, budget_seconds, retry_unreadable), sync_ministries_exclusively()]
     return next((status for status in statuses if status), 0)
 
 
@@ -566,6 +573,10 @@ def main() -> int:
     content.add_argument("--limit", type=int, default=500, help="maximum number of texts to fetch in this run")
     content.add_argument("--budget-seconds", type=float, default=1800, help="time limit of this run, in seconds")
     content.add_argument("--category", default=None, help="only fetch one category (a top_category value, e.g. 法律 or 行政法规)")
+    content.add_argument(
+        "--retry-unreadable", action="store_true",
+        help="first clear the 'not a docx' unreadable records and fetch those laws again (needs LibreOffice for legacy docs)",
+    )
     commands.add_parser("ministries", help="sync the ministry rule libraries")
     updater = commands.add_parser("update", help="scheduled run: catalogue diff + missing texts + ministry rules")
     updater.add_argument(
@@ -575,6 +586,10 @@ def main() -> int:
     updater.add_argument(
         "--budget-seconds", type=float, default=DEFAULT_UPDATE_BUDGET_SECONDS, help="time limit for fetching texts, in seconds"
     )
+    updater.add_argument(
+        "--retry-unreadable", action="store_true",
+        help="first clear the 'not a docx' unreadable records and fetch those laws again (needs LibreOffice for legacy docs)",
+    )
     commands.add_parser("probe", help="check whether each source is reachable right now")
     commands.add_parser("manifest", help="print the data manifest (JSON)")
     args = parser.parse_args()
@@ -582,7 +597,7 @@ def main() -> int:
     logging.getLogger("httpx").setLevel(logging.WARNING)
     try:
         if args.command == "update":
-            return update(args.content_limit, args.budget_seconds)
+            return update(args.content_limit, args.budget_seconds, args.retry_unreadable)
         if args.command == "probe":
             return probe()
         if args.command == "manifest":
@@ -594,7 +609,7 @@ def main() -> int:
         with single_instance(LOCK_NATIONAL):
             if args.command == "metadata":
                 return sync_metadata()
-            return sync_content(args.limit, args.budget_seconds, args.category)
+            return sync_content(args.limit, args.budget_seconds, args.category, args.retry_unreadable)
     except AlreadyRunning as error:
         logger.error("Not running: %s", error)
         return 1

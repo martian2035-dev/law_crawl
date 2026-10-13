@@ -16,5 +16,7 @@ jobs:
           python-version: "3.12"
           cache: pip
       - run: pip install -r requirements.txt pytest ruff
+      - name: Install LibreOffice (for the conversion tests)
+        run: sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends libreoffice-writer
       - run: ruff check law_crawl tests
       - run: python -m pytest -q

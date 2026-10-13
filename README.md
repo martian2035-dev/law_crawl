@@ -61,8 +61,8 @@ snapshot date and row count per ministry.
 
 - `contents`: one row per document. `body` is the zlib-compressed text, one paragraph per line (UTF-8);
   `paragraph_count` and `fetched_at` describe it.
-- `unreadable`: documents whose text file cannot be parsed, for example when the source only offers a legacy
-  `.doc`. `reason` says why, in Chinese.
+- `unreadable`: documents whose text file cannot be parsed. `reason` says why, in Chinese. Most texts the source
+  serves as "docx" are not: see *Text formats* below.
 
 Reading a text in Python:
 
@@ -97,6 +97,22 @@ gh release create data --title "Law data" --notes "Data files maintained by the 
 gh release upload data /path/to/laws.db /path/to/laws_content.db --clobber
 ```
 
+### Text formats
+
+The files the national database serves as "docx" often are not docx, and the file extension cannot be trusted. The
+crawler recognises them by their file header (`law_crawl/doc_convert.py`):
+
+| Actual format | Handling |
+| --- | --- |
+| Legacy Word (OLE2) and RTF (mostly local regulations of 2019-2022) | Converted with LibreOffice in headless mode; the workflow installs `libreoffice-writer` |
+| Word XML in the single-file form (`<pkg:package>`; mostly Hainan) | Rebuilt into a docx package in Python; a file with a DTD is refused |
+| Macro-enabled Word | The content type is corrected, then read as docx |
+
+Where LibreOffice is missing, a legacy doc is recorded in `unreadable` as before. To fetch the texts recorded
+that way again, start "Crawl laws and rules" by hand with *retry_unreadable* ticked (or run
+`python -m law_crawl content --retry-unreadable` locally with LibreOffice installed). Do it once after a new
+converter was added; it clears the `正文文件不是有效的 docx` records and fetches those laws first.
+
 ### Rate limiting
 
 - The national database answers with a browser challenge page and refuses service when it is hit too often. The
@@ -114,7 +130,7 @@ Python 3.12 or later.
 ```bash
 pip install -r requirements.txt
 python -m law_crawl probe                 # can this network reach each source?
-python -m law_crawl update --content-limit 200 --budget-seconds 600
+python -m law_crawl update --content-limit 200 --budget-seconds 600   # legacy doc texts need LibreOffice
 python -m law_crawl manifest              # the data manifest
 ```
 
@@ -136,6 +152,7 @@ ruff check law_crawl tests
 | `law_crawl/flk_client.py` | Client for the national database |
 | `law_crawl/ministry_rules.py` | Fetching and parsing the ministry rule libraries; `SOURCES` lists the ministries covered |
 | `law_crawl/docx_text.py`, `html_text.py` | Extracting text paragraphs from a docx or a detail page, and classifying headings and articles |
+| `law_crawl/doc_convert.py` | Converting legacy doc / RTF (LibreOffice), Word XML and macro-enabled Word to a standard docx |
 | `law_crawl/repository.py` | Reading and writing the two SQLite files |
 | `law_crawl/service.py` | Read helpers: title search, document details |
 | `scripts/crawl-loop.sh`, `release-data.sh` | The chunked crawl loop and the data publishing used by the pipeline |

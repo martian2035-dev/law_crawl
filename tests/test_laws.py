@@ -445,7 +445,7 @@ def test_national_and_ministry_locks_are_independent(tmp_path, monkeypatch):
 def test_update_runs_every_step_even_when_an_earlier_one_fails(tmp_path, monkeypatch):
     steps = []
     monkeypatch.setattr(laws_sync, "sync_metadata", lambda: steps.append("metadata") or 0)
-    monkeypatch.setattr(laws_sync, "sync_content", lambda limit, budget, category: steps.append(("content", limit)) or 0)
+    monkeypatch.setattr(laws_sync, "sync_content", lambda limit, budget, category, retry=False: steps.append(("content", limit)) or 0)
     monkeypatch.setattr(laws_sync, "sync_ministries", lambda: steps.append("ministries") or 0)
     monkeypatch.setattr(repository, "LAWS_DIR", tmp_path)
 
