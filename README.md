@@ -106,7 +106,7 @@ crawler recognises them by their file header (`law_crawl/doc_convert.py`):
 | --- | --- |
 | Legacy Word (OLE2) and RTF (mostly local regulations of 2019-2022) | Converted with LibreOffice in headless mode; the workflow installs `libreoffice-writer` |
 | Word XML in the single-file form (`<pkg:package>`; mostly Hainan) | Rebuilt into a docx package in Python; a file with a DTD is refused |
-| Macro-enabled Word | The content type is corrected, then read as docx |
+| Macro-enabled Word, or a docx with a relationship to a missing part (made by WPS) | The package is repaired, then read as docx |
 
 Where LibreOffice is missing, a legacy doc is recorded in `unreadable` as before. To fetch the texts recorded
 that way again, start "Crawl laws and rules" by hand with *retry_unreadable* ticked (or run

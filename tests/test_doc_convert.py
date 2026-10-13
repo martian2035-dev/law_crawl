@@ -88,6 +88,30 @@ def test_macro_enabled_docx_is_parsed_after_fixing_its_content_type():
     assert extract_paragraphs(macro) == PARAGRAPHS
 
 
+def with_dangling_relationship(docx: bytes) -> bytes:
+    """Add a relationship to a missing part to the root relationships (common in packages made by WPS); python-docx
+    then raises KeyError."""
+    buffer = io.BytesIO()
+    with zipfile.ZipFile(io.BytesIO(docx)) as source, zipfile.ZipFile(buffer, "w") as output:
+        for item in source.infolist():
+            content = source.read(item.filename)
+            if item.filename == "_rels/.rels":
+                content = content.replace(
+                    b"</Relationships>",
+                    b'<Relationship Id="rIdX" Type="http://x/customUI" Target="userCustomization/customUI.xml"/></Relationships>',
+                )
+            output.writestr(item, content)
+    return buffer.getvalue()
+
+
+def test_docx_with_a_relationship_to_a_missing_part_is_repaired():
+    broken = with_dangling_relationship(build_docx(PARAGRAPHS))
+    with pytest.raises(KeyError):
+        Document(io.BytesIO(broken))
+
+    assert extract_paragraphs(broken) == PARAGRAPHS
+
+
 def test_flat_opc_with_a_dtd_is_rejected():
     hostile = b'<?xml version="1.0"?><!DOCTYPE x [<!ENTITY a "aaaa">]><pkg:package xmlns:pkg="' + doc_convert.FLAT_OPC_NAMESPACE.encode() + b'"/>'
 

@@ -7,7 +7,8 @@ cases occur in practice:
   in headless mode;
 - Word XML in the single-file form (Flat OPC, `<pkg:package>`; mostly Hainan): rebuilt into a docx package in
   Python, no LibreOffice needed;
-- macro-enabled Word (macroEnabled content type): python-docx refuses it, so the content type is corrected.
+- macro-enabled Word (macroEnabled content type) and packages with relationships to parts that do not exist
+  (made by WPS and similar): python-docx cannot open them, so the package is repaired.
 
 The converter (soffice) is installed only where it is needed: the crawl workflow installs it. Where it is missing,
 DocConversionUnavailable is raised and the caller records the text as unreadable, exactly as before conversion was
@@ -18,6 +19,7 @@ from __future__ import annotations
 
 import base64
 import io
+import posixpath
 import shutil
 import subprocess
 import tempfile
@@ -136,7 +138,7 @@ def flat_opc_to_docx(data: bytes) -> bytes:
         if not name.endswith(".rels"):
             etree.SubElement(types, f"{{{ns}}}Override", PartName=f"/{name}", ContentType=content_type)
     files[CONTENT_TYPES_PART] = etree.tostring(types, xml_declaration=True, encoding="UTF-8", standalone=True)
-    return normalize_docx_content_type(_zip_bytes(files))
+    return repair_docx_package(_zip_bytes(files))
 
 
 def _zip_bytes(files: dict[str, bytes]) -> bytes:
@@ -149,21 +151,49 @@ def _zip_bytes(files: dict[str, bytes]) -> bytes:
     return buffer.getvalue()
 
 
-def normalize_docx_content_type(data: bytes) -> bytes:
-    """Macro-enabled document or template: set the body content type to the standard docx one, leave the rest as is.
-    Returned unchanged when the data is not a zip or needs no change."""
+def repair_docx_package(data: bytes) -> bytes:
+    """Repair a docx package python-docx cannot open: macro-enabled documents and templates (set the body content
+    type to the standard one) and relationships that point to a part that does not exist (common in packages made
+    by WPS and similar; python-docx raises KeyError, and dropping those relationships fixes it). Everything else is
+    left as is; data that is not a zip, or needs no repair, is returned unchanged."""
     try:
         with zipfile.ZipFile(io.BytesIO(data)) as archive:
+            names = set(archive.namelist())
+            replacements: dict[str, bytes] = {}
             types = archive.read(CONTENT_TYPES_PART).decode("utf-8")
-            if not any(bad in types for bad in NONSTANDARD_MAIN_TYPES):
+            if any(bad in types for bad in NONSTANDARD_MAIN_TYPES):
+                for bad in NONSTANDARD_MAIN_TYPES:
+                    types = types.replace(bad, DOCX_MAIN_TYPE)
+                replacements[CONTENT_TYPES_PART] = types.encode("utf-8")
+            for name in names:
+                if name.endswith(".rels"):
+                    fixed = _without_dangling_relationships(name, archive.read(name), names)
+                    if fixed is not None:
+                        replacements[name] = fixed
+            if not replacements:
                 return data
-            patched = types
-            for bad in NONSTANDARD_MAIN_TYPES:
-                patched = patched.replace(bad, DOCX_MAIN_TYPE)
             buffer = io.BytesIO()
             with zipfile.ZipFile(buffer, "w", zipfile.ZIP_DEFLATED) as output:
                 for item in archive.infolist():
-                    output.writestr(item, patched.encode("utf-8") if item.filename == CONTENT_TYPES_PART else archive.read(item.filename))
+                    output.writestr(item, replacements.get(item.filename, archive.read(item.filename)))
             return buffer.getvalue()
-    except (zipfile.BadZipFile, KeyError, UnicodeDecodeError):
+    except (zipfile.BadZipFile, KeyError, UnicodeDecodeError, etree.XMLSyntaxError):
         return data
+
+
+def _without_dangling_relationships(rels_name: str, content: bytes, names: set[str]) -> bytes | None:
+    """Drop the relationships whose internal target does not exist; None when there is nothing to drop."""
+    parser = etree.XMLParser(resolve_entities=False, no_network=True, huge_tree=False)
+    root = etree.fromstring(content, parser)
+    # The relationships file a/_rels/b.xml.rels belongs to part a/b.xml; relative targets start at a/
+    base = posixpath.dirname(posixpath.dirname(rels_name))
+    removed = False
+    for relationship in list(root):
+        target = relationship.get("Target", "")
+        if relationship.get("TargetMode") == "External" or not target:
+            continue
+        resolved = target.lstrip("/") if target.startswith("/") else posixpath.normpath(posixpath.join(base, target))
+        if resolved not in names:
+            root.remove(relationship)
+            removed = True
+    return etree.tostring(root, xml_declaration=True, encoding="UTF-8", standalone=True) if removed else None

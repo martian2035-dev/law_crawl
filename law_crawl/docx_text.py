@@ -15,7 +15,7 @@ from law_crawl.doc_convert import (
     flat_opc_to_docx,
     is_flat_opc,
     is_legacy_doc,
-    normalize_docx_content_type,
+    repair_docx_package,
 )
 
 BLOCK_HEADING = "heading"
@@ -66,7 +66,7 @@ def extract_paragraphs(docx_bytes: bytes) -> list[str]:
         except DocConversionFailed as error:
             raise LawTextError(REASON_CONVERSION_FAILED) from error
     else:
-        docx_bytes = normalize_docx_content_type(docx_bytes)
+        docx_bytes = repair_docx_package(docx_bytes)
     try:
         document = Document(io.BytesIO(docx_bytes))
     except (zipfile.BadZipFile, KeyError, ValueError) as error:
