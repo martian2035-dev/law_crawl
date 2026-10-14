@@ -1,8 +1,8 @@
 {
   "snapshot_date": "2026-10-14",
   "laws": 31759,
-  "listed": 31759,
-  "with_content": 19846,
+  "listed": 31758,
+  "with_content": 24270,
   "unreadable": 4794,
   "by_source": {
     "flk": 30948,
@@ -13,5 +13,14 @@
     "nea": 65,
     "samr": 251
   },
-  "recent_changes": []
+  "recent_changes": [
+    {
+      "law_id": "ff808181927f1276019619672d884286",
+      "title": "重庆市轨道交通条例",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-10-14"
+    }
+  ]
 }
