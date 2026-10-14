@@ -1,8 +1,8 @@
 {
-  "snapshot_date": "2026-10-14",
+  "snapshot_date": "2026-10-15",
   "laws": 31759,
   "listed": 31758,
-  "with_content": 24270,
+  "with_content": 26937,
   "unreadable": 4794,
   "by_source": {
     "flk": 30948,
@@ -21,6 +21,22 @@
       "old_value": "有效",
       "new_value": "",
       "detected_on": "2026-10-14"
+    },
+    {
+      "law_id": "ff8081819fad4019019fd11735b22e26",
+      "title": "集成电路布图设计保护条例",
+      "change_type": "status",
+      "old_value": "尚未生效",
+      "new_value": "有效",
+      "detected_on": "2026-10-15"
+    },
+    {
+      "law_id": "ff8080816f3cbb3c016f411f9b83189a",
+      "title": "集成电路布图设计保护条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-10-15"
     }
   ]
 }
