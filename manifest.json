@@ -1,9 +1,9 @@
 {
-  "snapshot_date": "2026-10-13",
+  "snapshot_date": "2026-10-14",
   "laws": 31759,
   "listed": 31759,
-  "with_content": 16198,
-  "unreadable": 3115,
+  "with_content": 19846,
+  "unreadable": 4794,
   "by_source": {
     "flk": 30948,
     "mee": 70,
