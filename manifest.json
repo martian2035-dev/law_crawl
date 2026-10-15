@@ -1,11 +1,11 @@
 {
-  "snapshot_date": "2026-10-15",
-  "laws": 31759,
-  "listed": 31758,
-  "with_content": 26937,
+  "snapshot_date": "2026-10-16",
+  "laws": 31760,
+  "listed": 31759,
+  "with_content": 26938,
   "unreadable": 4794,
   "by_source": {
-    "flk": 30948,
+    "flk": 30949,
     "mee": 70,
     "mem": 76,
     "mohurd": 88,
@@ -37,6 +37,14 @@
       "old_value": "有效",
       "new_value": "已修改",
       "detected_on": "2026-10-15"
+    },
+    {
+      "law_id": "be5e84a01b224795bf66ef73f6c480e4",
+      "title": "金华市人民代表大会常务委员会关于修改《金华市水环境保护条例》《金华市大气污染防治规定》《金华市农村生活垃圾分类管理条例》三件地方性法规的决定",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "",
+      "detected_on": "2026-10-16"
     }
   ]
 }
