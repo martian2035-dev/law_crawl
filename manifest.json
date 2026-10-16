@@ -1,11 +1,11 @@
 {
-  "snapshot_date": "2026-10-16",
-  "laws": 31760,
-  "listed": 31759,
-  "with_content": 26938,
+  "snapshot_date": "2026-10-17",
+  "laws": 31813,
+  "listed": 31806,
+  "with_content": 26991,
   "unreadable": 4794,
   "by_source": {
-    "flk": 30949,
+    "flk": 31002,
     "mee": 70,
     "mem": 76,
     "mohurd": 88,
@@ -15,36 +15,404 @@
   },
   "recent_changes": [
     {
-      "law_id": "ff808181927f1276019619672d884286",
-      "title": "重庆市轨道交通条例",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-10-14"
-    },
-    {
-      "law_id": "ff8081819fad4019019fd11735b22e26",
-      "title": "集成电路布图设计保护条例",
-      "change_type": "status",
-      "old_value": "尚未生效",
-      "new_value": "有效",
-      "detected_on": "2026-10-15"
-    },
-    {
-      "law_id": "ff8080816f3cbb3c016f411f9b83189a",
-      "title": "集成电路布图设计保护条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-10-15"
-    },
-    {
-      "law_id": "be5e84a01b224795bf66ef73f6c480e4",
-      "title": "金华市人民代表大会常务委员会关于修改《金华市水环境保护条例》《金华市大气污染防治规定》《金华市农村生活垃圾分类管理条例》三件地方性法规的决定",
+      "law_id": "8fae1166d6384a46bcdfca45624d2fe5",
+      "title": "金秀瑶族自治县人民代表大会关于废止《金秀瑶族自治县森林资源管理条例》、《金秀瑶族自治县野生植物保护条例》的决定",
       "change_type": "added",
       "old_value": "",
       "new_value": "",
-      "detected_on": "2026-10-16"
+      "detected_on": "2026-10-17"
+    },
+    {
+      "law_id": "ff8081819ff54ab801a056c5b1d433e7",
+      "title": "呼和浩特市网络虚假信息治理办法",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-10-17"
+    },
+    {
+      "law_id": "ff8081819ff541ea01a0652bf7721bfb",
+      "title": "浙江省饮用水水源保护条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-10-17"
+    },
+    {
+      "law_id": "ff8081819ff54a6401a0652b3fc76412",
+      "title": "浙江省港口管理条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-10-17"
+    },
+    {
+      "law_id": "ff8081819ff541ea01a064e9cfb51769",
+      "title": "浙江省大气污染防治条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-10-17"
+    },
+    {
+      "law_id": "ff8081819ff54a6401a064eb450f5ecb",
+      "title": "浙江省机动车排气污染防治条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-10-17"
+    },
+    {
+      "law_id": "ff8081819ff54ab801a0653115470dad",
+      "title": "浙江省生活垃圾管理条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-10-17"
+    },
+    {
+      "law_id": "ff8081819ff541ea01a06530e1081c3f",
+      "title": "浙江省固体废物污染环境防治条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-10-17"
+    },
+    {
+      "law_id": "ff8081819ff541ea01a06531428c1c50",
+      "title": "浙江省土壤污染防治条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-10-17"
+    },
+    {
+      "law_id": "13b71d4613eb4ea3a59e0061c87f143b",
+      "title": "浙江省人民代表大会常务委员会关于修改《浙江省大气污染防治条例》《浙江省机动车排气污染防治条例》两件地方性法规的决定",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "",
+      "detected_on": "2026-10-17"
+    },
+    {
+      "law_id": "bd30207b7ec84988b77986324993be39",
+      "title": "浙江省人民代表大会常务委员会关于修改《浙江省土壤污染防治条例》等三件地方性法规的决定",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "",
+      "detected_on": "2026-10-17"
+    },
+    {
+      "law_id": "ff808181a0bc9b0a01a12f8564fc5be0",
+      "title": "山西省预防未成年人犯罪条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-10-17"
+    },
+    {
+      "law_id": "ff8081819ff54ab801a12f6b417e61c2",
+      "title": "山西省电动自行车管理条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-10-17"
+    },
+    {
+      "law_id": "ff808181a0bc9b0a01a12f818c5a5bcf",
+      "title": "山西省实施《中华人民共和国职业教育法》办法",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-10-17"
+    },
+    {
+      "law_id": "ff8081819ff54a6401a05ac09f1f1192",
+      "title": "重庆市轨道交通条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-10-17"
+    },
+    {
+      "law_id": "ff8081819ff541ea01a06b44ee2d437e",
+      "title": "安徽省人民代表大会常务委员会关于用好“六尺巷工作法”提升基层社会治理效能的决定",
+      "change_type": "status",
+      "old_value": "尚未生效",
+      "new_value": "有效",
+      "detected_on": "2026-10-17"
+    },
+    {
+      "law_id": "56c84e24404b4fd794994be4438d1e9a",
+      "title": "重庆市人民代表大会常务委员会关于修改部分地方性法规的决定",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "",
+      "detected_on": "2026-10-17"
+    },
+    {
+      "law_id": "ff8081819b697220019b9228a8f9579f",
+      "title": "浙江省港口管理条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-10-17"
+    },
+    {
+      "law_id": "ff808181968021090196add8f1e60863",
+      "title": "临汾市城市建筑垃圾管理条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-10-17"
+    },
+    {
+      "law_id": "ff808181927f09310193fd83754c7406",
+      "title": "乌兰察布市粉尘污染防治条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-10-17"
+    },
+    {
+      "law_id": "ff8081818c24e05b018c6c3eadc55192",
+      "title": "浙江省土壤污染防治条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-10-17"
+    },
+    {
+      "law_id": "ff80818187c29b500187c5815e4b08ff",
+      "title": "宜昌市人民代表大会常务委员会关于加强生物多样性协同保护的决定",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-10-17"
+    },
+    {
+      "law_id": "ff808181862ee2eb01863551430b28ab",
+      "title": "恩施土家族苗族自治州人民代表大会常务委员会关于加强生物多样性协同保护的决定",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-10-17"
+    },
+    {
+      "law_id": "ff8081818364d9f60183e4ae21632594",
+      "title": "浙江省固体废物污染环境防治条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-10-17"
+    },
+    {
+      "law_id": "ff8081819ff54ab801a119166e120193",
+      "title": "内蒙古自治区地质环境保护条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "已废止",
+      "detected_on": "2026-10-17"
+    },
+    {
+      "law_id": "ff80808176d83e4a0176da9a8e7d04bf",
+      "title": "浙江省生活垃圾管理条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-10-17"
+    },
+    {
+      "law_id": "ff80808175265dd401768953b70e0abe",
+      "title": "浙江省机动车排气污染防治条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-10-17"
+    },
+    {
+      "law_id": "ff808081752b7d4301768953dc7e188d",
+      "title": "浙江省大气污染防治条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-10-17"
+    },
+    {
+      "law_id": "ff80808175265dd40176895c61610b06",
+      "title": "浙江省饮用水水源保护条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-10-17"
+    },
+    {
+      "law_id": "ff8081817b53bcc1017b5825d14006b5",
+      "title": "呼和浩特市市容环境卫生管理条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已废止",
+      "detected_on": "2026-10-17"
+    },
+    {
+      "law_id": "ff808081752b7d4301764179521e6600",
+      "title": "临汾市农村环境卫生综合治理促进条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-10-17"
+    },
+    {
+      "law_id": "ff80808174681d4a01747af446ad1316",
+      "title": "临汾市大气污染防治条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-10-17"
+    },
+    {
+      "law_id": "ff8080816fbc57c101709e544f6d2e0a",
+      "title": "金华市水环境保护条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-10-17"
+    },
+    {
+      "law_id": "ff80808172b5f24f0173319f2f313d77",
+      "title": "临汾市建筑工程施工扬尘污染防治规定",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-10-17"
+    },
+    {
+      "law_id": "ff8080816fbc57c101710657771f7679",
+      "title": "临汾市饮用水水源保护条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-10-17"
+    },
+    {
+      "law_id": "2c90e5ba6200715a0163fcefe4f171c2",
+      "title": "金华市农村生活垃圾分类管理条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-10-17"
+    },
+    {
+      "law_id": "4028abcc612777930161282d0cc7703a",
+      "title": "临汾市燃煤污染防治规定",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-10-17"
+    },
+    {
+      "law_id": "ff8080816eb1afb8016ebb03e0697444",
+      "title": "杭州市机动车驾驶员培训管理条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-10-17"
+    },
+    {
+      "law_id": "ff808181a0bc9b0a01a11e11cb460f7c",
+      "title": "内蒙古自治区地质环境保护条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "已废止",
+      "detected_on": "2026-10-17"
+    },
+    {
+      "law_id": "4028abcc61277793016127dc6fd41b38",
+      "title": "金秀瑶族自治县野生植物保护条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已废止",
+      "detected_on": "2026-10-17"
+    },
+    {
+      "law_id": "ff808181a0bc9b0a01a11aa24b250a6a",
+      "title": "内蒙古自治区地质环境保护条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "已废止",
+      "detected_on": "2026-10-17"
+    },
+    {
+      "law_id": "4028abcc61277793016127d7273c161d",
+      "title": "金秀瑶族自治县森林资源管理条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已废止",
+      "detected_on": "2026-10-17"
+    },
+    {
+      "law_id": "4028abcc6127779301612818b37a5972",
+      "title": "山西省实施《中华人民共和国职业教育法》办法",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-10-17"
+    },
+    {
+      "law_id": "4028abcc612777930161288e41b7449a",
+      "title": "呼和浩特市市容环境卫生管理条例",
+      "change_type": "status",
+      "old_value": "已修改",
+      "new_value": "已废止",
+      "detected_on": "2026-10-17"
+    },
+    {
+      "law_id": "ff8081819ff54a6401a0e6c0c9083735",
+      "title": "中华人民共和国审计法实施条例",
+      "change_type": "removed",
+      "old_value": "尚未生效",
+      "new_value": "",
+      "detected_on": "2026-10-17"
+    },
+    {
+      "law_id": "ff8081817b826c87017b875b82bf0af2",
+      "title": "昆明市轿子山国家级自然保护区条例",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-10-17"
+    },
+    {
+      "law_id": "ff8081817c63656c017c72a2ff384aa4",
+      "title": "昆明市道路交通安全条例",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-10-17"
+    },
+    {
+      "law_id": "ff8081817be7b934017c77beffb36a83",
+      "title": "昆明市人民代表大会常务委员会关于修改《昆明市轿子山国家级自然保护区条例》等三件地方性法规的决定",
+      "change_type": "removed",
+      "old_value": "",
+      "new_value": "",
+      "detected_on": "2026-10-17"
+    },
+    {
+      "law_id": "ff8081817c92ddac017c97a3c22c5472",
+      "title": "内蒙古自治区地质环境保护条例",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-10-17"
+    },
+    {
+      "law_id": "4028abcc61277793016127f2b5203294",
+      "title": "内蒙古自治区地质环境保护条例",
+      "change_type": "removed",
+      "old_value": "已修改",
+      "new_value": "",
+      "detected_on": "2026-10-17"
     }
   ]
 }
