@@ -1,7 +1,7 @@
 {
-  "snapshot_date": "2026-10-22",
+  "snapshot_date": "2026-10-23",
   "laws": 31848,
-  "listed": 31842,
+  "listed": 31840,
   "with_content": 27026,
   "unreadable": 4794,
   "by_source": {
@@ -14,22 +14,6 @@
     "samr": 251
   },
   "recent_changes": [
-    {
-      "law_id": "ff8081819ff54ab801a13454a8ba7f22",
-      "title": "云南省昭通渔洞水库保护条例",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "有效",
-      "detected_on": "2026-10-21"
-    },
-    {
-      "law_id": "ff8081819ff54a6401a13808703226df",
-      "title": "云南省土壤污染防治条例",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "有效",
-      "detected_on": "2026-10-21"
-    },
     {
       "law_id": "ff8081819ff54a6401a1380051f5264a",
       "title": "云南省实施《中华人民共和国水法》办法",
@@ -413,6 +397,22 @@
       "old_value": "有效",
       "new_value": "已废止",
       "detected_on": "2026-10-21"
+    },
+    {
+      "law_id": "ff808181907350630191253308de2779",
+      "title": "海南省建筑垃圾管理规定",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-10-23"
+    },
+    {
+      "law_id": "ff8081817cbae136017ccc0442855507",
+      "title": "海南省生活垃圾管理条例",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-10-23"
     }
   ]
 }
