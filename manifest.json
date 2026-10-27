@@ -1,12 +1,12 @@
 {
-  "snapshot_date": "2026-10-27",
-  "laws": 31903,
-  "listed": 31894,
-  "with_content": 27081,
+  "snapshot_date": "2026-10-28",
+  "laws": 31929,
+  "listed": 31922,
+  "with_content": 27107,
   "unreadable": 4794,
   "by_source": {
-    "flk": 31092,
-    "mee": 70,
+    "flk": 31117,
+    "mee": 71,
     "mem": 76,
     "mohurd": 88,
     "mot": 261,
@@ -14,374 +14,6 @@
     "samr": 251
   },
   "recent_changes": [
-    {
-      "law_id": "ff80818188321ae1018846744e552dff",
-      "title": "昆明市生活垃圾管理条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-10-27"
-    },
-    {
-      "law_id": "ff80818187c29b500187cb684866254b",
-      "title": "铁岭市文明行为促进条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-10-27"
-    },
-    {
-      "law_id": "ff80818185c453880185c8cff70f12f6",
-      "title": "鞍山市扬尘污染防治条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-10-27"
-    },
-    {
-      "law_id": "ff80818185c455590185c8cbe90d2305",
-      "title": "鞍山市水资源保护条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已废止",
-      "detected_on": "2026-10-27"
-    },
-    {
-      "law_id": "ff808181844230ec01855cf36a85686e",
-      "title": "成都市城镇排水与污水处理条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-10-27"
-    },
-    {
-      "law_id": "ff808181844230ec01855ce3b8946801",
-      "title": "成都市《中华人民共和国渔业法》实施办法",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-10-27"
-    },
-    {
-      "law_id": "ff808181844232f7018534b1acdf7f4b",
-      "title": "内蒙古自治区固体废物污染环境防治条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-10-27"
-    },
-    {
-      "law_id": "ff80818180e0a5d001811438489e1380",
-      "title": "鞍山市生活垃圾分类管理条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-10-27"
-    },
-    {
-      "law_id": "ff8081817e008eb5017e2efdaadc7d45",
-      "title": "朝阳市生活垃圾分类管理条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-10-27"
-    },
-    {
-      "law_id": "ff8081817bdd7e17017be8d3d2c745b3",
-      "title": "成都市美丽宜居公园城市建设条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-10-27"
-    },
-    {
-      "law_id": "ff8081817b63b895017b81431c606bd1",
-      "title": "内蒙古自治区实施《中华人民共和国野生动物保护法》办法",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已废止",
-      "detected_on": "2026-10-27"
-    },
-    {
-      "law_id": "ff80808175265dd40176840c4c820342",
-      "title": "昆明市大气污染防治条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-10-27"
-    },
-    {
-      "law_id": "ff8081817b63b895017b7b1475e9440b",
-      "title": "内蒙古自治区耕地保养条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已废止",
-      "detected_on": "2026-10-27"
-    },
-    {
-      "law_id": "ff80808175265dd401756d9807443acd",
-      "title": "昆明市爱国卫生工作条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-10-27"
-    },
-    {
-      "law_id": "ff80808175265dd401752a5c27270394",
-      "title": "金华市大气污染防治规定",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-10-27"
-    },
-    {
-      "law_id": "ff80808174861d1101748f7d504f063b",
-      "title": "成都市三岔湖水环境保护条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-10-27"
-    },
-    {
-      "law_id": "ff8080816fbc57c10170c1f9e0ce7fe9",
-      "title": "昆明市城市市容和环境卫生管理条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-10-27"
-    },
-    {
-      "law_id": "ff8080816eb1afb8016ebf5109cb496b",
-      "title": "成都市兴隆湖区域生态保护条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-10-27"
-    },
-    {
-      "law_id": "ff8080816eb1afb8016ebaddbdb26e18",
-      "title": "昆明市清水海保护条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-10-27"
-    },
-    {
-      "law_id": "2c90e5ba6a291d8f016b918c6d1a2741",
-      "title": "昆明市城镇绿化条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-10-27"
-    },
-    {
-      "law_id": "ff8080816ecb2302016ed57e29f75749",
-      "title": "内蒙古自治区实施《中华人民共和国野生动物保护法》办法",
-      "change_type": "status",
-      "old_value": "已修改",
-      "new_value": "已废止",
-      "detected_on": "2026-10-27"
-    },
-    {
-      "law_id": "ff8080816ecb2302016ed5802eb8577a",
-      "title": "内蒙古自治区珍稀林木保护条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已废止",
-      "detected_on": "2026-10-27"
-    },
-    {
-      "law_id": "ff8080816eb1afb8016ec025b0726e30",
-      "title": "鞍山市环境保护条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已废止",
-      "detected_on": "2026-10-27"
-    },
-    {
-      "law_id": "4028855b61cc679a0161cc7b3de60076",
-      "title": "太原市建筑废弃物管理条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已废止",
-      "detected_on": "2026-10-27"
-    },
-    {
-      "law_id": "4028abcc6127779301612882924b3b87",
-      "title": "宁夏回族自治区六盘山、贺兰山、罗山国家级自然保护区条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-10-27"
-    },
-    {
-      "law_id": "ff8081818c24e05b018caa12531f1738",
-      "title": "昆明市机动车排气污染防治条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已废止",
-      "detected_on": "2026-10-27"
-    },
-    {
-      "law_id": "4028abcc612777930161282fbf59733f",
-      "title": "朔州市人民代表大会常务委员会议事规则",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-10-27"
-    },
-    {
-      "law_id": "4028abcc61277793016128674ca5260d",
-      "title": "辽宁省实施《中华人民共和国全国人民代表大会和地方各级人民代表大会代表法》办法",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-10-27"
-    },
-    {
-      "law_id": "4028abcc61277793016127d6dcd615cf",
-      "title": "昆明市机动车排气污染防治条例",
-      "change_type": "status",
-      "old_value": "已修改",
-      "new_value": "已废止",
-      "detected_on": "2026-10-27"
-    },
-    {
-      "law_id": "4028abcc61277793016127c8016608e1",
-      "title": "云南省云龙水库保护条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-10-27"
-    },
-    {
-      "law_id": "4028abcc6127779301612822aff164a8",
-      "title": "成都市建筑垃圾处置管理条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-10-27"
-    },
-    {
-      "law_id": "4028abcc61277793016127f5e96f362c",
-      "title": "鞍山市水资源保护条例",
-      "change_type": "status",
-      "old_value": "已修改",
-      "new_value": "已废止",
-      "detected_on": "2026-10-27"
-    },
-    {
-      "law_id": "4028abcc61277793016128215f59631e",
-      "title": "四川省人民代表大会常务委员会关于停止执行四川省地方性法规中部分行政许可事项的决定",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已废止",
-      "detected_on": "2026-10-27"
-    },
-    {
-      "law_id": "4028abcc61277793016127d69fc51596",
-      "title": "内蒙古自治区实施《中华人民共和国渔业法》办法",
-      "change_type": "status",
-      "old_value": "已修改",
-      "new_value": "已废止",
-      "detected_on": "2026-10-27"
-    },
-    {
-      "law_id": "4028abcc612777930161287102732f18",
-      "title": "太原市清洁生产条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已废止",
-      "detected_on": "2026-10-27"
-    },
-    {
-      "law_id": "4028abcc61277793016127ce68820e5d",
-      "title": "内蒙古自治区实施《中华人民共和国野生动物保护法》办法",
-      "change_type": "status",
-      "old_value": "已修改",
-      "new_value": "已废止",
-      "detected_on": "2026-10-27"
-    },
-    {
-      "law_id": "4028abcc61277793016127e5940d24a4",
-      "title": "内蒙古自治区耕地保养条例",
-      "change_type": "status",
-      "old_value": "已修改",
-      "new_value": "已废止",
-      "detected_on": "2026-10-27"
-    },
-    {
-      "law_id": "4028abcc612777930161285bfc621b49",
-      "title": "鞍山市环境保护条例",
-      "change_type": "status",
-      "old_value": "已修改",
-      "new_value": "已废止",
-      "detected_on": "2026-10-27"
-    },
-    {
-      "law_id": "4028abcc612777930161288495563cac",
-      "title": "成都市水资源管理条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-10-27"
-    },
-    {
-      "law_id": "4028abcc6127779301612821d80963ad",
-      "title": "成都市环城生态区保护条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-10-27"
-    },
-    {
-      "law_id": "4028abcc61277793016128874d403eba",
-      "title": "四川省《中华人民共和国集会游行示威法》实施办法",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-10-27"
-    },
-    {
-      "law_id": "4028abcc612777930161282241fe642a",
-      "title": "四川省人民代表大会常务委员会关于加强农村村民住宅抗震设防管理的决定",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已废止",
-      "detected_on": "2026-10-27"
-    },
-    {
-      "law_id": "4028abcc6127779301612823968b65b3",
-      "title": "四川省县级人民代表大会常务委员会行使职权的规定",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已废止",
-      "detected_on": "2026-10-27"
-    },
-    {
-      "law_id": "4028abcc6127779301612825cef3683d",
-      "title": "四川省人民代表大会常务委员会关于加强同省人大代表联系的办法",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已废止",
-      "detected_on": "2026-10-27"
-    },
-    {
-      "law_id": "4028abcc61277793016127d55da0145a",
-      "title": "昆明市再生资源回收管理条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-10-27"
-    },
-    {
-      "law_id": "4028abcc61277793016127d4d5bc13dd",
-      "title": "昆明市石林风景名胜区保护条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-10-27"
-    },
     {
       "law_id": "4028abcc61277793016127d7f08d16ea",
       "title": "昆明市河道管理条例",
@@ -413,6 +45,374 @@
       "old_value": "有效",
       "new_value": "",
       "detected_on": "2026-10-27"
+    },
+    {
+      "law_id": "ff808181a1440cda01a15373c60335ba",
+      "title": "邢台市住宅小区消防安全管理规定",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "尚未生效",
+      "detected_on": "2026-10-28"
+    },
+    {
+      "law_id": "ff808181a1440bbc01a156fff9394208",
+      "title": "雅安市民宿促进和管理若干规定",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "尚未生效",
+      "detected_on": "2026-10-28"
+    },
+    {
+      "law_id": "ff808181a144173201a1536e4eae3931",
+      "title": "秦皇岛市城镇排水与污水处理条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "尚未生效",
+      "detected_on": "2026-10-28"
+    },
+    {
+      "law_id": "ff808181a144173201a1570bb6354cc8",
+      "title": "凉山彝族自治州电动自行车管理条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "尚未生效",
+      "detected_on": "2026-10-28"
+    },
+    {
+      "law_id": "ff808181a144173201a153993e893a5d",
+      "title": "德阳市孝文化资源保护传承条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "尚未生效",
+      "detected_on": "2026-10-28"
+    },
+    {
+      "law_id": "ff8081819ff54a6401a143908c4511f4",
+      "title": "牡丹江市文明行为促进条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-10-28"
+    },
+    {
+      "law_id": "ff8081819ff54ab801a1438e0e3b68cf",
+      "title": "牡丹江市餐厨废弃物管理条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-10-28"
+    },
+    {
+      "law_id": "ff8081819ff54ab801a1438f633868e2",
+      "title": "牡丹江市城市绿化条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-10-28"
+    },
+    {
+      "law_id": "ff8081819ff54ab801a1439160416916",
+      "title": "镜泊湖水域船舶管理条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-10-28"
+    },
+    {
+      "law_id": "ff808181a1440bbc01a156ddfb2c3f5a",
+      "title": "围场满族蒙古族自治县畜牧业发展条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-10-28"
+    },
+    {
+      "law_id": "ff808181a144173201a1570360aa4b8a",
+      "title": "雅安市农村生活垃圾分类处理若干规定",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-10-28"
+    },
+    {
+      "law_id": "ff808181a1440cda01a1570325674324",
+      "title": "雅安市青衣江流域水环境保护条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-10-28"
+    },
+    {
+      "law_id": "ff808181a144173201a15358702937c1",
+      "title": "河北省法治宣传教育条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "尚未生效",
+      "detected_on": "2026-10-28"
+    },
+    {
+      "law_id": "ff808181a1440bbc01a152199a9f255c",
+      "title": "河北省国民经济和社会发展计划审查监督条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-10-28"
+    },
+    {
+      "law_id": "ff808181a1440cda01a1521feb24267d",
+      "title": "河北省哲学社会科学促进条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-10-28"
+    },
+    {
+      "law_id": "ff8081819ff54ab801a143c8a1166cda",
+      "title": "鹤岗市农村人居环境卫生管理条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-10-28"
+    },
+    {
+      "law_id": "ff808181a0bc9b0a01a143c9478e6484",
+      "title": "鹤岗市文明祭祀条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-10-28"
+    },
+    {
+      "law_id": "ff8081819ff54ab801a143c812de6cd1",
+      "title": "鹤岗市河道管理条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-10-28"
+    },
+    {
+      "law_id": "ff808181a0bc9b0a01a143c72a5c6467",
+      "title": "鹤岗市饮用水水源保护条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-10-28"
+    },
+    {
+      "law_id": "ff808181a0bc9b0a01a143c2235f6425",
+      "title": "七台河市文明祭祀条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-10-28"
+    },
+    {
+      "law_id": "ff808181a0bc9b0a01a143c2e8206435",
+      "title": "七台河市医疗废物管理若干规定",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-10-28"
+    },
+    {
+      "law_id": "ff8081819ff54ab801a03cab51ef35c7",
+      "title": "黑龙江省大气污染防治条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-10-28"
+    },
+    {
+      "law_id": "ff8081819ff54ab801a03cacbbdc35d5",
+      "title": "黑龙江省水污染防治条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-10-28"
+    },
+    {
+      "law_id": "ff8081819ff54ab801a03caceac735dd",
+      "title": "黑龙江省野生动物保护条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-10-28"
+    },
+    {
+      "law_id": "ff8081819ff54ab801a03cac796435ce",
+      "title": "黑龙江省森林植物园保护条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-10-28"
+    },
+    {
+      "law_id": "ff8081819b697220019b91382e65489b",
+      "title": "浙江省禁毒条例",
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-10-28"
+    },
+    {
+      "law_id": "ff8081819b697249019b913bff0e4202",
+      "title": "浙江省物业管理条例",
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-10-28"
+    },
+    {
+      "law_id": "ff8081818c24e05b018d0acaa8053967",
+      "title": "鹤岗市文明祭祀条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-10-28"
+    },
+    {
+      "law_id": "ff8081818bd27b26018bf0951f427d43",
+      "title": "镜泊湖水域船舶管理条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-10-28"
+    },
+    {
+      "law_id": "ff8081818bd27b26018bf086039e7c77",
+      "title": "黑龙江省水污染防治条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-10-28"
+    },
+    {
+      "law_id": "ff808181842c261c0184ac89f5b27f0b",
+      "title": "牡丹江市餐厨废弃物管理条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-10-28"
+    },
+    {
+      "law_id": "ff808181842c261c0184ac949e377f2f",
+      "title": "七台河市文明祭祀条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-10-28"
+    },
+    {
+      "law_id": "ff8081818364da1401837cb7e6a35862",
+      "title": "雅安市青衣江流域水环境保护条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-10-28"
+    },
+    {
+      "law_id": "ff8081817d0e9df5017d224ca6de1b10",
+      "title": "鹤岗市农村人居环境卫生管理条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-10-28"
+    },
+    {
+      "law_id": "ff8081817bf35433017c2103824e1564",
+      "title": "牡丹江市文明行为促进条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-10-28"
+    },
+    {
+      "law_id": "ff80808175265dd4017692961fe91432",
+      "title": "雅安市农村生活垃圾分类处理若干规定",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-10-28"
+    },
+    {
+      "law_id": "ff808081752b7d4301761bec0d15468f",
+      "title": "鹤岗市河道管理条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-10-28"
+    },
+    {
+      "law_id": "ff808081736bb19d01737a4279a30af4",
+      "title": "七台河市医疗废物管理若干规定",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-10-28"
+    },
+    {
+      "law_id": "ff808081736ba74201736f36ca910325",
+      "title": "牡丹江市城市绿化条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-10-28"
+    },
+    {
+      "law_id": "ff8080816e7327db016e7d602c6c0f1d",
+      "title": "黑龙江省野生动物保护条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-10-28"
+    },
+    {
+      "law_id": "2c90e5ba6a291d8f016d3e21cc9b5b7b",
+      "title": "鹤岗市饮用水水源保护条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-10-28"
+    },
+    {
+      "law_id": "2c90e5ba681ce0d4016827360e99011f",
+      "title": "黑龙江省大气污染防治条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-10-28"
+    },
+    {
+      "law_id": "4028abcc61277793016128042d2445c9",
+      "title": "河北省各级人民代表大会常务委员会经济工作监督条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已废止",
+      "detected_on": "2026-10-28"
+    },
+    {
+      "law_id": "4028abcc61277793016127e77ce526a9",
+      "title": "黑龙江省森林植物园保护条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-10-28"
+    },
+    {
+      "law_id": "4028855b61cc679a0161cc7b10d20045",
+      "title": "围场满族蒙古族自治县畜牧业管理条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已废止",
+      "detected_on": "2026-10-28"
+    },
+    {
+      "law_id": "18556b9b182812aa8c27d4bb2f187f72",
+      "title": "新化学物质环境管理登记办法",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-10-28"
     }
   ]
 }
