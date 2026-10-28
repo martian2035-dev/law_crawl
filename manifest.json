@@ -1,211 +1,19 @@
 {
-  "snapshot_date": "2026-10-28",
-  "laws": 31929,
-  "listed": 31922,
-  "with_content": 27107,
+  "snapshot_date": "2026-10-29",
+  "laws": 31943,
+  "listed": 31934,
+  "with_content": 27120,
   "unreadable": 4794,
   "by_source": {
-    "flk": 31117,
+    "flk": 31130,
     "mee": 71,
     "mem": 76,
     "mohurd": 88,
     "mot": 261,
-    "nea": 65,
+    "nea": 66,
     "samr": 251
   },
   "recent_changes": [
-    {
-      "law_id": "4028abcc61277793016127d7f08d16ea",
-      "title": "昆明市河道管理条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已废止",
-      "detected_on": "2026-10-27"
-    },
-    {
-      "law_id": "4028abcc61277793016127e605a42522",
-      "title": "昆明市九乡风景名胜区保护条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已废止",
-      "detected_on": "2026-10-27"
-    },
-    {
-      "law_id": "ff8081819b697220019b91382e65489b",
-      "title": "浙江省禁毒条例",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-10-27"
-    },
-    {
-      "law_id": "ff8081819b697249019b913bff0e4202",
-      "title": "浙江省物业管理条例",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-10-27"
-    },
-    {
-      "law_id": "ff808181a1440cda01a15373c60335ba",
-      "title": "邢台市住宅小区消防安全管理规定",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "尚未生效",
-      "detected_on": "2026-10-28"
-    },
-    {
-      "law_id": "ff808181a1440bbc01a156fff9394208",
-      "title": "雅安市民宿促进和管理若干规定",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "尚未生效",
-      "detected_on": "2026-10-28"
-    },
-    {
-      "law_id": "ff808181a144173201a1536e4eae3931",
-      "title": "秦皇岛市城镇排水与污水处理条例",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "尚未生效",
-      "detected_on": "2026-10-28"
-    },
-    {
-      "law_id": "ff808181a144173201a1570bb6354cc8",
-      "title": "凉山彝族自治州电动自行车管理条例",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "尚未生效",
-      "detected_on": "2026-10-28"
-    },
-    {
-      "law_id": "ff808181a144173201a153993e893a5d",
-      "title": "德阳市孝文化资源保护传承条例",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "尚未生效",
-      "detected_on": "2026-10-28"
-    },
-    {
-      "law_id": "ff8081819ff54a6401a143908c4511f4",
-      "title": "牡丹江市文明行为促进条例",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "有效",
-      "detected_on": "2026-10-28"
-    },
-    {
-      "law_id": "ff8081819ff54ab801a1438e0e3b68cf",
-      "title": "牡丹江市餐厨废弃物管理条例",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "有效",
-      "detected_on": "2026-10-28"
-    },
-    {
-      "law_id": "ff8081819ff54ab801a1438f633868e2",
-      "title": "牡丹江市城市绿化条例",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "有效",
-      "detected_on": "2026-10-28"
-    },
-    {
-      "law_id": "ff8081819ff54ab801a1439160416916",
-      "title": "镜泊湖水域船舶管理条例",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "有效",
-      "detected_on": "2026-10-28"
-    },
-    {
-      "law_id": "ff808181a1440bbc01a156ddfb2c3f5a",
-      "title": "围场满族蒙古族自治县畜牧业发展条例",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "有效",
-      "detected_on": "2026-10-28"
-    },
-    {
-      "law_id": "ff808181a144173201a1570360aa4b8a",
-      "title": "雅安市农村生活垃圾分类处理若干规定",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "有效",
-      "detected_on": "2026-10-28"
-    },
-    {
-      "law_id": "ff808181a1440cda01a1570325674324",
-      "title": "雅安市青衣江流域水环境保护条例",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "有效",
-      "detected_on": "2026-10-28"
-    },
-    {
-      "law_id": "ff808181a144173201a15358702937c1",
-      "title": "河北省法治宣传教育条例",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "尚未生效",
-      "detected_on": "2026-10-28"
-    },
-    {
-      "law_id": "ff808181a1440bbc01a152199a9f255c",
-      "title": "河北省国民经济和社会发展计划审查监督条例",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "有效",
-      "detected_on": "2026-10-28"
-    },
-    {
-      "law_id": "ff808181a1440cda01a1521feb24267d",
-      "title": "河北省哲学社会科学促进条例",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "有效",
-      "detected_on": "2026-10-28"
-    },
-    {
-      "law_id": "ff8081819ff54ab801a143c8a1166cda",
-      "title": "鹤岗市农村人居环境卫生管理条例",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "有效",
-      "detected_on": "2026-10-28"
-    },
-    {
-      "law_id": "ff808181a0bc9b0a01a143c9478e6484",
-      "title": "鹤岗市文明祭祀条例",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "有效",
-      "detected_on": "2026-10-28"
-    },
-    {
-      "law_id": "ff8081819ff54ab801a143c812de6cd1",
-      "title": "鹤岗市河道管理条例",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "有效",
-      "detected_on": "2026-10-28"
-    },
-    {
-      "law_id": "ff808181a0bc9b0a01a143c72a5c6467",
-      "title": "鹤岗市饮用水水源保护条例",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "有效",
-      "detected_on": "2026-10-28"
-    },
-    {
-      "law_id": "ff808181a0bc9b0a01a143c2235f6425",
-      "title": "七台河市文明祭祀条例",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "有效",
-      "detected_on": "2026-10-28"
-    },
     {
       "law_id": "ff808181a0bc9b0a01a143c2e8206435",
       "title": "七台河市医疗废物管理若干规定",
@@ -413,6 +221,198 @@
       "old_value": "",
       "new_value": "有效",
       "detected_on": "2026-10-28"
+    },
+    {
+      "law_id": "ff808181a144173201a15395eb373a38",
+      "title": "泸州市红色资源保护传承条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "尚未生效",
+      "detected_on": "2026-10-29"
+    },
+    {
+      "law_id": "ff808181a144173201a153ac902d3ae7",
+      "title": "达州市违法建设治理条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "尚未生效",
+      "detected_on": "2026-10-29"
+    },
+    {
+      "law_id": "ff808181a144173201a1539df6df3a89",
+      "title": "南充市朱德纪念地保护条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "尚未生效",
+      "detected_on": "2026-10-29"
+    },
+    {
+      "law_id": "ff808181a1440bbc01a15334d5b130d7",
+      "title": "自贡市优化营商环境条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "尚未生效",
+      "detected_on": "2026-10-29"
+    },
+    {
+      "law_id": "ff808181a144173201a1538db04f39db",
+      "title": "自贡市中心城区山体保护条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-10-29"
+    },
+    {
+      "law_id": "ff808181a1440bbc01a1538ce23934c1",
+      "title": "自贡市文明行为促进条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-10-29"
+    },
+    {
+      "law_id": "ff808181a1440cda01a1538d190a35fc",
+      "title": "自贡市建设施工现场管理条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-10-29"
+    },
+    {
+      "law_id": "ff808181a1440bbc01a1538d82db34c8",
+      "title": "自贡市户外广告和招牌设置管理条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-10-29"
+    },
+    {
+      "law_id": "ff808181a1440cda01a1538d54a43603",
+      "title": "自贡市畜禽养殖污染防治条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-10-29"
+    },
+    {
+      "law_id": "ff808181a1440bbc01a1538c30b634b9",
+      "title": "自贡市集中式饮用水水源地保护条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-10-29"
+    },
+    {
+      "law_id": "ff808181a0bc9b0a01a143c9df0e6491",
+      "title": "鹤岗市餐厨垃圾管理条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-10-29"
+    },
+    {
+      "law_id": "ff8081819ff54ab801a13e74449040e5",
+      "title": "凉山彝族自治州文明行为促进条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-10-29"
+    },
+    {
+      "law_id": "ff8081819ff541ea01a0475060ea023e",
+      "title": "宜宾市电动自行车管理条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-10-29"
+    },
+    {
+      "law_id": "ff808181989c88400198a795425704c2",
+      "title": "自贡市中心城区山体保护条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-10-29"
+    },
+    {
+      "law_id": "ff808181927f1276019366877170111a",
+      "title": "鹤岗市餐厨垃圾管理条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-10-29"
+    },
+    {
+      "law_id": "ff8081818c24da9e018ca581f74470eb",
+      "title": "凉山彝族自治州文明行为促进条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-10-29"
+    },
+    {
+      "law_id": "ff8081818a1cb709018a26845abd2f53",
+      "title": "自贡市户外广告和招牌设置管理条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-10-29"
+    },
+    {
+      "law_id": "ff8081818364d90301837cd2a2b038d7",
+      "title": "自贡市畜禽养殖污染防治条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-10-29"
+    },
+    {
+      "law_id": "ff80808175265dd40176928e992a13f2",
+      "title": "自贡市建设施工现场管理条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-10-29"
+    },
+    {
+      "law_id": "2c90e5ba6a291d8f016dfb6cf975044d",
+      "title": "自贡市文明行为促进条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-10-29"
+    },
+    {
+      "law_id": "4028abcc612777930161281e6f6e5fc4",
+      "title": "自贡市集中式饮用水水源地保护条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-10-29"
+    },
+    {
+      "law_id": "252f642897de32d95c3a8dd3eaa39754",
+      "title": "新化学物质环境管理登记办法",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-10-29"
+    },
+    {
+      "law_id": "231d6c62071b88ecadd50ab99ef419aa",
+      "title": "石油天然气基础设施规划建设与运营管理办法",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "时效待核实",
+      "detected_on": "2026-10-29"
+    },
+    {
+      "law_id": "1f94b79144f3d9086f0601aa3aa36569",
+      "title": "天然气基础设施建设与运营管理办法",
+      "change_type": "removed",
+      "old_value": "时效待核实",
+      "new_value": "",
+      "detected_on": "2026-10-29"
     }
   ]
 }
