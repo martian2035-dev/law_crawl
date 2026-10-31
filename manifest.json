@@ -1,5 +1,5 @@
 {
-  "snapshot_date": "2026-10-31",
+  "snapshot_date": "2026-11-01",
   "laws": 32004,
   "listed": 31995,
   "with_content": 27181,
@@ -15,404 +15,404 @@
   },
   "recent_changes": [
     {
-      "law_id": "ff8081819ff541ea01a0655f9aaa1da0",
-      "title": "贵阳市青岩古镇保护条例",
-      "change_type": "added",
-      "old_value": "",
+      "law_id": "ff808181a144173201a15358702937c1",
+      "title": "河北省法治宣传教育条例",
+      "change_type": "status",
+      "old_value": "尚未生效",
       "new_value": "有效",
-      "detected_on": "2026-10-31"
+      "detected_on": "2026-11-01"
     },
     {
-      "law_id": "ff8081819ff541ea01a0655e389b1d8f",
-      "title": "贵阳市建设生态文明城市条例",
-      "change_type": "added",
-      "old_value": "",
+      "law_id": "ff8081819ff54a6401a11976225d172b",
+      "title": "湖南省实施《中华人民共和国全国人民代表大会和地方各级人民代表大会代表法》办法",
+      "change_type": "status",
+      "old_value": "尚未生效",
       "new_value": "有效",
-      "detected_on": "2026-10-31"
+      "detected_on": "2026-11-01"
     },
     {
-      "law_id": "ff8081819ff54ab801a0655d0d150ef2",
-      "title": "贵阳市城市市容和环境卫生管理办法",
-      "change_type": "added",
-      "old_value": "",
+      "law_id": "ff8081819ff54a6401a118e651b20e1b",
+      "title": "包头市气象灾害防御条例",
+      "change_type": "status",
+      "old_value": "尚未生效",
       "new_value": "有效",
-      "detected_on": "2026-10-31"
+      "detected_on": "2026-11-01"
     },
     {
-      "law_id": "ff8081819ff541ea01a0655b69f31d64",
-      "title": "贵阳市城市节约用水管理条例",
-      "change_type": "added",
-      "old_value": "",
+      "law_id": "ff8081819ff54ab801a118ede9977f3b",
+      "title": "通辽市肉牛种源管理条例",
+      "change_type": "status",
+      "old_value": "尚未生效",
       "new_value": "有效",
-      "detected_on": "2026-10-31"
+      "detected_on": "2026-11-01"
     },
     {
-      "law_id": "ff8081819ff541ea01a0655d9d561d85",
-      "title": "贵阳市公园和绿化广场管理办法",
-      "change_type": "added",
-      "old_value": "",
+      "law_id": "ff8081819ff54ab801a12df3eefc522f",
+      "title": "曲靖市红色资源保护利用条例",
+      "change_type": "status",
+      "old_value": "尚未生效",
       "new_value": "有效",
-      "detected_on": "2026-10-31"
+      "detected_on": "2026-11-01"
     },
     {
-      "law_id": "ff8081819ff54a6401a0655ed8bd6615",
-      "title": "贵阳市大气污染防治办法",
-      "change_type": "added",
-      "old_value": "",
+      "law_id": "ff8081819ff54ab801a10f05daaf751e",
+      "title": "内蒙古自治区科学技术进步条例",
+      "change_type": "status",
+      "old_value": "尚未生效",
       "new_value": "有效",
-      "detected_on": "2026-10-31"
+      "detected_on": "2026-11-01"
     },
     {
-      "law_id": "ff8081819ff541ea01a0655c2e181d7f",
-      "title": "贵阳市环城林带建设保护办法",
-      "change_type": "added",
-      "old_value": "",
+      "law_id": "ff808181a0bc9b0a01a10f091ab370e6",
+      "title": "内蒙古自治区文物保护条例",
+      "change_type": "status",
+      "old_value": "尚未生效",
       "new_value": "有效",
-      "detected_on": "2026-10-31"
+      "detected_on": "2026-11-01"
     },
     {
-      "law_id": "ff8081819ff54a6401a13e9dac2f696a",
-      "title": "乐山市集中式饮用水水源保护管理条例",
-      "change_type": "added",
-      "old_value": "",
+      "law_id": "ff8081819ff54ab801a12ded273151b4",
+      "title": "云南省安全生产条例",
+      "change_type": "status",
+      "old_value": "尚未生效",
       "new_value": "有效",
-      "detected_on": "2026-10-31"
+      "detected_on": "2026-11-01"
     },
     {
-      "law_id": "7d6e2f57a39b4d66b290a2f148bdea85",
-      "title": "贵阳市人民代表大会常务委员会关于修改《贵阳市城市节约用水管理条例》等九件地方性法规部分条款的决定",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "",
-      "detected_on": "2026-10-31"
-    },
-    {
-      "law_id": "ff8081819ff54a6401a0477ac4f03681",
-      "title": "达州市市容和环境卫生管理条例",
-      "change_type": "added",
-      "old_value": "",
+      "law_id": "ff808181a0bc9b0a01a12de6e2504bce",
+      "title": "云南省铁路安全管理条例",
+      "change_type": "status",
+      "old_value": "尚未生效",
       "new_value": "有效",
-      "detected_on": "2026-10-31"
+      "detected_on": "2026-11-01"
     },
     {
-      "law_id": "ff8081819ff54ab801a0477a55db7705",
-      "title": "达州市莲花湖湿地保护条例",
-      "change_type": "added",
-      "old_value": "",
+      "law_id": "ff8081819ff54a6401a0c354b24425ba",
+      "title": "深圳经济特区中小企业发展促进条例",
+      "change_type": "status",
+      "old_value": "尚未生效",
       "new_value": "有效",
-      "detected_on": "2026-10-31"
+      "detected_on": "2026-11-01"
     },
     {
-      "law_id": "ff808181a1440bbc01a1570e56264333",
-      "title": "成都市大气污染防治条例",
-      "change_type": "added",
-      "old_value": "",
+      "law_id": "ff8081819ff54ab801a08dfad9c2608b",
+      "title": "黄石市停车场建设管理条例",
+      "change_type": "status",
+      "old_value": "尚未生效",
       "new_value": "有效",
-      "detected_on": "2026-10-31"
+      "detected_on": "2026-11-01"
     },
     {
-      "law_id": "ff8081819ff54ab801a0427d4f61547a",
-      "title": "遂宁市集中式饮用水水源保护条例",
-      "change_type": "added",
-      "old_value": "",
+      "law_id": "ff8081819ff541ea01a036de4f85256b",
+      "title": "石嘴山市文明祭祀条例",
+      "change_type": "status",
+      "old_value": "尚未生效",
       "new_value": "有效",
-      "detected_on": "2026-10-31"
+      "detected_on": "2026-11-01"
     },
     {
-      "law_id": "ff8081819ff54ab801a0427dc0735481",
-      "title": "遂宁市城市管理条例",
-      "change_type": "added",
-      "old_value": "",
+      "law_id": "ff8081819ff54ab801a0474b5def73e0",
+      "title": "青海省湿地保护条例",
+      "change_type": "status",
+      "old_value": "尚未生效",
       "new_value": "有效",
-      "detected_on": "2026-10-31"
+      "detected_on": "2026-11-01"
     },
     {
-      "law_id": "ff8081819ff54a6401a0428e4d130f47",
-      "title": "内江市石窟石刻保护条例",
-      "change_type": "added",
-      "old_value": "",
+      "law_id": "ff8081819ff54a6401a036a0f3ec373e",
+      "title": "宁夏回族自治区民营经济促进条例",
+      "change_type": "status",
+      "old_value": "尚未生效",
       "new_value": "有效",
-      "detected_on": "2026-10-31"
+      "detected_on": "2026-11-01"
     },
     {
-      "law_id": "ff80818199e72c4f019a006e604a48c9",
-      "title": "伊春市废弃食用菌包污染环境防治条例",
+      "law_id": "ff8081819ff54a6401a0137129f7156e",
+      "title": "吉林省历史文化名城名镇名村保护条例",
+      "change_type": "status",
+      "old_value": "尚未生效",
+      "new_value": "有效",
+      "detected_on": "2026-11-01"
+    },
+    {
+      "law_id": "ff8081819ff54ab801a0136bf4e47fb3",
+      "title": "吉林省湿地保护条例",
+      "change_type": "status",
+      "old_value": "尚未生效",
+      "new_value": "有效",
+      "detected_on": "2026-11-01"
+    },
+    {
+      "law_id": "ff8081819ff54ab8019fff2bd2e3309d",
+      "title": "重庆市野生动物保护规定",
+      "change_type": "status",
+      "old_value": "尚未生效",
+      "new_value": "有效",
+      "detected_on": "2026-11-01"
+    },
+    {
+      "law_id": "ff8081819ff54a6401a03d118355652b",
+      "title": "四川省涉及国家安全事项的建设项目管理条例",
+      "change_type": "status",
+      "old_value": "尚未生效",
+      "new_value": "有效",
+      "detected_on": "2026-11-01"
+    },
+    {
+      "law_id": "ff8081819ff541ea01a0428620e46154",
+      "title": "福建省拥军优属条例",
+      "change_type": "status",
+      "old_value": "尚未生效",
+      "new_value": "有效",
+      "detected_on": "2026-11-01"
+    },
+    {
+      "law_id": "ff8081819ff541ea019ff8d9f5a10ed0",
+      "title": "唐山市出租汽车管理条例",
+      "change_type": "status",
+      "old_value": "尚未生效",
+      "new_value": "有效",
+      "detected_on": "2026-11-01"
+    },
+    {
+      "law_id": "ff8081819e48b44c019f1159b8d31b60",
+      "title": "衡阳市养犬管理若干规定",
+      "change_type": "status",
+      "old_value": "尚未生效",
+      "new_value": "有效",
+      "detected_on": "2026-11-01"
+    },
+    {
+      "law_id": "ff8081819e48b493019eee6abf4f5e41",
+      "title": "常州市居民住宅区消防安全条例",
+      "change_type": "status",
+      "old_value": "尚未生效",
+      "new_value": "有效",
+      "detected_on": "2026-11-01"
+    },
+    {
+      "law_id": "fb60d09eadb5483aa6e933e478b15a71",
+      "title": "中华人民共和国监狱法",
+      "change_type": "status",
+      "old_value": "尚未生效",
+      "new_value": "有效",
+      "detected_on": "2026-11-01"
+    },
+    {
+      "law_id": "ff8081819bdff392019be9b8ab764ee3",
+      "title": "鸡西市煤矸石污染环境防治和综合利用条例",
       "change_type": "status",
       "old_value": "有效",
       "new_value": "已修改",
-      "detected_on": "2026-10-31"
+      "detected_on": "2026-11-01"
     },
     {
-      "law_id": "ff8081819150458d01915a1b4b111374",
-      "title": "贵阳市农村生活垃圾治理条例",
+      "law_id": "ff8081818364da140183d3fc81445c64",
+      "title": "鸡西市文明祭祀条例",
       "change_type": "status",
       "old_value": "有效",
       "new_value": "已修改",
-      "detected_on": "2026-10-31"
+      "detected_on": "2026-11-01"
     },
     {
-      "law_id": "ff80818191d616940191def24dd41c1c",
-      "title": "乐山市畜禽水产养殖污染防治条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-10-31"
-    },
-    {
-      "law_id": "ff8081818ba42296018ba778c2fc09ef",
-      "title": "遂宁市集中式饮用水水源保护条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-10-31"
-    },
-    {
-      "law_id": "ff8081818a22132f018a929bed7036b5",
-      "title": "毕节市餐厨垃圾管理条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-10-31"
-    },
-    {
-      "law_id": "ff80818186266c7a01862fe456333c79",
-      "title": "毕节市韭菜坪景区保护条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-10-31"
-    },
-    {
-      "law_id": "ff80818186266fdc01862ff466a93095",
-      "title": "毕节市人大常委会关于加强韭菜坪景区共同保护的决定",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-10-31"
-    },
-    {
-      "law_id": "ff808181844230ec01855cd209a3673d",
-      "title": "达州市市容和环境卫生管理条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-10-31"
-    },
-    {
-      "law_id": "ff808181842c261c01855cda246c78f5",
-      "title": "乐山市三江岸线保护条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-10-31"
-    },
-    {
-      "law_id": "ff808181844230ec01848aa8b69d78be",
-      "title": "贵阳市城镇生活垃圾分类管理条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-10-31"
-    },
-    {
-      "law_id": "ff8081818364da140183b6cabaa25c40",
-      "title": "毕节市乡村环境卫生管理条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-10-31"
-    },
-    {
-      "law_id": "ff8081817e5815dc017e8f19396d0826",
-      "title": "乐山市城市管理条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-10-31"
-    },
-    {
-      "law_id": "ff8081817e008c43017e0523266f0bda",
-      "title": "四平市河道管理条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-10-31"
-    },
-    {
-      "law_id": "ff8081818364d9f60183c9d4c56571a3",
-      "title": "贵阳市建设生态文明城市条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-10-31"
-    },
-    {
-      "law_id": "ff8081818364d9f60183c9d42ac6718c",
-      "title": "贵阳市大气污染防治办法",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-10-31"
-    },
-    {
-      "law_id": "ff8081818364da140183c9d16bdf7995",
-      "title": "贵阳市城市市容和环境卫生管理办法",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-10-31"
-    },
-    {
-      "law_id": "ff8081818364d9030183c9d115227639",
-      "title": "贵阳市城市节约用水管理条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-10-31"
-    },
-    {
-      "law_id": "ff8081817c635ffe017c7396483f728c",
-      "title": "毕节市文明行为促进条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-10-31"
-    },
-    {
-      "law_id": "ff808081752b7d430176184f464843e0",
-      "title": "伊春市城市绿化条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-10-31"
-    },
-    {
-      "law_id": "ff808081752b7d43017563ea4e292fbc",
-      "title": "乐山市扬尘污染防治条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-10-31"
-    },
-    {
-      "law_id": "ff80808177e75f8801783f2ce10d55e4",
-      "title": "毕节市城市园林绿化条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-10-31"
-    },
-    {
-      "law_id": "ff8080817486163e01748f94d8dd0653",
-      "title": "达州市莲花湖湿地保护条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-10-31"
-    },
-    {
-      "law_id": "ff8080816fbc57c10170853269841095",
-      "title": "四平市市区饮用水水源地保护条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-10-31"
-    },
-    {
-      "law_id": "ff8080816fbc57c1016fd06af866254c",
-      "title": "峨眉山世界文化和自然遗产保护条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-10-31"
-    },
-    {
-      "law_id": "ff8080816fbc57c1016fcc05cfa61d2c",
-      "title": "乐山大佛世界文化和自然遗产保护条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-10-31"
-    },
-    {
-      "law_id": "ff8080816e5f2a0a016e62b5f620181d",
-      "title": "毕节市织金古城保护条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-10-31"
-    },
-    {
-      "law_id": "2c90e5ba6a291d8f016d1415a940582f",
-      "title": "贵阳市青岩古镇保护条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-10-31"
-    },
-    {
-      "law_id": "ff8080816eb1afb8016ec0c2973d0eaa",
-      "title": "贵阳市公园和绿化广场管理办法",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-10-31"
-    },
-    {
-      "law_id": "ff8080816eb1afb8016ec0c7982d1047",
-      "title": "贵阳市环城林带建设保护办法",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-10-31"
-    },
-    {
-      "law_id": "2c90e5b96c128b4c016d13c4152f22c9",
-      "title": "毕节市饮用水水源保护条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-10-31"
-    },
-    {
-      "law_id": "2c90e5bb65c68cfd0167ee74b7904a0b",
-      "title": "乐山市集中式饮用水水源保护管理条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-10-31"
-    },
-    {
-      "law_id": "2c90e5b965c6ae1301673077c8df1627",
-      "title": "毕节市百里杜鹃风景名胜区条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-10-31"
-    },
-    {
-      "law_id": "2c90e5bb6200722a0164b556808e0558",
-      "title": "黑龙江茅兰沟国家级自然保护区管理条例",
+      "law_id": "ff80808177e75f880178c555f2757976",
+      "title": "宁夏回族自治区环境教育条例",
       "change_type": "status",
       "old_value": "有效",
       "new_value": "已废止",
-      "detected_on": "2026-10-31"
+      "detected_on": "2026-11-01"
     },
     {
-      "law_id": "2c90e5bb6200722a0163397f821d421e",
-      "title": "遂宁市城市管理条例",
+      "law_id": "ff808081736ba742017410806b455e74",
+      "title": "青海省湿地保护条例",
       "change_type": "status",
       "old_value": "有效",
       "new_value": "已修改",
-      "detected_on": "2026-10-31"
+      "detected_on": "2026-11-01"
     },
     {
-      "law_id": "4028abcc612777930161282ac4cc6db7",
-      "title": "乐山市中心城区绿心保护条例",
+      "law_id": "ff8080816fbc57c10170a890f4fa42cb",
+      "title": "深圳经济特区中小企业发展促进条例",
       "change_type": "status",
       "old_value": "有效",
       "new_value": "已修改",
-      "detected_on": "2026-10-31"
+      "detected_on": "2026-11-01"
+    },
+    {
+      "law_id": "ff808081736ba7420173f0c10180405b",
+      "title": "重庆市野生动物保护规定",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-11-01"
+    },
+    {
+      "law_id": "ff808081736ba742017434ae21587ce4",
+      "title": "陕西省古树名木保护条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-11-01"
+    },
+    {
+      "law_id": "ff8080816eb1afb8016eb66c83b44668",
+      "title": "宁夏回族自治区环境教育条例",
+      "change_type": "status",
+      "old_value": "已修改",
+      "new_value": "已废止",
+      "detected_on": "2026-11-01"
+    },
+    {
+      "law_id": "2c90e5ba65c68cf70167ee8d5ca44b72",
+      "title": "甘肃省实施《中华人民共和国野生动物保护法》办法",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-11-01"
+    },
+    {
+      "law_id": "2c90e5bb65c68cfd0167c569b4582fe4",
+      "title": "福建省拥军优属条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-11-01"
+    },
+    {
+      "law_id": "4028abcc612777930161288e16184470",
+      "title": "云南省安全生产条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-11-01"
+    },
+    {
+      "law_id": "2c90e5b9617a3e49016183a1861d0096",
+      "title": "吉林省湿地保护条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-11-01"
+    },
+    {
+      "law_id": "4028abcc61277793016127d8c04717aa",
+      "title": "天津市实施《中华人民共和国突发事件应对法》办法",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已废止",
+      "detected_on": "2026-11-01"
+    },
+    {
+      "law_id": "4028abcc61277793016127f2da0e32be",
+      "title": "内蒙古自治区科学技术进步条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-11-01"
+    },
+    {
+      "law_id": "2c909fdd678bf17901678bf745870677",
+      "title": "中华人民共和国监狱法",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-11-01"
+    },
+    {
+      "law_id": "4028abcc61277793016128032d1344d5",
+      "title": "重庆市突发事件应对条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-11-01"
+    },
+    {
+      "law_id": "2c90e5ba6200715a01638ffe27f251d9",
+      "title": "宁夏回族自治区环境教育条例",
+      "change_type": "status",
+      "old_value": "已修改",
+      "new_value": "已废止",
+      "detected_on": "2026-11-01"
+    },
+    {
+      "law_id": "4028abcc6127779301612846b2dd05ce",
+      "title": "内蒙古自治区文物保护条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-11-01"
+    },
+    {
+      "law_id": "4028abcc61277793016127e185442073",
+      "title": "吉林省财政监督条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已废止",
+      "detected_on": "2026-11-01"
+    },
+    {
+      "law_id": "2c90e5bb6200722a01638fea6eec5158",
+      "title": "宁夏回族自治区科学技术普及条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-11-01"
+    },
+    {
+      "law_id": "4028abcc61277793016127fb80f43c70",
+      "title": "河北省法制宣传教育条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已废止",
+      "detected_on": "2026-11-01"
+    },
+    {
+      "law_id": "4028abcc61277793016128144bd654ea",
+      "title": "包头市气象灾害防御条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-11-01"
+    },
+    {
+      "law_id": "4028abcc612777930161287e77f43901",
+      "title": "湖南省实施《中华人民共和国全国人民代表大会和地方各级人民代表大会代表法》办法",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-11-01"
+    },
+    {
+      "law_id": "4028abcc6127779301612823c3fa65e8",
+      "title": "四川省涉外建设项目国家安全事项管理条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已废止",
+      "detected_on": "2026-11-01"
+    },
+    {
+      "law_id": "4028abcc612777930161286eb11b2ce5",
+      "title": "甘肃省文物保护条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-11-01"
+    },
+    {
+      "law_id": "4028abcc612777930161286377932281",
+      "title": "甘肃省法制宣传教育条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已废止",
+      "detected_on": "2026-11-01"
+    },
+    {
+      "law_id": "1b1da19a1b11dd84c19c07ac9913afb1",
+      "title": "中华人民共和国船舶及其有关作业活动污染海洋环境防治管理规定",
+      "change_type": "status",
+      "old_value": "尚未生效",
+      "new_value": "有效",
+      "detected_on": "2026-11-01"
     }
   ]
 }
