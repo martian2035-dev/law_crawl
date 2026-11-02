@@ -1,11 +1,11 @@
 {
-  "snapshot_date": "2026-11-02",
-  "laws": 32004,
-  "listed": 31995,
-  "with_content": 27181,
+  "snapshot_date": "2026-11-03",
+  "laws": 32024,
+  "listed": 32015,
+  "with_content": 27201,
   "unreadable": 4794,
   "by_source": {
-    "flk": 31191,
+    "flk": 31211,
     "mee": 71,
     "mem": 76,
     "mohurd": 88,
@@ -14,262 +14,6 @@
     "samr": 251
   },
   "recent_changes": [
-    {
-      "law_id": "ff808181a144173201a15358702937c1",
-      "title": "河北省法治宣传教育条例",
-      "change_type": "status",
-      "old_value": "尚未生效",
-      "new_value": "有效",
-      "detected_on": "2026-11-01"
-    },
-    {
-      "law_id": "ff8081819ff54a6401a11976225d172b",
-      "title": "湖南省实施《中华人民共和国全国人民代表大会和地方各级人民代表大会代表法》办法",
-      "change_type": "status",
-      "old_value": "尚未生效",
-      "new_value": "有效",
-      "detected_on": "2026-11-01"
-    },
-    {
-      "law_id": "ff8081819ff54a6401a118e651b20e1b",
-      "title": "包头市气象灾害防御条例",
-      "change_type": "status",
-      "old_value": "尚未生效",
-      "new_value": "有效",
-      "detected_on": "2026-11-01"
-    },
-    {
-      "law_id": "ff8081819ff54ab801a118ede9977f3b",
-      "title": "通辽市肉牛种源管理条例",
-      "change_type": "status",
-      "old_value": "尚未生效",
-      "new_value": "有效",
-      "detected_on": "2026-11-01"
-    },
-    {
-      "law_id": "ff8081819ff54ab801a12df3eefc522f",
-      "title": "曲靖市红色资源保护利用条例",
-      "change_type": "status",
-      "old_value": "尚未生效",
-      "new_value": "有效",
-      "detected_on": "2026-11-01"
-    },
-    {
-      "law_id": "ff8081819ff54ab801a10f05daaf751e",
-      "title": "内蒙古自治区科学技术进步条例",
-      "change_type": "status",
-      "old_value": "尚未生效",
-      "new_value": "有效",
-      "detected_on": "2026-11-01"
-    },
-    {
-      "law_id": "ff808181a0bc9b0a01a10f091ab370e6",
-      "title": "内蒙古自治区文物保护条例",
-      "change_type": "status",
-      "old_value": "尚未生效",
-      "new_value": "有效",
-      "detected_on": "2026-11-01"
-    },
-    {
-      "law_id": "ff8081819ff54ab801a12ded273151b4",
-      "title": "云南省安全生产条例",
-      "change_type": "status",
-      "old_value": "尚未生效",
-      "new_value": "有效",
-      "detected_on": "2026-11-01"
-    },
-    {
-      "law_id": "ff808181a0bc9b0a01a12de6e2504bce",
-      "title": "云南省铁路安全管理条例",
-      "change_type": "status",
-      "old_value": "尚未生效",
-      "new_value": "有效",
-      "detected_on": "2026-11-01"
-    },
-    {
-      "law_id": "ff8081819ff54a6401a0c354b24425ba",
-      "title": "深圳经济特区中小企业发展促进条例",
-      "change_type": "status",
-      "old_value": "尚未生效",
-      "new_value": "有效",
-      "detected_on": "2026-11-01"
-    },
-    {
-      "law_id": "ff8081819ff54ab801a08dfad9c2608b",
-      "title": "黄石市停车场建设管理条例",
-      "change_type": "status",
-      "old_value": "尚未生效",
-      "new_value": "有效",
-      "detected_on": "2026-11-01"
-    },
-    {
-      "law_id": "ff8081819ff541ea01a036de4f85256b",
-      "title": "石嘴山市文明祭祀条例",
-      "change_type": "status",
-      "old_value": "尚未生效",
-      "new_value": "有效",
-      "detected_on": "2026-11-01"
-    },
-    {
-      "law_id": "ff8081819ff54ab801a0474b5def73e0",
-      "title": "青海省湿地保护条例",
-      "change_type": "status",
-      "old_value": "尚未生效",
-      "new_value": "有效",
-      "detected_on": "2026-11-01"
-    },
-    {
-      "law_id": "ff8081819ff54a6401a036a0f3ec373e",
-      "title": "宁夏回族自治区民营经济促进条例",
-      "change_type": "status",
-      "old_value": "尚未生效",
-      "new_value": "有效",
-      "detected_on": "2026-11-01"
-    },
-    {
-      "law_id": "ff8081819ff54a6401a0137129f7156e",
-      "title": "吉林省历史文化名城名镇名村保护条例",
-      "change_type": "status",
-      "old_value": "尚未生效",
-      "new_value": "有效",
-      "detected_on": "2026-11-01"
-    },
-    {
-      "law_id": "ff8081819ff54ab801a0136bf4e47fb3",
-      "title": "吉林省湿地保护条例",
-      "change_type": "status",
-      "old_value": "尚未生效",
-      "new_value": "有效",
-      "detected_on": "2026-11-01"
-    },
-    {
-      "law_id": "ff8081819ff54ab8019fff2bd2e3309d",
-      "title": "重庆市野生动物保护规定",
-      "change_type": "status",
-      "old_value": "尚未生效",
-      "new_value": "有效",
-      "detected_on": "2026-11-01"
-    },
-    {
-      "law_id": "ff8081819ff54a6401a03d118355652b",
-      "title": "四川省涉及国家安全事项的建设项目管理条例",
-      "change_type": "status",
-      "old_value": "尚未生效",
-      "new_value": "有效",
-      "detected_on": "2026-11-01"
-    },
-    {
-      "law_id": "ff8081819ff541ea01a0428620e46154",
-      "title": "福建省拥军优属条例",
-      "change_type": "status",
-      "old_value": "尚未生效",
-      "new_value": "有效",
-      "detected_on": "2026-11-01"
-    },
-    {
-      "law_id": "ff8081819ff541ea019ff8d9f5a10ed0",
-      "title": "唐山市出租汽车管理条例",
-      "change_type": "status",
-      "old_value": "尚未生效",
-      "new_value": "有效",
-      "detected_on": "2026-11-01"
-    },
-    {
-      "law_id": "ff8081819e48b44c019f1159b8d31b60",
-      "title": "衡阳市养犬管理若干规定",
-      "change_type": "status",
-      "old_value": "尚未生效",
-      "new_value": "有效",
-      "detected_on": "2026-11-01"
-    },
-    {
-      "law_id": "ff8081819e48b493019eee6abf4f5e41",
-      "title": "常州市居民住宅区消防安全条例",
-      "change_type": "status",
-      "old_value": "尚未生效",
-      "new_value": "有效",
-      "detected_on": "2026-11-01"
-    },
-    {
-      "law_id": "fb60d09eadb5483aa6e933e478b15a71",
-      "title": "中华人民共和国监狱法",
-      "change_type": "status",
-      "old_value": "尚未生效",
-      "new_value": "有效",
-      "detected_on": "2026-11-01"
-    },
-    {
-      "law_id": "ff8081819bdff392019be9b8ab764ee3",
-      "title": "鸡西市煤矸石污染环境防治和综合利用条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-11-01"
-    },
-    {
-      "law_id": "ff8081818364da140183d3fc81445c64",
-      "title": "鸡西市文明祭祀条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-11-01"
-    },
-    {
-      "law_id": "ff80808177e75f880178c555f2757976",
-      "title": "宁夏回族自治区环境教育条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已废止",
-      "detected_on": "2026-11-01"
-    },
-    {
-      "law_id": "ff808081736ba742017410806b455e74",
-      "title": "青海省湿地保护条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-11-01"
-    },
-    {
-      "law_id": "ff8080816fbc57c10170a890f4fa42cb",
-      "title": "深圳经济特区中小企业发展促进条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-11-01"
-    },
-    {
-      "law_id": "ff808081736ba7420173f0c10180405b",
-      "title": "重庆市野生动物保护规定",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-11-01"
-    },
-    {
-      "law_id": "ff808081736ba742017434ae21587ce4",
-      "title": "陕西省古树名木保护条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-11-01"
-    },
-    {
-      "law_id": "ff8080816eb1afb8016eb66c83b44668",
-      "title": "宁夏回族自治区环境教育条例",
-      "change_type": "status",
-      "old_value": "已修改",
-      "new_value": "已废止",
-      "detected_on": "2026-11-01"
-    },
-    {
-      "law_id": "2c90e5ba65c68cf70167ee8d5ca44b72",
-      "title": "甘肃省实施《中华人民共和国野生动物保护法》办法",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-11-01"
-    },
     {
       "law_id": "2c90e5bb65c68cfd0167c569b4582fe4",
       "title": "福建省拥军优属条例",
@@ -413,6 +157,262 @@
       "old_value": "尚未生效",
       "new_value": "有效",
       "detected_on": "2026-11-01"
+    },
+    {
+      "law_id": "ff808181a1440bbc01a166cc3dc12691",
+      "title": "德州市制定地方性法规条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-03"
+    },
+    {
+      "law_id": "4a00a7a38cdc42fd830c468e53e4acf7",
+      "title": "德州市人民代表大会常务委员会关于修改《德州市制定地方性法规条例》的决定",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "",
+      "detected_on": "2026-11-03"
+    },
+    {
+      "law_id": "ff808181a144173201a166ba7a034d7a",
+      "title": "泰安市历史文化名城名镇名村保护条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "尚未生效",
+      "detected_on": "2026-11-03"
+    },
+    {
+      "law_id": "ff808181a1440cda01a166799da5242d",
+      "title": "烟台市电梯安全条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "尚未生效",
+      "detected_on": "2026-11-03"
+    },
+    {
+      "law_id": "ff808181a1440bbc01a166d5f82226f8",
+      "title": "滨州市渤海老区革命遗址遗迹保护条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "尚未生效",
+      "detected_on": "2026-11-03"
+    },
+    {
+      "law_id": "ff808181a144173201a166d13c674ed4",
+      "title": "滨州市科技创新促进条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "尚未生效",
+      "detected_on": "2026-11-03"
+    },
+    {
+      "law_id": "ff808181a144173201a166bef18f4dc4",
+      "title": "威海市传统村落保护传承利用条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-03"
+    },
+    {
+      "law_id": "8819b76f79d24324bc39edef20255de9",
+      "title": "滨州市人民代表大会常务委员关于修改《滨州市渤海老区革命遗址遗迹保护条例》的决定",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "",
+      "detected_on": "2026-11-03"
+    },
+    {
+      "law_id": "ff808181a1440cda01a15dd22ec57a55",
+      "title": "陕西省风景名胜区管理条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-03"
+    },
+    {
+      "law_id": "ff808181a144173201a15dd2748c10ac",
+      "title": "陕西省生活垃圾分类管理条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-03"
+    },
+    {
+      "law_id": "ff808181a1440bbc01a15dd24707778d",
+      "title": "陕西省华山风景名胜区条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-03"
+    },
+    {
+      "law_id": "ff808181a1440bbc01a15dd2041f778a",
+      "title": "陕西省地下水条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-03"
+    },
+    {
+      "law_id": "ff808181a1440cda01a15dd28c7c7a6e",
+      "title": "陕西省渭河保护条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-03"
+    },
+    {
+      "law_id": "ff8081819ff54ab801a037cc43d32434",
+      "title": "银川市餐厨垃圾管理条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-03"
+    },
+    {
+      "law_id": "ff8081819ff54a6401a0424d77620cac",
+      "title": "德阳市华强沟水库饮用水水源保护条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-03"
+    },
+    {
+      "law_id": "ff808181a0bc9b0a01a13e79250e3a48",
+      "title": "德阳市大气污染防治条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-03"
+    },
+    {
+      "law_id": "ff8081819ff541ea01a023f9545c68a4",
+      "title": "泰安市生活垃圾分类管理条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-03"
+    },
+    {
+      "law_id": "ff8081819ff54a6401a023f854047d3b",
+      "title": "泰安市大气污染防治条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-03"
+    },
+    {
+      "law_id": "ff8081819ff54a6401a023fa1be77d4b",
+      "title": "泰安市文明行为促进条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-03"
+    },
+    {
+      "law_id": "21963605fea4441d8c3b889da1806a77",
+      "title": "泰安市人民代表大会常务委员会关于修改《泰安市文明行为促进条例》《泰安市生活垃圾分类管理条例》《泰安市大气污染防治条例》的决定",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "",
+      "detected_on": "2026-11-03"
+    },
+    {
+      "law_id": "ff808181971b83ab01975e85d812082b",
+      "title": "陕西省生活垃圾分类管理条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-11-03"
+    },
+    {
+      "law_id": "ff808181927f0e7b0192d732e58d630f",
+      "title": "银川市餐厨垃圾管理条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-11-03"
+    },
+    {
+      "law_id": "ff8081818e750aac018eb66a4e0247b8",
+      "title": "陕西省地下水条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-11-03"
+    },
+    {
+      "law_id": "ff808181927f12760194ed8514e84411",
+      "title": "泰安市大气污染防治条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-11-03"
+    },
+    {
+      "law_id": "ff80818186024e9601860b62c9d92e19",
+      "title": "陕西省渭河保护条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-11-03"
+    },
+    {
+      "law_id": "ff8081818364d9f601837cac7d94328e",
+      "title": "德阳市大气污染防治条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-11-03"
+    },
+    {
+      "law_id": "ff8081817e581772017e8f1efb032023",
+      "title": "德阳市华强沟水库饮用水水源保护条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-11-03"
+    },
+    {
+      "law_id": "ff808081736bb19d01742eb1ccc1792c",
+      "title": "泰安市生活垃圾分类管理条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-11-03"
+    },
+    {
+      "law_id": "ff8080816fbc57c10170373da7064fc0",
+      "title": "泰安市文明行为促进条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-11-03"
+    },
+    {
+      "law_id": "4028abcc6127779301612824df9e6730",
+      "title": "德州市制定地方性法规条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-11-03"
+    },
+    {
+      "law_id": "4028abcc61277793016127c7f9ee08d8",
+      "title": "陕西省华山风景名胜区条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-11-03"
+    },
+    {
+      "law_id": "4028abcc612777930161284c552b0b1f",
+      "title": "陕西省风景名胜区管理条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-11-03"
     }
   ]
 }
