@@ -1,8 +1,8 @@
 {
-  "snapshot_date": "2026-11-04",
-  "laws": 32051,
-  "listed": 32041,
-  "with_content": 27228,
+  "snapshot_date": "2026-11-05",
+  "laws": 32052,
+  "listed": 32040,
+  "with_content": 27229,
   "unreadable": 4794,
   "by_source": {
     "flk": 31238,
@@ -11,41 +11,9 @@
     "mohurd": 88,
     "mot": 261,
     "nea": 66,
-    "samr": 251
+    "samr": 252
   },
   "recent_changes": [
-    {
-      "law_id": "ff8081818364d9f601837cac7d94328e",
-      "title": "德阳市大气污染防治条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-11-03"
-    },
-    {
-      "law_id": "ff8081817e581772017e8f1efb032023",
-      "title": "德阳市华强沟水库饮用水水源保护条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-11-03"
-    },
-    {
-      "law_id": "ff808081736bb19d01742eb1ccc1792c",
-      "title": "泰安市生活垃圾分类管理条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-11-03"
-    },
-    {
-      "law_id": "ff8080816fbc57c10170373da7064fc0",
-      "title": "泰安市文明行为促进条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-11-03"
-    },
     {
       "law_id": "4028abcc6127779301612824df9e6730",
       "title": "德州市制定地方性法规条例",
@@ -413,6 +381,38 @@
       "old_value": "有效",
       "new_value": "",
       "detected_on": "2026-11-04"
+    },
+    {
+      "law_id": "ff8081819ff54ab801a0c358f7ca2280",
+      "title": "深圳经济特区红树林湿地保护若干规定",
+      "change_type": "status",
+      "old_value": "尚未生效",
+      "new_value": "有效",
+      "detected_on": "2026-11-05"
+    },
+    {
+      "law_id": "ff8081819ff54a6401a022381c7c67d4",
+      "title": "崇左市养犬管理规定",
+      "change_type": "removed",
+      "old_value": "尚未生效",
+      "new_value": "",
+      "detected_on": "2026-11-05"
+    },
+    {
+      "law_id": "cc816352519d62ca29b8e0e5f546bb10",
+      "title": "市场监督管理行政处罚裁量规定",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "尚未生效",
+      "detected_on": "2026-11-05"
+    },
+    {
+      "law_id": "b0029721864b7cf4fe3504628aa23163",
+      "title": "家用汽车产品修理更换退货责任规定",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-05"
     }
   ]
 }
