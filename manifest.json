@@ -1,418 +1,418 @@
 {
-  "snapshot_date": "2026-11-06",
-  "laws": 32052,
-  "listed": 32040,
-  "with_content": 27229,
-  "unreadable": 4794,
+  "snapshot_date": "2026-11-07",
+  "laws": 32061,
+  "listed": 31998,
+  "with_content": 27237,
+  "unreadable": 4795,
   "by_source": {
-    "flk": 31238,
+    "flk": 31246,
     "mee": 71,
     "mem": 76,
     "mohurd": 88,
     "mot": 261,
     "nea": 66,
-    "samr": 252
+    "samr": 253
   },
   "recent_changes": [
     {
-      "law_id": "4028abcc6127779301612824df9e6730",
-      "title": "德州市制定地方性法规条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-11-03"
-    },
-    {
-      "law_id": "4028abcc61277793016127c7f9ee08d8",
-      "title": "陕西省华山风景名胜区条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-11-03"
-    },
-    {
-      "law_id": "4028abcc612777930161284c552b0b1f",
-      "title": "陕西省风景名胜区管理条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-11-03"
-    },
-    {
-      "law_id": "ff808181a1440bbc01a16674cb6b220d",
-      "title": "淄博市矛盾纠纷预防化解条例",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "尚未生效",
-      "detected_on": "2026-11-04"
-    },
-    {
-      "law_id": "ff808181a1440cda01a166c2973027f0",
-      "title": "日照市两城镇遗址和尧王城遗址保护条例",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "尚未生效",
-      "detected_on": "2026-11-04"
-    },
-    {
-      "law_id": "ff808181a1440bbc01a166b6fad7256d",
-      "title": "济宁市历史文化名城名镇名村保护条例",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "尚未生效",
-      "detected_on": "2026-11-04"
-    },
-    {
-      "law_id": "ff808181a1440bbc01a1666f8c8321ca",
-      "title": "济南市单用途预付卡管理条例",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "尚未生效",
-      "detected_on": "2026-11-04"
-    },
-    {
-      "law_id": "ff808181a1440bbc01a166c5c73b263f",
-      "title": "临沂商城国际化促进条例",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "尚未生效",
-      "detected_on": "2026-11-04"
-    },
-    {
-      "law_id": "ff8081819ff54ab801a0477fdc287797",
-      "title": "巴中市城乡污水处理条例",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "有效",
-      "detected_on": "2026-11-04"
-    },
-    {
-      "law_id": "ff8081819ff54a6401a047817a3e3731",
-      "title": "巴中市烟花爆竹燃放管理条例",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "有效",
-      "detected_on": "2026-11-04"
-    },
-    {
-      "law_id": "ff8081819ff54a6401a04781b00a3735",
-      "title": "巴中市乡村清洁条例",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "有效",
-      "detected_on": "2026-11-04"
-    },
-    {
-      "law_id": "ff8081819ff54a6401a13ec712d16ca3",
-      "title": "巴中市城市饮用水水源保护条例",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "有效",
-      "detected_on": "2026-11-04"
-    },
-    {
-      "law_id": "ff8081819ff54a6401a0478162833729",
-      "title": "巴中市扬尘污染防治条例",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "有效",
-      "detected_on": "2026-11-04"
-    },
-    {
-      "law_id": "97af5c707dc242599b9621c7d744683d",
-      "title": "巴中市人民代表大会常务委员会关于修改《巴中市城市饮用水水源保护条例》等六件地方性法规的决定",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "",
-      "detected_on": "2026-11-04"
-    },
-    {
-      "law_id": "ff8081819ff54ab801a0424d76ff5257",
-      "title": "德阳市城市管理条例",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "有效",
-      "detected_on": "2026-11-04"
-    },
-    {
-      "law_id": "ff8081819ff54ab801a13e93f9f743a4",
-      "title": "德阳市文明行为促进条例",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "有效",
-      "detected_on": "2026-11-04"
-    },
-    {
-      "law_id": "8eec2af6f356427d953eb606c581f4b5",
-      "title": "德阳市人民代表大会常务委员会关于修改《德阳市城市管理条例》等四件地方性法规的决定",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "",
-      "detected_on": "2026-11-04"
-    },
-    {
-      "law_id": "ff8081819ff541ea01a0473a7d3e7d2b",
-      "title": "南充市城镇环境卫生管理条例",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "有效",
-      "detected_on": "2026-11-04"
-    },
-    {
-      "law_id": "d32af1e570e341d8b414c0a8ef9d0f9a",
-      "title": "南充市人民代表大会常务委员会关于修改《南充市城镇环境卫生管理条例》等五件地方性法规的决定",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "",
-      "detected_on": "2026-11-04"
-    },
-    {
-      "law_id": "ff8081819ff541ea01a0475ceedf03aa",
-      "title": "广安市电动自行车管理条例",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "尚未生效",
-      "detected_on": "2026-11-04"
-    },
-    {
-      "law_id": "ff8081819ff54ab801a0478cf3c5794a",
-      "title": "资阳市大气污染防治条例",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "有效",
-      "detected_on": "2026-11-04"
-    },
-    {
-      "law_id": "ff8081819ff541ea01a0478d896e075c",
-      "title": "资阳市中心城区山体保护条例",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "有效",
-      "detected_on": "2026-11-04"
-    },
-    {
-      "law_id": "ff8081819ff54ab801a0478d6ce77976",
-      "title": "资阳市文明行为促进条例",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "有效",
-      "detected_on": "2026-11-04"
-    },
-    {
-      "law_id": "ff8081819ff54a6401a0478d4b1a3875",
-      "title": "资阳市中心城区市容和环境卫生管理条例",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "有效",
-      "detected_on": "2026-11-04"
-    },
-    {
-      "law_id": "ff8081819ff54ab801a0478d269c7958",
-      "title": "资阳市城区建筑垃圾管理条例",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "有效",
-      "detected_on": "2026-11-04"
-    },
-    {
-      "law_id": "024b0ecc9db04925b749ee39e424fbd1",
-      "title": "资阳市人民代表大会常务委员会关于修改《资阳市大气污染防治条例》等五件地方性法规的决定",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "",
-      "detected_on": "2026-11-04"
-    },
-    {
-      "law_id": "ff8081819ff54ab801a13e6675b93f94",
-      "title": "广元市城市市容和环境卫生管理条例",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "有效",
-      "detected_on": "2026-11-04"
-    },
-    {
-      "law_id": "ff8081819ff54a6401a13e6aa760650e",
-      "title": "广元市饮用水水源地保护条例",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "有效",
-      "detected_on": "2026-11-04"
-    },
-    {
-      "law_id": "bc6d39a68093481f9ebe62dd59f31a78",
-      "title": "广元市人民代表大会常务委员会关于修改《广元市白龙湖亭子湖保护条例》等四件地方性法规的决定",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "",
-      "detected_on": "2026-11-04"
-    },
-    {
-      "law_id": "ff8081819e48b493019ed9f4f7db2bbd",
-      "title": "凉山彝族自治州邛海保护条例",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "有效",
-      "detected_on": "2026-11-04"
-    },
-    {
-      "law_id": "ff80818191d62db00191def7eaec1d47",
-      "title": "南充市城镇环境卫生管理条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-11-04"
-    },
-    {
-      "law_id": "ff8081818c24da9e018ca570e2696f85",
-      "title": "资阳市城区建筑垃圾管理条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-11-04"
-    },
-    {
-      "law_id": "ff8081818c24df58018ca566df3c5698",
-      "title": "巴中市乡村清洁条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-11-04"
-    },
-    {
-      "law_id": "ff8081817e5815dc017e8f16694c07fd",
-      "title": "巴中市烟花爆竹燃放管理条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-11-04"
-    },
-    {
-      "law_id": "ff8081817dc68c03017ddac2dd321f11",
-      "title": "资阳市大气污染防治条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-11-04"
-    },
-    {
-      "law_id": "ff8081817a6bd5c4017a75b4916009a6",
-      "title": "资阳市中心城区山体保护条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-11-04"
-    },
-    {
-      "law_id": "ff80808175265dd401769282066913a8",
-      "title": "资阳市文明行为促进条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-11-04"
-    },
-    {
-      "law_id": "ff808081752b7d43017563e41eef2f9b",
-      "title": "巴中市扬尘污染防治条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-11-04"
-    },
-    {
-      "law_id": "ff80808174861d110174911cb9930a4d",
-      "title": "巴中市城市饮用水水源保护条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-11-04"
-    },
-    {
-      "law_id": "ff8080817486163e01748fd1160c06f2",
-      "title": "德阳市文明行为促进条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-11-04"
-    },
-    {
-      "law_id": "ff808081713927d10171b57449e614e9",
-      "title": "资阳市中心城区市容和环境卫生管理条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-11-04"
-    },
-    {
-      "law_id": "ff8080816fbc57c1016fcc2fc38f1dc4",
-      "title": "广元市城市市容和环境卫生管理条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-11-04"
-    },
-    {
-      "law_id": "ff8080816fbc57c1016fd0ce6dc42689",
-      "title": "巴中市城乡污水处理条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-11-04"
-    },
-    {
-      "law_id": "2c90e5bb6a291f86016a293c9ae20019",
-      "title": "广元市饮用水水源地保护条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-11-04"
-    },
-    {
-      "law_id": "2c90e5bb6200722a0163399010104236",
-      "title": "德阳市城市管理条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-11-04"
-    },
-    {
-      "law_id": "06f0b316c4c8a3f1a4e609d66b21720d",
-      "title": "中华人民共和国船舶及其有关作业活动污染海洋环境防治管理规定",
+      "law_id": "c6f51fca69b61c2030b0335390c281e5",
+      "title": "集中用餐单位落实食品安全主体责任监督管理规定",
       "change_type": "removed",
       "old_value": "有效",
       "new_value": "",
-      "detected_on": "2026-11-04"
+      "detected_on": "2026-11-07"
     },
     {
-      "law_id": "ff8081819ff54ab801a0c358f7ca2280",
-      "title": "深圳经济特区红树林湿地保护若干规定",
-      "change_type": "status",
-      "old_value": "尚未生效",
-      "new_value": "有效",
-      "detected_on": "2026-11-05"
-    },
-    {
-      "law_id": "ff8081819ff54a6401a022381c7c67d4",
-      "title": "崇左市养犬管理规定",
-      "change_type": "removed",
-      "old_value": "尚未生效",
-      "new_value": "",
-      "detected_on": "2026-11-05"
-    },
-    {
-      "law_id": "cc816352519d62ca29b8e0e5f546bb10",
-      "title": "市场监督管理行政处罚裁量规定",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "尚未生效",
-      "detected_on": "2026-11-05"
-    },
-    {
-      "law_id": "b0029721864b7cf4fe3504628aa23163",
-      "title": "家用汽车产品修理更换退货责任规定",
+      "law_id": "cbe7105157916f2963c0d8426983636b",
+      "title": "国家市场监督管理总局关于修改《企业落实食品安全主体责任监督管理规定》的决定",
       "change_type": "removed",
       "old_value": "有效",
       "new_value": "",
-      "detected_on": "2026-11-05"
+      "detected_on": "2026-11-07"
+    },
+    {
+      "law_id": "0c17d741fbea9d05cbd678bc2595c786",
+      "title": "公平竞争审查条例实施办法",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-07"
+    },
+    {
+      "law_id": "86b95287112bfa61d7e8d56f71f67af2",
+      "title": "经营主体登记档案管理办法",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-07"
+    },
+    {
+      "law_id": "0ddea8fbb2d4afc2365879680e243440",
+      "title": "公司登记管理实施办法",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-07"
+    },
+    {
+      "law_id": "909354233e97167330d9653b086f7782",
+      "title": "专业计量站管理办法",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-07"
+    },
+    {
+      "law_id": "93058609f0096c507368d7fbf587b477",
+      "title": "法定计量检定机构监督管理办法",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-07"
+    },
+    {
+      "law_id": "6a4753453467d46dd1c8d4aacda51e74",
+      "title": "网络反不正当竞争暂行规定",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-07"
+    },
+    {
+      "law_id": "ed09f090e230cafc301c15fa1c26308b",
+      "title": "非法定计量单位限制使用管理办法",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-07"
+    },
+    {
+      "law_id": "d69d0efc6c33c54362c9c821ebc3d67b",
+      "title": "国家计量技术规范管理办法",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-07"
+    },
+    {
+      "law_id": "e9711fd9aeb7b1d3bd3171ce59298e40",
+      "title": "农业农村标准化管理办法",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-07"
+    },
+    {
+      "law_id": "55cc1bdbe1782c38440638a423d90a5a",
+      "title": "防范和查处假冒企业登记违法行为规定",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-07"
+    },
+    {
+      "law_id": "0c18dca8a7f26e623a06b0c5e1c5195a",
+      "title": "行业标准管理办法",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-07"
+    },
+    {
+      "law_id": "a9c59ef511b47348b49210c1bd144a4b",
+      "title": "特殊医学用途配方食品注册管理办法",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-07"
+    },
+    {
+      "law_id": "53dafbe62c39e7ecc800fe2a10b0fcbd",
+      "title": "药品经营和使用质量监督管理办法",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-07"
+    },
+    {
+      "law_id": "b12e36a5e69edc3fa501533e65ba375f",
+      "title": "企业标准化促进办法",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-07"
+    },
+    {
+      "law_id": "95880025a191c15f92866999ef8b892c",
+      "title": "企业名称登记管理规定实施办法",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-07"
+    },
+    {
+      "law_id": "71733fc18c3a30b8e157cea73209d3d7",
+      "title": "食用农产品市场销售质量安全监督管理办法",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-07"
+    },
+    {
+      "law_id": "8a533561174b325b7865ff547b27bfae",
+      "title": "食品经营许可和备案管理办法",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-07"
+    },
+    {
+      "law_id": "db55b0ad5f5d4e6355f13ced878b96d9",
+      "title": "禁止滥用知识产权排除、限制竞争行为规定",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-07"
+    },
+    {
+      "law_id": "e1ea11471613e588c50f69ed62770c8f",
+      "title": "工业产品销售单位落实质量安全主体责任监督管理规定",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-07"
+    },
+    {
+      "law_id": "f6e7bce6bd6233bdb23b58b697e0f361",
+      "title": "工业产品生产单位落实质量安全主体责任监督管理规定",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-07"
+    },
+    {
+      "law_id": "578293da6b80abb4776578a1e7f7df9c",
+      "title": "特种设备使用单位落实使用安全主体责任监督管理规定",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-07"
+    },
+    {
+      "law_id": "fba470b53a584129a97d59390e0f8e94",
+      "title": "特种设备生产单位落实质量安全主体责任监督管理规定",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-07"
+    },
+    {
+      "law_id": "b3da44bc8ff9d47ce535aa10705faad9",
+      "title": "牙膏监督管理办法",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-07"
+    },
+    {
+      "law_id": "70c25270e42e68c954ca13545b514c93",
+      "title": "互联网广告管理办法",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-07"
+    },
+    {
+      "law_id": "72c458036857889f111073f6d44d480b",
+      "title": "经营者集中审查规定",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-07"
+    },
+    {
+      "law_id": "0e71395d9bdfebb3cc593034a30ff62e",
+      "title": "禁止滥用市场支配地位行为规定",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-07"
+    },
+    {
+      "law_id": "95072e80f15acdfb530c8ff5d53958ea",
+      "title": "定量包装商品计量监督管理办法",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-07"
+    },
+    {
+      "law_id": "51411090320075d34174a1b07772e835",
+      "title": "计量器具新产品管理办法",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-07"
+    },
+    {
+      "law_id": "d10350b3cf1d8bf70e36152d47b1d0e1",
+      "title": "计量比对管理办法",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-07"
+    },
+    {
+      "law_id": "1be82e35c2428929d00a5253c87d695e",
+      "title": "商标代理监督管理规定",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-07"
+    },
+    {
+      "law_id": "b48cb34e82a6b48f1d3cd26976af5434",
+      "title": "市场监督管理行政处罚程序规定",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-07"
+    },
+    {
+      "law_id": "86b783f9f475e0328f8e90cb8eb0a57c",
+      "title": "食品相关产品质量安全监督管理暂行办法",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-07"
+    },
+    {
+      "law_id": "73e5ffe2b23829bbbec71bbeb7d4435b",
+      "title": "国家市场监督管理总局关于修改和废止部分部门规章的决定",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-07"
+    },
+    {
+      "law_id": "80025f9b5a99e77be129d471de9a8d63",
+      "title": "国家标准管理办法",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-07"
+    },
+    {
+      "law_id": "10af874decb0978a6b3f67d4652d463b",
+      "title": "药品网络销售监督管理办法",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-07"
+    },
+    {
+      "law_id": "d5eb4646ed98222f8adad7af4c9c378d",
+      "title": "特种设备安全监督检查办法",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-07"
+    },
+    {
+      "law_id": "c85ea73878470bbebd590b5d26a33f5d",
+      "title": "明码标价和禁止价格欺诈规定",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-07"
+    },
+    {
+      "law_id": "ba18d6bbcde3298f498f5359bea8c425",
+      "title": "国家市场监督管理总局关于修改和废止部分规章的决定",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-07"
+    },
+    {
+      "law_id": "867d3b5e9cfc9113a782433f33b61e83",
+      "title": "市场监督管理行政许可程序暂行规定",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-07"
+    },
+    {
+      "law_id": "906d3dae22733fc0ce486b95e03f1c2f",
+      "title": "医疗器械经营监督管理办法",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-07"
+    },
+    {
+      "law_id": "d3d4f90139ce354fcf08b70ba006220d",
+      "title": "医疗器械生产监督管理办法",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-07"
+    },
+    {
+      "law_id": "fcf9c266f9c3b52eb8fc17461521184a",
+      "title": "外商投资企业授权登记管理办法",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-07"
+    },
+    {
+      "law_id": "d88ad5872324c6370570a6cc963233fc",
+      "title": "中华人民共和国市场主体登记管理条例实施细则",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-07"
+    },
+    {
+      "law_id": "660f3e141150c35a40f30c81e347508d",
+      "title": "特种设备事故报告和调查处理规定",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-07"
+    },
+    {
+      "law_id": "086a39511915d96591147bf517f2e929",
+      "title": "食品生产经营监督检查管理办法",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-07"
+    },
+    {
+      "law_id": "f975244ce86b65aa3bad1152bb73834b",
+      "title": "体外诊断试剂注册与备案管理办法",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-07"
+    },
+    {
+      "law_id": "9f53902af371b8e0636ae05f65ae1b33",
+      "title": "医疗器械注册与备案管理办法",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-07"
+    },
+    {
+      "law_id": "8e47801509e4b431d5f167e631065647",
+      "title": "化妆品生产经营监督管理办法",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-07"
     }
   ]
 }
