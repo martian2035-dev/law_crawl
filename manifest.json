@@ -1,5 +1,5 @@
 {
-  "snapshot_date": "2026-11-08",
+  "snapshot_date": "2026-11-09",
   "laws": 32061,
   "listed": 31998,
   "with_content": 27237,
@@ -14,30 +14,6 @@
     "samr": 253
   },
   "recent_changes": [
-    {
-      "law_id": "c6f51fca69b61c2030b0335390c281e5",
-      "title": "集中用餐单位落实食品安全主体责任监督管理规定",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-07"
-    },
-    {
-      "law_id": "cbe7105157916f2963c0d8426983636b",
-      "title": "国家市场监督管理总局关于修改《企业落实食品安全主体责任监督管理规定》的决定",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-07"
-    },
-    {
-      "law_id": "0c17d741fbea9d05cbd678bc2595c786",
-      "title": "公平竞争审查条例实施办法",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-07"
-    },
     {
       "law_id": "86b95287112bfa61d7e8d56f71f67af2",
       "title": "经营主体登记档案管理办法",
@@ -413,6 +389,30 @@
       "old_value": "有效",
       "new_value": "",
       "detected_on": "2026-11-07"
+    },
+    {
+      "law_id": "ff808181a1440cda01a15373c60335ba",
+      "title": "邢台市住宅小区消防安全管理规定",
+      "change_type": "status",
+      "old_value": "尚未生效",
+      "new_value": "有效",
+      "detected_on": "2026-11-09"
+    },
+    {
+      "law_id": "ff808181a144173201a153091a54334d",
+      "title": "成都市消防条例",
+      "change_type": "status",
+      "old_value": "尚未生效",
+      "new_value": "有效",
+      "detected_on": "2026-11-09"
+    },
+    {
+      "law_id": "4028abcc61277793016128854b6b3d31",
+      "title": "成都市消防条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-11-09"
     }
   ]
 }
