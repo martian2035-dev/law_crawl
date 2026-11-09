@@ -1,11 +1,11 @@
 {
-  "snapshot_date": "2026-11-09",
-  "laws": 32061,
-  "listed": 31998,
-  "with_content": 27237,
+  "snapshot_date": "2026-11-10",
+  "laws": 32062,
+  "listed": 31999,
+  "with_content": 27238,
   "unreadable": 4795,
   "by_source": {
-    "flk": 31246,
+    "flk": 31247,
     "mee": 71,
     "mem": 76,
     "mohurd": 88,
@@ -14,30 +14,6 @@
     "samr": 253
   },
   "recent_changes": [
-    {
-      "law_id": "86b95287112bfa61d7e8d56f71f67af2",
-      "title": "经营主体登记档案管理办法",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-07"
-    },
-    {
-      "law_id": "0ddea8fbb2d4afc2365879680e243440",
-      "title": "公司登记管理实施办法",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-07"
-    },
-    {
-      "law_id": "909354233e97167330d9653b086f7782",
-      "title": "专业计量站管理办法",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-07"
-    },
     {
       "law_id": "93058609f0096c507368d7fbf587b477",
       "title": "法定计量检定机构监督管理办法",
@@ -413,6 +389,30 @@
       "old_value": "有效",
       "new_value": "已修改",
       "detected_on": "2026-11-09"
+    },
+    {
+      "law_id": "451171e62c9b4520b4686285112df5d3",
+      "title": "中华人民共和国律师法",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-10"
+    },
+    {
+      "law_id": "2c909fdd678bf17901678bf867e80a55",
+      "title": "中华人民共和国律师法",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-11-10"
+    },
+    {
+      "law_id": "ff8080816eea6bee016eed706e240116",
+      "title": "北京市水利工程保护管理条例",
+      "change_type": "status",
+      "old_value": "已修改",
+      "new_value": "已废止",
+      "detected_on": "2026-11-10"
     }
   ]
 }
