@@ -9,6 +9,10 @@
 #   - the total time is used up (CRAWL_TOTAL_SECONDS, 4.5 hours by default; a GitHub job may run for 6 hours);
 #   - a source demands a browser challenge (exit code 2): requests were too frequent, so no more today;
 #   - a chunk fetched no new text: everything is fetched, or the source is unavailable.
+#
+# Exit code 3 means some ministry rule libraries were unreachable. Their previous data is kept, the run reports
+# a warning annotation on GitHub, and the pipeline still succeeds: a single ministry being down is not a reason
+# to mark the whole crawl as failed. Only a real error (1) or an unexpected exit code fails the job.
 set -uo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
@@ -17,11 +21,24 @@ TOTAL_SECONDS="${CRAWL_TOTAL_SECONDS:-16200}"
 CHUNK_SECONDS="${CRAWL_CHUNK_SECONDS:-2700}"
 CONTENT_LIMIT="${CRAWL_CONTENT_LIMIT:-100000}"
 EXIT_BLOCKED=2
+EXIT_PARTIAL=3
 started=$(date +%s)
 worst=0
 first=1
 retry_flag=""
 [ "${RETRY_UNREADABLE:-false}" = true ] && retry_flag="--retry-unreadable"
+
+# Exit codes are not a severity scale: rank them so the most severe outcome survives across chunks. Any exit
+# code we do not know about is treated as a real failure rather than silently swallowed.
+severity() {
+  case "$1" in
+    0) echo 0 ;;
+    "$EXIT_PARTIAL") echo 1 ;;
+    "$EXIT_BLOCKED") echo 2 ;;
+    1) echo 3 ;;
+    *) echo 4 ;;
+  esac
+}
 
 content_count() {
   python -m law_crawl manifest 2>/dev/null | python -c 'import json,sys; print(json.load(sys.stdin).get("with_content", 0))'
@@ -39,7 +56,7 @@ while :; do
   fi
   status=$?
   first=0
-  [ "$status" -gt "$worst" ] && worst=$status
+  if [ "$(severity "$status")" -gt "$(severity "$worst")" ]; then worst=$status; fi
   scripts/release-data.sh upload || echo "[crawl-loop] publishing this chunk failed; retrying after the next chunk"
   after=$(content_count)
   echo "[crawl-loop] chunk finished: exit code $status, texts $before -> $after"
@@ -47,6 +64,15 @@ while :; do
   [ "$after" = "$before" ] && { echo "[crawl-loop] no new text in this chunk; stopping"; break; }
 done
 
-# A browser challenge is an expected outcome and must not fail the pipeline; other non-zero exit codes still do
-[ "$worst" = "$EXIT_BLOCKED" ] && exit 0
-exit "$worst"
+# A browser challenge and a partially unreachable source are expected outcomes: report them, succeed anyway.
+case "$worst" in
+  "$EXIT_BLOCKED")
+    echo "[crawl-loop] a source demanded a browser challenge; treating this run as successful"
+    exit 0
+    ;;
+  "$EXIT_PARTIAL")
+    echo "[crawl-loop] some ministry rule libraries were unreachable; see the warnings above; treating this run as successful"
+    exit 0
+    ;;
+  *) exit "$worst" ;;
+esac

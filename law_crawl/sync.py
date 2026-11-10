@@ -26,6 +26,9 @@ Rate limiting: the national database answers with a browser challenge page and r
 too often. The crawler stops as soon as it sees that page (exit code 2), allows one process per source at a
 time, and waits between requests (see the constants below). Do not raise the request rate or work around the
 challenge.
+
+Exit codes: 0 = success, 1 = a real failure, 2 = a browser challenge (expected), 3 = some ministry rule
+libraries were unreachable (a warning on the CI run, not a failure; their previous data is kept).
 """
 
 from __future__ import annotations
@@ -65,6 +68,9 @@ LOCK_NATIONAL = "laws_sync.lock"
 LOCK_MINISTRIES = "laws_sync_ministries.lock"
 LOCK_METADATA_WRITE = "laws_metadata_write.lock"
 EXIT_BLOCKED = 2
+# GitHub-hosted runners are outside mainland China and some ministry sites refuse them. A ministry that is
+# unreachable keeps its previous data and only produces a warning; only a total failure fails the run.
+EXIT_PARTIAL = 3
 MAX_CONSECUTIVE_FAILURES = 10
 # A streak of failures is usually a short network outage: pause, then carry on; give up only after several pauses
 FAILURE_PAUSE_SECONDS = 300
@@ -418,13 +424,23 @@ def fetch_ministry_contents(client: httpx.Client, source: ministry_rules.RuleSou
     return fetched
 
 
+def ci_warning(message: str) -> None:
+    """Show a warning on the GitHub Actions run without failing it; a no-op outside CI."""
+    if os.environ.get("GITHUB_ACTIONS") == "true":
+        print(f"::warning::{message}", flush=True)
+
+
 def sync_ministries(today: dt.date | None = None) -> int:
-    """Sync the catalogue and texts of every ministry rule library; one ministry failing does not stop the others."""
+    """Sync the catalogue and texts of every ministry rule library; one ministry failing does not stop the others.
+
+    An unreachable ministry keeps its previous snapshot. Returns EXIT_PARTIAL when only some ministries failed,
+    1 when every ministry failed (or the catalogue is missing), and 0 when all of them were updated.
+    """
     today = today or dt.date.today()
     if not repository.METADATA_DB_PATH.exists():
         logger.error("The catalogue database does not exist; run `metadata` first")
         return 1
-    status = 0
+    failed: list[str] = []
     cache = ContentCache()
     with ministry_rules.new_client() as client:
         for source in ministry_rules.SOURCES:
@@ -432,14 +448,14 @@ def sync_ministries(today: dt.date | None = None) -> int:
                 rules = ministry_rules.fetch_rules(client, source, today)
             except ministry_rules.MinistrySourceUnavailable as error:
                 logger.error("%s: rule library sync failed: %s", source.key, error)
-                status = 1
+                failed.append(source.key)
                 continue
             if len(rules) < source.min_expected:
                 logger.error(
                     "%s: only %d rules fetched, fewer than the expected %d; not updating",
                     source.key, len(rules), source.min_expected,
                 )
-                status = 1
+                failed.append(source.key)
                 continue
             counts = write_ministry_rules(source, rules, today)
             fetched = fetch_ministry_contents(client, source, rules, cache)
@@ -448,7 +464,15 @@ def sync_ministries(today: dt.date | None = None) -> int:
                 source.key, len(rules), counts[repository.CHANGE_ADDED], counts[repository.CHANGE_STATUS],
                 counts[repository.CHANGE_REMOVED], fetched,
             )
-    return status
+    if not failed:
+        return 0
+    if len(failed) == len(ministry_rules.SOURCES):
+        logger.error("Every ministry rule library failed; no ministry data was updated")
+        return 1
+    message = f"Ministry rule libraries unreachable: {', '.join(failed)}; their previous data was kept"
+    logger.warning("%s", message)
+    ci_warning(message)
+    return EXIT_PARTIAL
 
 
 def sync_ministries_exclusively() -> int:
@@ -487,11 +511,12 @@ def sync_national(content_limit: int, budget_seconds: float, retry_unreadable: b
 def update(content_limit: int, budget_seconds: float, retry_unreadable: bool = False) -> int:
     """Scheduled run: the national database, then the ministry rule libraries.
 
-    The two steps are independent: the second runs even when the first fails, and the first non-zero exit code
-    is returned.
+    The two steps are independent: the second runs even when the first fails, and the most severe status
+    (hard error > browser challenge > partial ministry failure) is returned.
     """
     statuses = [sync_national(content_limit, budget_seconds, retry_unreadable), sync_ministries_exclusively()]
-    return next((status for status in statuses if status), 0)
+    priority = {1: 3, EXIT_BLOCKED: 2, EXIT_PARTIAL: 1}
+    return max(statuses, key=lambda status: priority.get(status, 0))
 
 
 PROBE_TIMEOUT_SECONDS = 20

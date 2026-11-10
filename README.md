@@ -84,6 +84,11 @@ paragraphs = zlib.decompress(body).decode("utf-8").split("\n")
   only handles new documents.
 - `.github/workflows/test.yml` ("Tests") runs the linter and the tests when the code changes.
 
+A ministry site that is temporarily unreachable is reported as a warning annotation on the run: its previous
+data is kept and the run still succeeds (`sync_ministries` returns exit code 3, which `crawl-loop.sh` treats as
+success). Only a real error — for example an unreadable catalogue or every ministry failing — fails the job.
+A browser challenge (exit code 2) is likewise an expected outcome, not a failure.
+
 To deploy a copy of this repository:
 
 1. Create a public repository on GitHub and push this directory. The workflow declares the `contents: write`

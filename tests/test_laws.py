@@ -544,3 +544,72 @@ def test_sync_content_stops_at_once_when_blocked(sample_db, tmp_path, monkeypatc
     with pytest.raises(flk_client.LawSourceBlocked):
         laws_sync.sync_content(limit=10, budget_seconds=60, category=None)
     assert len(calls) == 1
+
+
+# --- Partially unreachable sources ---
+
+
+@pytest.fixture
+def ministry_env(tmp_path, monkeypatch):
+    """Two ministry sources, with the catalogue and text fetching stubbed out."""
+    from contextlib import nullcontext
+    from types import SimpleNamespace
+
+    path = tmp_path / "laws.db"
+    path.touch()
+    monkeypatch.setattr(repository, "METADATA_DB_PATH", path)
+    monkeypatch.setattr(laws_sync, "ContentCache", lambda: object())
+    monkeypatch.setattr(laws_sync, "write_ministry_rules", lambda source, rules, today: laws_sync.count_changes([]))
+    monkeypatch.setattr(laws_sync, "fetch_ministry_contents", lambda client, source, rules, cache: 0)
+    monkeypatch.setattr(laws_sync.ministry_rules, "new_client", lambda: nullcontext())
+    sources = (SimpleNamespace(key="reachable", min_expected=1), SimpleNamespace(key="unreachable", min_expected=1))
+    monkeypatch.setattr(laws_sync.ministry_rules, "SOURCES", sources)
+    return sources
+
+
+def set_ministry_fetch(monkeypatch, failures=(), too_few=()):
+    def fake_fetch(_client, source, _today):
+        if source.key in failures:
+            raise laws_sync.ministry_rules.MinistrySourceUnavailable("cannot connect to example.gov.cn: ConnectError")
+        return [] if source.key in too_few else [{"id": f"{source.key}-rule"}]
+
+    monkeypatch.setattr(laws_sync.ministry_rules, "fetch_rules", fake_fetch)
+
+
+def test_partial_ministry_failure_is_a_warning_not_a_failure(ministry_env, monkeypatch, capsys):
+    import datetime as dt
+
+    monkeypatch.setenv("GITHUB_ACTIONS", "true")
+    set_ministry_fetch(monkeypatch, failures={"unreachable"})
+
+    assert laws_sync.sync_ministries(today=dt.date(2026, 11, 10)) == laws_sync.EXIT_PARTIAL
+    assert "::warning::Ministry rule libraries unreachable: unreachable" in capsys.readouterr().out
+
+
+def test_a_ministry_with_too_few_rules_is_also_partial(ministry_env, monkeypatch):
+    import datetime as dt
+
+    set_ministry_fetch(monkeypatch, too_few={"unreachable"})
+
+    assert laws_sync.sync_ministries(today=dt.date(2026, 11, 10)) == laws_sync.EXIT_PARTIAL
+
+
+def test_every_ministry_failing_is_still_a_failure(ministry_env, monkeypatch):
+    import datetime as dt
+
+    set_ministry_fetch(monkeypatch, failures={"reachable", "unreachable"})
+
+    assert laws_sync.sync_ministries(today=dt.date(2026, 11, 10)) == 1
+
+
+def test_update_prefers_hard_errors_over_partial_failures(monkeypatch):
+    monkeypatch.setattr(laws_sync, "sync_ministries_exclusively", lambda: laws_sync.EXIT_PARTIAL)
+
+    monkeypatch.setattr(laws_sync, "sync_national", lambda *args, **kwargs: 0)
+    assert laws_sync.update(content_limit=0, budget_seconds=60) == laws_sync.EXIT_PARTIAL
+
+    monkeypatch.setattr(laws_sync, "sync_national", lambda *args, **kwargs: 1)
+    assert laws_sync.update(content_limit=0, budget_seconds=60) == 1
+
+    monkeypatch.setattr(laws_sync, "sync_national", lambda *args, **kwargs: laws_sync.EXIT_BLOCKED)
+    assert laws_sync.update(content_limit=0, budget_seconds=60) == laws_sync.EXIT_BLOCKED
