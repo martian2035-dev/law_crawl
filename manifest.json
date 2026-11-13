@@ -1,11 +1,11 @@
 {
-  "snapshot_date": "2026-11-13",
-  "laws": 32198,
-  "listed": 32137,
-  "with_content": 27374,
+  "snapshot_date": "2026-11-14",
+  "laws": 32222,
+  "listed": 32159,
+  "with_content": 27398,
   "unreadable": 4795,
   "by_source": {
-    "flk": 31383,
+    "flk": 31407,
     "mee": 71,
     "mem": 76,
     "mohurd": 88,
@@ -14,326 +14,6 @@
     "samr": 253
   },
   "recent_changes": [
-    {
-      "law_id": "ff8081819ff54ab801a069d90b6325cd",
-      "title": "黔东南苗族侗族自治州月亮山梯田保护条例",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "有效",
-      "detected_on": "2026-11-13"
-    },
-    {
-      "law_id": "ff8081819ff541ea01a069d9e5c334ae",
-      "title": "黔东南苗族侗族自治州隆里古城保护条例",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "有效",
-      "detected_on": "2026-11-13"
-    },
-    {
-      "law_id": "ff8081819ff54ab801a069d7a39c25b5",
-      "title": "黔东南苗族侗族自治州乡村清洁条例",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "有效",
-      "detected_on": "2026-11-13"
-    },
-    {
-      "law_id": "ff8081819ff54a6401a069d871ff0009",
-      "title": "黔东南苗族侗族自治州㵲阳河流域保护条例",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "有效",
-      "detected_on": "2026-11-13"
-    },
-    {
-      "law_id": "ff8081819ff541ea01a069da9a3a34ba",
-      "title": "黔东南苗族侗族自治州锦屏文书保护条例",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "有效",
-      "detected_on": "2026-11-13"
-    },
-    {
-      "law_id": "1004512eadb640669c9106710449408c",
-      "title": "黔东南苗族侗族自治州人民代表大会常务委员会关于修改《黔东南苗族侗族自治州乡村清洁条例》等五件地方性法规部分条款的决定",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "",
-      "detected_on": "2026-11-13"
-    },
-    {
-      "law_id": "ff808181a1440bbc01a180a1649e1560",
-      "title": "太原市生活垃圾分类管理条例",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "有效",
-      "detected_on": "2026-11-13"
-    },
-    {
-      "law_id": "ff808181a144173201a1809edb304e61",
-      "title": "太原市机动车和非道路移动机械排气污染防治办法",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "有效",
-      "detected_on": "2026-11-13"
-    },
-    {
-      "law_id": "ff808181a1440bbc01a180a258ef1565",
-      "title": "太原市生态环境保护条例",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "有效",
-      "detected_on": "2026-11-13"
-    },
-    {
-      "law_id": "ff808181a1440cda01a1809a976615dd",
-      "title": "太原市餐厨废弃物管理条例",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "有效",
-      "detected_on": "2026-11-13"
-    },
-    {
-      "law_id": "ff808181a1440bbc01a180a0a7c81555",
-      "title": "太原市兰村泉域水资源保护条例",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "有效",
-      "detected_on": "2026-11-13"
-    },
-    {
-      "law_id": "ff808181a1440cda01a1809ff3281610",
-      "title": "太原市晋祠泉域水资源保护条例",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "有效",
-      "detected_on": "2026-11-13"
-    },
-    {
-      "law_id": "ff808181a1440bbc01a1809ca2f41538",
-      "title": "太原市大气污染防治条例",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "有效",
-      "detected_on": "2026-11-13"
-    },
-    {
-      "law_id": "1e81cd8af5544e8ba4db1caba2b9ff23",
-      "title": "太原市人民代表大会常务委员会关于修改《太原市晋祠泉域水资源保护条例》等七部地方性法规的决定",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "",
-      "detected_on": "2026-11-13"
-    },
-    {
-      "law_id": "ff808181a1440cda01a1819381391f60",
-      "title": "阳泉市非物质文化遗产条例",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "有效",
-      "detected_on": "2026-11-13"
-    },
-    {
-      "law_id": "ff808181a1440bbc01a1819fd8101f0d",
-      "title": "阳泉市文明行为促进条例",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "有效",
-      "detected_on": "2026-11-13"
-    },
-    {
-      "law_id": "ff808181a1440bbc01a1819d5eda1eeb",
-      "title": "阳泉市大气污染防治条例",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "有效",
-      "detected_on": "2026-11-13"
-    },
-    {
-      "law_id": "ff808181a1440bbc01a1819e841e1efa",
-      "title": "阳泉市机动车和非道路移动机械排放污染防治条例",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "有效",
-      "detected_on": "2026-11-13"
-    },
-    {
-      "law_id": "2a52167687054171bb112e1f719ee479",
-      "title": "贵阳市人民代表大会常务委员会关于废止《贵阳市禁止生产销售使用含磷洗涤剂规定》的决定",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "",
-      "detected_on": "2026-11-13"
-    },
-    {
-      "law_id": "ff808181a1440bbc01a180b61947163b",
-      "title": "忻州市红色文化资源保护条例",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "尚未生效",
-      "detected_on": "2026-11-13"
-    },
-    {
-      "law_id": "ff8081819b697249019b87e35ead6c5e",
-      "title": "黔东南苗族侗族自治州隆里古城保护条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-11-13"
-    },
-    {
-      "law_id": "ff8081819b697249019b87fd296d6f65",
-      "title": "黔东南苗族侗族自治州㵲阳河流域保护条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-11-13"
-    },
-    {
-      "law_id": "ff8081819b697220019b87fef4117663",
-      "title": "黔东南苗族侗族自治州月亮山梯田保护条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-11-13"
-    },
-    {
-      "law_id": "ff808181927f127601967b3ecbad1301",
-      "title": "贵阳市住房租赁管理条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-11-13"
-    },
-    {
-      "law_id": "ff808181968021090196af4ac0ee1672",
-      "title": "阳泉市机动车和非道路移动机械排放污染防治条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-11-13"
-    },
-    {
-      "law_id": "ff808181907350630191253308de2779",
-      "title": "海南省建筑垃圾管理规定",
-      "change_type": "restored",
-      "old_value": "",
-      "new_value": "已修改",
-      "detected_on": "2026-11-13"
-    },
-    {
-      "law_id": "ff808181907350630191253308de2779",
-      "title": "海南省建筑垃圾管理规定",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-11-13"
-    },
-    {
-      "law_id": "ff8081818a1cb546018a253cfbc517b1",
-      "title": "泰州市农业面源污染防治条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-11-13"
-    },
-    {
-      "law_id": "ff808181857bca5e0185850505f21492",
-      "title": "南通市城市建筑垃圾管理条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已废止",
-      "detected_on": "2026-11-13"
-    },
-    {
-      "law_id": "ff8081817cbae136017ccc0442855507",
-      "title": "海南省生活垃圾管理条例",
-      "change_type": "restored",
-      "old_value": "",
-      "new_value": "已修改",
-      "detected_on": "2026-11-13"
-    },
-    {
-      "law_id": "ff8081817cbae136017ccc0442855507",
-      "title": "海南省生活垃圾管理条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-11-13"
-    },
-    {
-      "law_id": "ff8081817cbae136017ccad26f664b52",
-      "title": "江苏省统计条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-11-13"
-    },
-    {
-      "law_id": "ff8081817e9b1ec8017eee402f03371c",
-      "title": "黔东南苗族侗族自治州乡村清洁条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-11-13"
-    },
-    {
-      "law_id": "ff8081818364d9030183c9d484bd76a9",
-      "title": "贵阳市城市轨道交通条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-11-13"
-    },
-    {
-      "law_id": "ff808181927f1276019305f0546b58f6",
-      "title": "贵阳市绿化条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-11-13"
-    },
-    {
-      "law_id": "ff8081818364d9f60183c9d22a84713d",
-      "title": "贵阳市禁止生产销售使用含磷洗涤剂规定",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已废止",
-      "detected_on": "2026-11-13"
-    },
-    {
-      "law_id": "ff80818179b2b3250179cab6252510f5",
-      "title": "阳泉市文明行为促进条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-11-13"
-    },
-    {
-      "law_id": "ff80808177e75f880178589834717820",
-      "title": "阳泉市大气污染防治条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-11-13"
-    },
-    {
-      "law_id": "ff80808176d5cbce0176d6b2f93b031c",
-      "title": "泰州市垛田保护条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-11-13"
-    },
-    {
-      "law_id": "ff808081736bb19d01740af6a46a561e",
-      "title": "太原市机动车和非道路移动机械排气污染防治办法",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-11-13"
-    },
     {
       "law_id": "2c90e5bb692e81550169a31667026ab7",
       "title": "黔东南苗族侗族自治州锦屏文书保护条例",
@@ -413,6 +93,326 @@
       "old_value": "有效",
       "new_value": "已修改",
       "detected_on": "2026-11-13"
+    },
+    {
+      "law_id": "ff808181a1440bbc01a199bbb606778a",
+      "title": "无锡市水资源节约利用条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "尚未生效",
+      "detected_on": "2026-11-14"
+    },
+    {
+      "law_id": "ff808181a1440cda01a199b38f327772",
+      "title": "南京市产业工人队伍建设促进与保障条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "尚未生效",
+      "detected_on": "2026-11-14"
+    },
+    {
+      "law_id": "ff808181a144173201a17c7277eb38f1",
+      "title": "黔南布依族苗族自治州校外托管机构管理条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-14"
+    },
+    {
+      "law_id": "ff808181a1440cda01a17c6301eb011d",
+      "title": "威宁彝族回族苗族自治县乡风文明促进条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-14"
+    },
+    {
+      "law_id": "ff808181a1440bbc01a17c7e10180260",
+      "title": "遵义市居家养老服务条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-14"
+    },
+    {
+      "law_id": "ff808181a1440bbc01a1855571662fc0",
+      "title": "泉州市市容和环境卫生管理条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-14"
+    },
+    {
+      "law_id": "ff808181a144173201a18553dde3696c",
+      "title": "泉州市晋江洛阳江流域水环境保护条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-14"
+    },
+    {
+      "law_id": "ff808181a1440cda01a185529f1c304a",
+      "title": "泉州市市区内沟河保护管理条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-14"
+    },
+    {
+      "law_id": "ff808181a1440cda01a19b7af4e40aff",
+      "title": "龙岩市扬尘污染防治条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-14"
+    },
+    {
+      "law_id": "ff808181a144173201a19b7a087a4e03",
+      "title": "龙岩市实施河长制条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-14"
+    },
+    {
+      "law_id": "ff808181a1440cda01a19b7fc5150b0d",
+      "title": "龙岩市烟花爆竹燃放管理条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-14"
+    },
+    {
+      "law_id": "ff808181a1440cda01a19b7e91850b06",
+      "title": "龙岩市汀江保护条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-14"
+    },
+    {
+      "law_id": "ff808181a1440bbc01a19b7cbb410bcc",
+      "title": "龙岩市农村人居环境治理条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-14"
+    },
+    {
+      "law_id": "ff808181a1440bbc01a19b78f5c30bbc",
+      "title": "龙岩市饮用水水源保护条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-14"
+    },
+    {
+      "law_id": "ff808181a144173201a19b7785174df1",
+      "title": "龙岩市文明行为促进条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-14"
+    },
+    {
+      "law_id": "27370d3a943145eea14ac36f8d93dd25",
+      "title": "泉州市人民代表大会常务委员会关于修改《泉州市市区内沟河保护管理条例》等三项地方性法规的决定",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "",
+      "detected_on": "2026-11-14"
+    },
+    {
+      "law_id": "2080d2c8ddf54a94a9ea86e5fc44aa68",
+      "title": "龙岩市人民代表大会常务委员会关于修改《龙岩市文明行为促进条例》等七项地方性法规的决定",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "",
+      "detected_on": "2026-11-14"
+    },
+    {
+      "law_id": "ff808181a1440bbc01a17c54e6df0074",
+      "title": "务川仡佬族苗族自治县乡风文明促进条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "尚未生效",
+      "detected_on": "2026-11-14"
+    },
+    {
+      "law_id": "ff808181a144173201a19bc78a5d501e",
+      "title": "宁德市城市养犬管理条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "尚未生效",
+      "detected_on": "2026-11-14"
+    },
+    {
+      "law_id": "ff808181a144173201a19bad38554f31",
+      "title": "宁德市城市内河管理条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-14"
+    },
+    {
+      "law_id": "ff808181a1440bbc01a19bac582c0cc7",
+      "title": "宁德市扬尘污染防治条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-14"
+    },
+    {
+      "law_id": "ff808181a144173201a19ba8cf7a4f0c",
+      "title": "宁德市霍童溪流域保护条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-14"
+    },
+    {
+      "law_id": "ff808181a1440bbc01a19baa3cce0cbf",
+      "title": "宁德市三都澳海域环境保护条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-14"
+    },
+    {
+      "law_id": "06b26cc4d2034012818bcef4b19acab4",
+      "title": "宁德市人民代表大会常务委员会关于修改《宁德市霍童溪流域保护条例》等五项地方性法规的决定",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "",
+      "detected_on": "2026-11-14"
+    },
+    {
+      "law_id": "ff80818198a7eafa0198e059ddfd0e85",
+      "title": "宁德市霍童溪流域保护条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-11-14"
+    },
+    {
+      "law_id": "ff80818198a7eafa0198e061ed040ed3",
+      "title": "宁德市三都澳海域环境保护条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-11-14"
+    },
+    {
+      "law_id": "ff808181927f12760192b81dff244380",
+      "title": "泉州市市容和环境卫生管理条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-11-14"
+    },
+    {
+      "law_id": "ff8081819150458d01916f783ad85036",
+      "title": "宁德市扬尘污染防治条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-11-14"
+    },
+    {
+      "law_id": "ff80818188c8b06b0188dda47e2c4e89",
+      "title": "宁德市城市内河管理条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-11-14"
+    },
+    {
+      "law_id": "ff80818188c8b06b0188dd9d993e4e70",
+      "title": "龙岩市汀江保护条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-11-14"
+    },
+    {
+      "law_id": "ff808181844230ec01844fa71eac31a2",
+      "title": "龙岩市农村人居环境治理条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-11-14"
+    },
+    {
+      "law_id": "ff8081817d283644017d371245e73a3c",
+      "title": "龙岩市扬尘污染防治条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-11-14"
+    },
+    {
+      "law_id": "ff808081713927d10171874326296537",
+      "title": "龙岩市实施河长制条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-11-14"
+    },
+    {
+      "law_id": "2c90e5b96c128b4c016dfb53be4a4fde",
+      "title": "泉州市晋江洛阳江流域水环境保护条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-11-14"
+    },
+    {
+      "law_id": "2c90e5bb65c68cfd0167c58bf54e30e7",
+      "title": "龙岩市饮用水水源保护条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-11-14"
+    },
+    {
+      "law_id": "2c90e5bb65c68cfd0166d1bc0e6d0f9f",
+      "title": "龙岩市文明行为促进条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-11-14"
+    },
+    {
+      "law_id": "4028abcc6127779301612827579f6a14",
+      "title": "泉州市市区内沟河保护管理条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-11-14"
+    },
+    {
+      "law_id": "4028abcc6127779301612807dff349c0",
+      "title": "龙岩市烟花爆竹燃放管理条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-11-14"
+    },
+    {
+      "law_id": "ff8081817acc6618017ae75a76fe1636",
+      "title": "长春市人民代表大会常务委员会关于修改和废止部分地方性法规的决定",
+      "change_type": "removed",
+      "old_value": "",
+      "new_value": "",
+      "detected_on": "2026-11-14"
+    },
+    {
+      "law_id": "4028abcc612777930161282aec9a6ddd",
+      "title": "忻州市电动车管理条例",
+      "change_type": "removed",
+      "old_value": "已修改",
+      "new_value": "",
+      "detected_on": "2026-11-14"
     }
   ]
 }
