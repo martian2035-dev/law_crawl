@@ -1,5 +1,5 @@
 {
-  "snapshot_date": "2026-11-14",
+  "snapshot_date": "2026-11-15",
   "laws": 32222,
   "listed": 32159,
   "with_content": 27398,
@@ -14,22 +14,6 @@
     "samr": 253
   },
   "recent_changes": [
-    {
-      "law_id": "2c90e5bb692e81550169a31667026ab7",
-      "title": "黔东南苗族侗族自治州锦屏文书保护条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-11-13"
-    },
-    {
-      "law_id": "2c90e5ba692e7f82016998f6d4c5683d",
-      "title": "太原市垃圾分类管理条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-11-13"
-    },
     {
       "law_id": "2c90e5b96214c5010163ba3f0feb54dc",
       "title": "太原市大气污染防治条例",
@@ -413,6 +397,22 @@
       "old_value": "已修改",
       "new_value": "",
       "detected_on": "2026-11-14"
+    },
+    {
+      "law_id": "ff8081819ff54a6401a0d26853e47e3a",
+      "title": "北京市无人驾驶航空器管理规定",
+      "change_type": "status",
+      "old_value": "尚未生效",
+      "new_value": "有效",
+      "detected_on": "2026-11-15"
+    },
+    {
+      "law_id": "ff8081819cf9f588019d6b2210797d0e",
+      "title": "北京市无人驾驶航空器管理规定",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-11-15"
     }
   ]
 }
