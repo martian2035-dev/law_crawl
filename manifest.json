@@ -1,11 +1,11 @@
 {
-  "snapshot_date": "2026-11-16",
-  "laws": 32222,
-  "listed": 32159,
-  "with_content": 27398,
+  "snapshot_date": "2026-11-17",
+  "laws": 32232,
+  "listed": 32169,
+  "with_content": 27408,
   "unreadable": 4795,
   "by_source": {
-    "flk": 31407,
+    "flk": 31417,
     "mee": 71,
     "mem": 76,
     "mohurd": 88,
@@ -14,174 +14,6 @@
     "samr": 253
   },
   "recent_changes": [
-    {
-      "law_id": "2c90e5b96214c5010163ba3f0feb54dc",
-      "title": "太原市大气污染防治条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-11-13"
-    },
-    {
-      "law_id": "2c90e5bb6200722a0163ba5aba426c29",
-      "title": "太原市生态环境保护条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-11-13"
-    },
-    {
-      "law_id": "2c90e5ba617a3f5b0161c66a22130618",
-      "title": "泰州市市区烟花爆竹燃放管理条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-11-13"
-    },
-    {
-      "law_id": "4028abcc6127779301612824e791673a",
-      "title": "南通市城市建筑垃圾管理条例",
-      "change_type": "status",
-      "old_value": "已修改",
-      "new_value": "已废止",
-      "detected_on": "2026-11-13"
-    },
-    {
-      "law_id": "4028abcc61277793016128141a8d54b2",
-      "title": "贵阳市禁止生产销售使用含磷洗涤剂规定",
-      "change_type": "status",
-      "old_value": "已修改",
-      "new_value": "已废止",
-      "detected_on": "2026-11-13"
-    },
-    {
-      "law_id": "4028855b61cc679a0161cc7b0adf003d",
-      "title": "太原市餐厨废弃物管理条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-11-13"
-    },
-    {
-      "law_id": "4028abcc612777930161287164402f78",
-      "title": "太原市兰村泉域水资源保护条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-11-13"
-    },
-    {
-      "law_id": "4028abcc612777930161287837f8360c",
-      "title": "太原市晋祠泉域水资源保护条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-11-13"
-    },
-    {
-      "law_id": "ff808181a1440bbc01a199bbb606778a",
-      "title": "无锡市水资源节约利用条例",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "尚未生效",
-      "detected_on": "2026-11-14"
-    },
-    {
-      "law_id": "ff808181a1440cda01a199b38f327772",
-      "title": "南京市产业工人队伍建设促进与保障条例",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "尚未生效",
-      "detected_on": "2026-11-14"
-    },
-    {
-      "law_id": "ff808181a144173201a17c7277eb38f1",
-      "title": "黔南布依族苗族自治州校外托管机构管理条例",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "有效",
-      "detected_on": "2026-11-14"
-    },
-    {
-      "law_id": "ff808181a1440cda01a17c6301eb011d",
-      "title": "威宁彝族回族苗族自治县乡风文明促进条例",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "有效",
-      "detected_on": "2026-11-14"
-    },
-    {
-      "law_id": "ff808181a1440bbc01a17c7e10180260",
-      "title": "遵义市居家养老服务条例",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "有效",
-      "detected_on": "2026-11-14"
-    },
-    {
-      "law_id": "ff808181a1440bbc01a1855571662fc0",
-      "title": "泉州市市容和环境卫生管理条例",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "有效",
-      "detected_on": "2026-11-14"
-    },
-    {
-      "law_id": "ff808181a144173201a18553dde3696c",
-      "title": "泉州市晋江洛阳江流域水环境保护条例",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "有效",
-      "detected_on": "2026-11-14"
-    },
-    {
-      "law_id": "ff808181a1440cda01a185529f1c304a",
-      "title": "泉州市市区内沟河保护管理条例",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "有效",
-      "detected_on": "2026-11-14"
-    },
-    {
-      "law_id": "ff808181a1440cda01a19b7af4e40aff",
-      "title": "龙岩市扬尘污染防治条例",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "有效",
-      "detected_on": "2026-11-14"
-    },
-    {
-      "law_id": "ff808181a144173201a19b7a087a4e03",
-      "title": "龙岩市实施河长制条例",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "有效",
-      "detected_on": "2026-11-14"
-    },
-    {
-      "law_id": "ff808181a1440cda01a19b7fc5150b0d",
-      "title": "龙岩市烟花爆竹燃放管理条例",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "有效",
-      "detected_on": "2026-11-14"
-    },
-    {
-      "law_id": "ff808181a1440cda01a19b7e91850b06",
-      "title": "龙岩市汀江保护条例",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "有效",
-      "detected_on": "2026-11-14"
-    },
-    {
-      "law_id": "ff808181a1440bbc01a19b7cbb410bcc",
-      "title": "龙岩市农村人居环境治理条例",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "有效",
-      "detected_on": "2026-11-14"
-    },
     {
       "law_id": "ff808181a1440bbc01a19b78f5c30bbc",
       "title": "龙岩市饮用水水源保护条例",
@@ -413,6 +245,174 @@
       "old_value": "有效",
       "new_value": "已修改",
       "detected_on": "2026-11-15"
+    },
+    {
+      "law_id": "ff808181a1440cda01a18540f8a02eb1",
+      "title": "厦门市海洋生态环境保护规定",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-17"
+    },
+    {
+      "law_id": "ff808181a1440cda01a181b45e6720d3",
+      "title": "厦门市市容环境卫生管理条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-17"
+    },
+    {
+      "law_id": "19c15005c1dd461abe7d58c469ffa8ef",
+      "title": "厦门市人民代表大会常务委员会关于废止《厦门市城乡规划条例》的决定",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "",
+      "detected_on": "2026-11-17"
+    },
+    {
+      "law_id": "3804c1d7d7294b509f4886cf593d6dd3",
+      "title": "厦门市人民代表大会常务委员会关于修改《厦门市环境保护条例》等两部法规和废止《厦门市城市供水节水条例》的决定",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "",
+      "detected_on": "2026-11-17"
+    },
+    {
+      "law_id": "ff808181a1440cda01a1800519000f95",
+      "title": "福州市园林绿化管理条例",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-17"
+    },
+    {
+      "law_id": "ff808181a1440bbc01a17fffefbb0e24",
+      "title": "福州市市容和环境卫生管理办法",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-17"
+    },
+    {
+      "law_id": "ff808181a1440cda01a18002f3430f6b",
+      "title": "福州市城市排水设施建设与管理办法",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-17"
+    },
+    {
+      "law_id": "ff808181a144173201a17ffed1be471b",
+      "title": "福州市大气污染防治办法",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-17"
+    },
+    {
+      "law_id": "211bef16a69a4fc68ae61fb8a3437f06",
+      "title": "福州市人民代表大会常务委员会关于修改《福州市环境噪声污染防治若干规定》等九项地方性法规的决定",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "",
+      "detected_on": "2026-11-17"
+    },
+    {
+      "law_id": "7f4aed315e454cd589080782fc36b39b",
+      "title": "围场满族蒙古族自治县人民代表大会关于废止《围场满族蒙古族自治县土地管理条例》的决定",
+      "change_type": "added",
+      "old_value": "",
+      "new_value": "",
+      "detected_on": "2026-11-17"
+    },
+    {
+      "law_id": "ff8081819b697220019b6d18d78c138e",
+      "title": "襄阳市文明行为促进条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-11-17"
+    },
+    {
+      "law_id": "ff80818188d322d50188dd97911337e8",
+      "title": "福州市大气污染防治办法",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-11-17"
+    },
+    {
+      "law_id": "ff8080816eb1afb8016ebff92caf65f8",
+      "title": "厦门市城市供水节水条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已废止",
+      "detected_on": "2026-11-17"
+    },
+    {
+      "law_id": "ff8080816eb1afb8016ebff14d016406",
+      "title": "厦门市海洋环境保护若干规定",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已废止",
+      "detected_on": "2026-11-17"
+    },
+    {
+      "law_id": "ff8080816eb1afb8016ebf863b205481",
+      "title": "福州市园林绿化管理条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-11-17"
+    },
+    {
+      "law_id": "4028abcc6127779301612800c1af4229",
+      "title": "福州市城市排水设施建设与管理办法",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-11-17"
+    },
+    {
+      "law_id": "4028abcc6127779301612863584f2260",
+      "title": "福州市市容和环境卫生管理办法",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-11-17"
+    },
+    {
+      "law_id": "4028abcc61277793016127f4c7af34e6",
+      "title": "厦门市市容环境卫生管理条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-11-17"
+    },
+    {
+      "law_id": "4028abcc61277793016127ee3adf2e09",
+      "title": "厦门市城市供水节水条例",
+      "change_type": "status",
+      "old_value": "已修改",
+      "new_value": "已废止",
+      "detected_on": "2026-11-17"
+    },
+    {
+      "law_id": "4028abcc612777930161286b569929d9",
+      "title": "厦门市海洋环境保护若干规定",
+      "change_type": "status",
+      "old_value": "已修改",
+      "new_value": "已废止",
+      "detected_on": "2026-11-17"
+    },
+    {
+      "law_id": "4028855b61cc679a0161cc7afda0002d",
+      "title": "围场满族蒙古族自治县土地管理条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已废止",
+      "detected_on": "2026-11-17"
     }
   ]
 }
