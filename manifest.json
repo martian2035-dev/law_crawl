@@ -1,7 +1,7 @@
 {
-  "snapshot_date": "2026-11-18",
+  "snapshot_date": "2026-11-19",
   "laws": 32299,
-  "listed": 32213,
+  "listed": 32211,
   "with_content": 27475,
   "unreadable": 4795,
   "by_source": {
@@ -14,134 +14,6 @@
     "samr": 253
   },
   "recent_changes": [
-    {
-      "law_id": "3db0a3bc5d8f4ba2b6203b14221eb7a6",
-      "title": "九江市人民代表大会常务委员会关于修改《九江市物业管理条例》的决定",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "",
-      "detected_on": "2026-11-18"
-    },
-    {
-      "law_id": "ff8081819c46f9bb019cb2c8ab521c16",
-      "title": "大同市生活垃圾分类管理条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-11-18"
-    },
-    {
-      "law_id": "ff808181927f1276019666f6ffc903a2",
-      "title": "福州市湿地保护办法",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-11-18"
-    },
-    {
-      "law_id": "ff80818190734f1d019101a9262371ad",
-      "title": "九江市物业管理条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-11-18"
-    },
-    {
-      "law_id": "ff808181857bca5e01858651dd2d1fd2",
-      "title": "株洲市城市综合管理条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-11-18"
-    },
-    {
-      "law_id": "ff808181857bbb76018586542e841b1b",
-      "title": "株洲市农村村庄规划建设管理条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-11-18"
-    },
-    {
-      "law_id": "ff808181857bbb7601858653a2fa1b18",
-      "title": "株洲市工业遗产保护条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-11-18"
-    },
-    {
-      "law_id": "ff8081817fd9859b01804609aa20172c",
-      "title": "阳泉市市容和环境卫生管理条例",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "已修改",
-      "detected_on": "2026-11-18"
-    },
-    {
-      "law_id": "3a446a0243be4fd49c488b795526c3b8",
-      "title": "长春市人民代表大会常务委员会关于修改和废止部分地方性法规的决定",
-      "change_type": "added",
-      "old_value": "",
-      "new_value": "",
-      "detected_on": "2026-11-18"
-    },
-    {
-      "law_id": "ff8081817d2837d2017d3709fecf4442",
-      "title": "三明市三元区环城山体保护条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-11-18"
-    },
-    {
-      "law_id": "ff808081736bb19d017424f1735474ac",
-      "title": "南平市市容和环境卫生管理办法",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-11-18"
-    },
-    {
-      "law_id": "ff808081736bb19d017424e8a2de7498",
-      "title": "三明市城市扬尘污染防治条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-11-18"
-    },
-    {
-      "law_id": "ff80808174681d4a017475cebe3310b8",
-      "title": "大同市大气污染防治条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-11-18"
-    },
-    {
-      "law_id": "ff8080816eea6bee016ef2b4b1e720ca",
-      "title": "株洲市畜禽养殖污染防治条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-11-18"
-    },
-    {
-      "law_id": "2c90e5ba6a291d8f016dfb41bdbd031e",
-      "title": "福州市生活垃圾分类管理条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-11-18"
-    },
-    {
-      "law_id": "ff808081736ba74201744daf497d0963",
-      "title": "大同市河道管理条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-11-18"
-    },
     {
       "law_id": "2c90e5ba6a291d8f016c73cd9b813c07",
       "title": "三明市城市园林绿化管理条例",
@@ -413,6 +285,134 @@
       "old_value": "已修改",
       "new_value": "",
       "detected_on": "2026-11-18"
+    },
+    {
+      "law_id": "ff8081819ff54ab801a03d2d20223b81",
+      "title": "四川省水资源条例",
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-19"
+    },
+    {
+      "law_id": "ff8081819ff54ab801a03d7604393e40",
+      "title": "四川省饮用水水源保护管理条例",
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-19"
+    },
+    {
+      "law_id": "ff8081819ff541ea01a03d7649e44809",
+      "title": "四川省大气污染防治条例",
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-19"
+    },
+    {
+      "law_id": "ff8081819ff54a6401a03d7621b273c6",
+      "title": "四川省老鹰水库饮用水水源保护条例",
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-19"
+    },
+    {
+      "law_id": "ff8081819ff541ea01a03d76cf4c4820",
+      "title": "四川省辐射污染防治条例",
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-19"
+    },
+    {
+      "law_id": "ff8081819ff54a6401a03d76ed0773f7",
+      "title": "四川省生态环境影响评价条例",
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-19"
+    },
+    {
+      "law_id": "4028abcc61277793016127cae59a0b4d",
+      "title": "北海市立法条例",
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "已修改",
+      "detected_on": "2026-11-19"
+    },
+    {
+      "law_id": "ff8081819ff54ab801a0424d76ff5257",
+      "title": "德阳市城市管理条例",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-19"
+    },
+    {
+      "law_id": "ff8081819ff54ab801a13e93f9f743a4",
+      "title": "德阳市文明行为促进条例",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-19"
+    },
+    {
+      "law_id": "ff808181a0bc9b0a01a13e79250e3a48",
+      "title": "德阳市大气污染防治条例",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-19"
+    },
+    {
+      "law_id": "ff8081819ff54a6401a0424d77620cac",
+      "title": "德阳市华强沟水库饮用水水源保护条例",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-19"
+    },
+    {
+      "law_id": "ff8081819ff541ea01a03d0832c143fe",
+      "title": "嘉峪关市市容和环境卫生管理条例",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-19"
+    },
+    {
+      "law_id": "ff8081819ff541ea01a03d0ad80d444c",
+      "title": "嘉峪关市绿化条例",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-19"
+    },
+    {
+      "law_id": "ff8081819ff54ab801a037fc261826b3",
+      "title": "银川市水资源管理条例",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-19"
+    },
+    {
+      "law_id": "4028abcc61277793016127dbbafa1a8c",
+      "title": "南宁市地方性法规制定条例",
+      "change_type": "removed",
+      "old_value": "已修改",
+      "new_value": "",
+      "detected_on": "2026-11-19"
+    },
+    {
+      "law_id": "4028abcc612777930161280d3c7d4db2",
+      "title": "西宁市大气污染防治条例",
+      "change_type": "removed",
+      "old_value": "已修改",
+      "new_value": "",
+      "detected_on": "2026-11-19"
     }
   ]
 }
