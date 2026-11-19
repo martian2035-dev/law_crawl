@@ -1,11 +1,11 @@
 {
-  "snapshot_date": "2026-11-19",
-  "laws": 32299,
-  "listed": 32211,
-  "with_content": 27475,
+  "snapshot_date": "2026-11-20",
+  "laws": 32312,
+  "listed": 32228,
+  "with_content": 27488,
   "unreadable": 4795,
   "by_source": {
-    "flk": 31484,
+    "flk": 31497,
     "mee": 71,
     "mem": 76,
     "mohurd": 88,
@@ -15,404 +15,404 @@
   },
   "recent_changes": [
     {
-      "law_id": "2c90e5ba6a291d8f016c73cd9b813c07",
-      "title": "三明市城市园林绿化管理条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-11-18"
-    },
-    {
-      "law_id": "ff80808172b5f24f0172b6be9b760079",
-      "title": "山西省开发区条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-11-18"
-    },
-    {
-      "law_id": "2c90e5ba65c68cf70167df750eca4239",
-      "title": "福州市建筑垃圾管理规定",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-11-18"
-    },
-    {
-      "law_id": "2c90e5bb692e8155016947e0765d1c79",
-      "title": "大同市御河流域生态保护条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-11-18"
-    },
-    {
-      "law_id": "2c90e5ba65c68cf70166ce9a5b5b0ea5",
-      "title": "南平市饮用水水源保护办法",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-11-18"
-    },
-    {
-      "law_id": "2c90e5ba64fa8206016546002f620310",
-      "title": "三明市东牙溪和薯沙溪水库饮用水水源保护条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-11-18"
-    },
-    {
-      "law_id": "4028abcc61277793016127fa9a8f3b6c",
-      "title": "三明市城市市容和环境卫生管理条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-11-18"
-    },
-    {
-      "law_id": "4028abcc6127779301612860897a1fa7",
-      "title": "福州市环境噪声污染防治若干规定",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-11-18"
-    },
-    {
-      "law_id": "4028abcc612777930161286412432308",
-      "title": "福州市水工程管理条例",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-11-18"
-    },
-    {
-      "law_id": "4028abcc61277793016128615c772077",
-      "title": "福州市环境保护条例",
+      "law_id": "ff8080816eb1afb8016ebb43bd95017f",
+      "title": "黑龙江省湿地保护条例",
       "change_type": "status",
       "old_value": "有效",
       "new_value": "已废止",
-      "detected_on": "2026-11-18"
+      "detected_on": "2026-11-20"
     },
     {
-      "law_id": "4028abcc612777930161285640c6159a",
-      "title": "江西省反不正当竞争条例",
+      "law_id": "ff8080816eb1afb8016ebb586e1b0747",
+      "title": "黑龙江挠力河国家级自然保护区管理条例",
       "change_type": "status",
       "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-11-18"
+      "new_value": "已废止",
+      "detected_on": "2026-11-20"
     },
     {
-      "law_id": "ff8081819ff54ab801a03d2d20223b81",
-      "title": "四川省水资源条例",
-      "change_type": "removed",
+      "law_id": "ff8080816ecb2302016ed3fa6cb6371a",
+      "title": "黑龙江省农业环境保护管理条例",
+      "change_type": "status",
       "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-18"
+      "new_value": "已废止",
+      "detected_on": "2026-11-20"
     },
     {
-      "law_id": "ff8081819ff54ab801a03d7604393e40",
-      "title": "四川省饮用水水源保护管理条例",
-      "change_type": "removed",
+      "law_id": "ff8080816ecb2302016ed4a937323ec9",
+      "title": "黑龙江省兴凯湖国家级自然保护区管理条例",
+      "change_type": "status",
       "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-18"
+      "new_value": "已废止",
+      "detected_on": "2026-11-20"
     },
     {
-      "law_id": "ff8081819ff541ea01a03d7649e44809",
-      "title": "四川省大气污染防治条例",
-      "change_type": "removed",
+      "law_id": "ff8080816eea6bee016eed6163b500d0",
+      "title": "黑龙江省森林管理条例",
+      "change_type": "status",
       "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-18"
+      "new_value": "已废止",
+      "detected_on": "2026-11-20"
     },
     {
-      "law_id": "ff8081819ff54a6401a03d7621b273c6",
-      "title": "四川省老鹰水库饮用水水源保护条例",
-      "change_type": "removed",
+      "law_id": "ff8080816eb1afb8016ebfd6cb5b5dfd",
+      "title": "黑龙江省地质环境保护条例",
+      "change_type": "status",
       "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-18"
+      "new_value": "已废止",
+      "detected_on": "2026-11-20"
     },
     {
-      "law_id": "ff8081819ff541ea01a03d76cf4c4820",
-      "title": "四川省辐射污染防治条例",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-18"
-    },
-    {
-      "law_id": "ff8081819ff54a6401a03d76ed0773f7",
-      "title": "四川省生态环境影响评价条例",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-18"
-    },
-    {
-      "law_id": "ff8081819aedd759019b538aa92d6dd6",
-      "title": "哈密市城市更新条例",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-18"
-    },
-    {
-      "law_id": "ff80818191d616940191d999beed0875",
-      "title": "江西省古树名木保护条例",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-18"
-    },
-    {
-      "law_id": "ff80818191d62db00191d9a4a4c8087d",
-      "title": "江西省湿地保护条例",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-18"
-    },
-    {
-      "law_id": "ff80818191d60d410191d9abaf07097e",
-      "title": "江西省水上治安管理条例",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-18"
-    },
-    {
-      "law_id": "ff80818191d62db00191d9a6847908a2",
-      "title": "江西省实施《中华人民共和国村民委员会组织法》办法",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-18"
-    },
-    {
-      "law_id": "ff80818191d60d410191d9ad1b2a098a",
-      "title": "江西省文物保护条例",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-18"
-    },
-    {
-      "law_id": "ff8080816f3cbb3c016f404b411702a1",
-      "title": "民用核安全设备监督管理条例",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-18"
-    },
-    {
-      "law_id": "ff8080816f3cbb3c016f412c3e031b23",
-      "title": "放射性同位素与射线装置安全和防护条例",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-18"
-    },
-    {
-      "law_id": "ff8080816f3cbb3c016f40f146ef0cf0",
-      "title": "古生物化石保护条例",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-18"
-    },
-    {
-      "law_id": "ff8080816f3cbb3c016f4048be2c027c",
-      "title": "军用饮食供应站供水站管理办法",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-18"
-    },
-    {
-      "law_id": "ff8080816f3e9784016f424f1b4a04d9",
-      "title": "废弃电器电子产品回收处理管理条例",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-18"
-    },
-    {
-      "law_id": "ff8080816f3cbb3c016f414f9d74216e",
-      "title": "中华人民共和国城镇土地使用税暂行条例",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-18"
-    },
-    {
-      "law_id": "ff8080816f3cbb3c016f4094918a04c0",
-      "title": "中华人民共和国内河交通安全管理条例",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-18"
-    },
-    {
-      "law_id": "ff8081817f420ac8017f795af2aa7b6b",
-      "title": "西安市城市市容和环境卫生管理条例",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-18"
-    },
-    {
-      "law_id": "4028abcc61277793016127cae59a0b4d",
-      "title": "北海市立法条例",
-      "change_type": "removed",
+      "law_id": "ff8080816eb1afb8016ec09702af038d",
+      "title": "黑龙江省兴凯湖国家级自然保护区管理条例",
+      "change_type": "status",
       "old_value": "已修改",
-      "new_value": "",
-      "detected_on": "2026-11-18"
+      "new_value": "已废止",
+      "detected_on": "2026-11-20"
     },
     {
-      "law_id": "4028abcc61277793016127e9d0132938",
-      "title": "河南省农村公路条例",
-      "change_type": "removed",
+      "law_id": "ff8080816eb1afb8016eca8d1e4d3d48",
+      "title": "黑龙江丰林国家级自然保护区管理条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已废止",
+      "detected_on": "2026-11-20"
+    },
+    {
+      "law_id": "ff8080816eb1afb8016eca9115e93da2",
+      "title": "黑龙江呼中国家级自然保护区管理条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已废止",
+      "detected_on": "2026-11-20"
+    },
+    {
+      "law_id": "ff8080816eb1afb8016eca93dca83de3",
+      "title": "黑龙江牡丹峰国家级自然保护区管理条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已废止",
+      "detected_on": "2026-11-20"
+    },
+    {
+      "law_id": "ff8080816eb1afb8016eca965aeb3e14",
+      "title": "黑龙江南瓮河国家级自然保护区保护条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已废止",
+      "detected_on": "2026-11-20"
+    },
+    {
+      "law_id": "ff8080816eb1afb8016eca98a3ee3e45",
+      "title": "黑龙江双河国家级自然保护区管理条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已废止",
+      "detected_on": "2026-11-20"
+    },
+    {
+      "law_id": "ff8080816ecb2302016ecfca5ed411de",
+      "title": "黑龙江省农业环境保护管理条例",
+      "change_type": "status",
       "old_value": "已修改",
-      "new_value": "",
-      "detected_on": "2026-11-18"
+      "new_value": "已废止",
+      "detected_on": "2026-11-20"
     },
     {
-      "law_id": "4028abcc6127779301612817276c57bf",
-      "title": "太原市城乡建设档案管理条例",
-      "change_type": "removed",
-      "old_value": "已修改",
-      "new_value": "",
-      "detected_on": "2026-11-18"
+      "law_id": "ff8080816ecb2302016ed01af6ba2ccd",
+      "title": "黑龙江省辐射污染防治条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已废止",
+      "detected_on": "2026-11-20"
     },
     {
-      "law_id": "ff8081819ff54ab801a03d2d20223b81",
-      "title": "四川省水资源条例",
-      "change_type": "restored",
-      "old_value": "",
-      "new_value": "有效",
-      "detected_on": "2026-11-19"
-    },
-    {
-      "law_id": "ff8081819ff54ab801a03d7604393e40",
-      "title": "四川省饮用水水源保护管理条例",
-      "change_type": "restored",
-      "old_value": "",
-      "new_value": "有效",
-      "detected_on": "2026-11-19"
-    },
-    {
-      "law_id": "ff8081819ff541ea01a03d7649e44809",
-      "title": "四川省大气污染防治条例",
-      "change_type": "restored",
-      "old_value": "",
-      "new_value": "有效",
-      "detected_on": "2026-11-19"
-    },
-    {
-      "law_id": "ff8081819ff54a6401a03d7621b273c6",
-      "title": "四川省老鹰水库饮用水水源保护条例",
-      "change_type": "restored",
-      "old_value": "",
-      "new_value": "有效",
-      "detected_on": "2026-11-19"
-    },
-    {
-      "law_id": "ff8081819ff541ea01a03d76cf4c4820",
-      "title": "四川省辐射污染防治条例",
-      "change_type": "restored",
-      "old_value": "",
-      "new_value": "有效",
-      "detected_on": "2026-11-19"
-    },
-    {
-      "law_id": "ff8081819ff54a6401a03d76ed0773f7",
-      "title": "四川省生态环境影响评价条例",
-      "change_type": "restored",
-      "old_value": "",
-      "new_value": "有效",
-      "detected_on": "2026-11-19"
-    },
-    {
-      "law_id": "4028abcc61277793016127cae59a0b4d",
-      "title": "北海市立法条例",
-      "change_type": "restored",
+      "law_id": "ff8081819ff54ab8019ffa27ed2e187d",
+      "title": "西安市城市污水处理和再生水利用条例",
+      "change_type": "added",
       "old_value": "",
       "new_value": "已修改",
-      "detected_on": "2026-11-19"
-    },
-    {
-      "law_id": "ff8081819ff54ab801a0424d76ff5257",
-      "title": "德阳市城市管理条例",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-19"
-    },
-    {
-      "law_id": "ff8081819ff54ab801a13e93f9f743a4",
-      "title": "德阳市文明行为促进条例",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-19"
-    },
-    {
-      "law_id": "ff808181a0bc9b0a01a13e79250e3a48",
-      "title": "德阳市大气污染防治条例",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-19"
-    },
-    {
-      "law_id": "ff8081819ff54a6401a0424d77620cac",
-      "title": "德阳市华强沟水库饮用水水源保护条例",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-19"
-    },
-    {
-      "law_id": "ff8081819ff541ea01a03d0832c143fe",
-      "title": "嘉峪关市市容和环境卫生管理条例",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-19"
-    },
-    {
-      "law_id": "ff8081819ff541ea01a03d0ad80d444c",
-      "title": "嘉峪关市绿化条例",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-19"
-    },
-    {
-      "law_id": "ff8081819ff54ab801a037fc261826b3",
-      "title": "银川市水资源管理条例",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-19"
+      "detected_on": "2026-11-20"
     },
     {
       "law_id": "4028abcc61277793016127dbbafa1a8c",
       "title": "南宁市地方性法规制定条例",
-      "change_type": "removed",
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "已修改",
+      "detected_on": "2026-11-20"
+    },
+    {
+      "law_id": "4028abcc6127779301612806102147be",
+      "title": "黑龙江省湿地保护条例",
+      "change_type": "status",
       "old_value": "已修改",
-      "new_value": "",
-      "detected_on": "2026-11-19"
+      "new_value": "已废止",
+      "detected_on": "2026-11-20"
+    },
+    {
+      "law_id": "4028abcc612777930161283d69437ce4",
+      "title": "黑龙江省农业环境保护管理条例",
+      "change_type": "status",
+      "old_value": "已修改",
+      "new_value": "已废止",
+      "detected_on": "2026-11-20"
+    },
+    {
+      "law_id": "4028abcc612777930161284ba84c0a78",
+      "title": "黑龙江省呼中国家级自然保护区管理条例",
+      "change_type": "status",
+      "old_value": "已修改",
+      "new_value": "已废止",
+      "detected_on": "2026-11-20"
+    },
+    {
+      "law_id": "4028abcc612777930161284cf8b60bbd",
+      "title": "黑龙江丰林国家级自然保护区管理条例",
+      "change_type": "status",
+      "old_value": "已修改",
+      "new_value": "已废止",
+      "detected_on": "2026-11-20"
+    },
+    {
+      "law_id": "4028abcc61277793016127e9d0132938",
+      "title": "河南省农村公路条例",
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "已修改",
+      "detected_on": "2026-11-20"
+    },
+    {
+      "law_id": "4028abcc61277793016127f1ee8131bb",
+      "title": "黑龙江省地质环境保护条例",
+      "change_type": "status",
+      "old_value": "已修改",
+      "new_value": "已废止",
+      "detected_on": "2026-11-20"
+    },
+    {
+      "law_id": "4028abcc612777930161286e61ef2ca1",
+      "title": "河北省城市建设监察条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已废止",
+      "detected_on": "2026-11-20"
+    },
+    {
+      "law_id": "4028abcc6127779301612817276c57bf",
+      "title": "太原市城乡建设档案管理条例",
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "已修改",
+      "detected_on": "2026-11-20"
+    },
+    {
+      "law_id": "4028abcc61277793016127e1a058208e",
+      "title": "黑龙江双河国家级自然保护区管理条例",
+      "change_type": "status",
+      "old_value": "已修改",
+      "new_value": "已废止",
+      "detected_on": "2026-11-20"
+    },
+    {
+      "law_id": "4028abcc61277793016127e911bc2865",
+      "title": "黑龙江省兴凯湖国家级自然保护区管理条例",
+      "change_type": "status",
+      "old_value": "已修改",
+      "new_value": "已废止",
+      "detected_on": "2026-11-20"
+    },
+    {
+      "law_id": "4028abcc61277793016127eaefdc2a78",
+      "title": "黑龙江牡丹峰国家级自然保护区管理条例",
+      "change_type": "status",
+      "old_value": "已修改",
+      "new_value": "已废止",
+      "detected_on": "2026-11-20"
+    },
+    {
+      "law_id": "4028abcc61277793016127f1e85f31b6",
+      "title": "黑龙江南瓮河国家级自然保护区保护条例",
+      "change_type": "status",
+      "old_value": "已修改",
+      "new_value": "已废止",
+      "detected_on": "2026-11-20"
+    },
+    {
+      "law_id": "4028abcc61277793016128497f970877",
+      "title": "黑龙江省森林公园管理条例",
+      "change_type": "status",
+      "old_value": "已修改",
+      "new_value": "已废止",
+      "detected_on": "2026-11-20"
     },
     {
       "law_id": "4028abcc612777930161280d3c7d4db2",
       "title": "西宁市大气污染防治条例",
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "已修改",
+      "detected_on": "2026-11-20"
+    },
+    {
+      "law_id": "ff8081818a1cb546018a21a21b1d0e81",
+      "title": "福建省发挥村规民约基层治理作用若干规定",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-20"
+    },
+    {
+      "law_id": "4028abcc612777930161285a22951980",
+      "title": "浙江省全民健身条例",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-20"
+    },
+    {
+      "law_id": "4028abcc612777930161287dd84b38b9",
+      "title": "呼和浩特市人民代表大会代表工作条例",
       "change_type": "removed",
       "old_value": "已修改",
       "new_value": "",
-      "detected_on": "2026-11-19"
+      "detected_on": "2026-11-20"
+    },
+    {
+      "law_id": "4028abcc612777930161289178ce4822",
+      "title": "呼和浩特市城市中小学幼儿园规划建设条例",
+      "change_type": "removed",
+      "old_value": "已修改",
+      "new_value": "",
+      "detected_on": "2026-11-20"
+    },
+    {
+      "law_id": "4028abcc61277793016128206a0b6204",
+      "title": "四川省预防职务犯罪工作条例",
+      "change_type": "removed",
+      "old_value": "已废止",
+      "new_value": "",
+      "detected_on": "2026-11-20"
+    },
+    {
+      "law_id": "4028abcc612777930161282162f76323",
+      "title": "四川省人民代表大会常务委员会关于严厉查处生产、销售假冒伪劣商品违法行为的决定",
+      "change_type": "removed",
+      "old_value": "已废止",
+      "new_value": "",
+      "detected_on": "2026-11-20"
+    },
+    {
+      "law_id": "4028abcc612777930161285dcaa21d01",
+      "title": "青海省实施《中华人民共和国归侨侨眷权益保护法》办法",
+      "change_type": "removed",
+      "old_value": "已修改",
+      "new_value": "",
+      "detected_on": "2026-11-20"
+    },
+    {
+      "law_id": "4028abcc6127779301612801e305436d",
+      "title": "青海省饮用水水源保护条例",
+      "change_type": "removed",
+      "old_value": "已修改",
+      "new_value": "",
+      "detected_on": "2026-11-20"
+    },
+    {
+      "law_id": "4028abcc61277793016127f55f1b358f",
+      "title": "西宁市人民代表大会及其常务委员会立法程序规定",
+      "change_type": "removed",
+      "old_value": "已修改",
+      "new_value": "",
+      "detected_on": "2026-11-20"
+    },
+    {
+      "law_id": "4028abcc61277793016127fbfd1a3cf0",
+      "title": "青海省罚款和没收财物管理条例",
+      "change_type": "removed",
+      "old_value": "已修改",
+      "new_value": "",
+      "detected_on": "2026-11-20"
+    },
+    {
+      "law_id": "4028abcc61277793016127fea0ec3fce",
+      "title": "西宁市防御雷电灾害条例",
+      "change_type": "removed",
+      "old_value": "已修改",
+      "new_value": "",
+      "detected_on": "2026-11-20"
+    },
+    {
+      "law_id": "4028abcc61277793016127f8742e3910",
+      "title": "西宁市城乡规划管理条例",
+      "change_type": "removed",
+      "old_value": "已修改",
+      "new_value": "",
+      "detected_on": "2026-11-20"
+    },
+    {
+      "law_id": "4028abcc61277793016127f9ed663ab1",
+      "title": "西宁市养犬管理条例",
+      "change_type": "removed",
+      "old_value": "已修改",
+      "new_value": "",
+      "detected_on": "2026-11-20"
+    },
+    {
+      "law_id": "4028abcc612777930161280252f443ef",
+      "title": "青海省消防条例",
+      "change_type": "removed",
+      "old_value": "已修改",
+      "new_value": "",
+      "detected_on": "2026-11-20"
+    },
+    {
+      "law_id": "4028abcc61277793016127f96f173a26",
+      "title": "青海省出版物发行管理条例",
+      "change_type": "removed",
+      "old_value": "已修改",
+      "new_value": "",
+      "detected_on": "2026-11-20"
+    },
+    {
+      "law_id": "4028abcc61277793016127facafc3ba6",
+      "title": "青海省实施《中华人民共和国集会游行示威法》办法",
+      "change_type": "removed",
+      "old_value": "已修改",
+      "new_value": "",
+      "detected_on": "2026-11-20"
+    },
+    {
+      "law_id": "4028abcc61277793016128013a5142ad",
+      "title": "青海省劳动保障监察条例",
+      "change_type": "removed",
+      "old_value": "已修改",
+      "new_value": "",
+      "detected_on": "2026-11-20"
+    },
+    {
+      "law_id": "4028abcc61277793016128667b502545",
+      "title": "青海省实施《中华人民共和国全国人民代表大会和地方各级人民代表大会代表法》办法",
+      "change_type": "removed",
+      "old_value": "已修改",
+      "new_value": "",
+      "detected_on": "2026-11-20"
+    },
+    {
+      "law_id": "4028abcc612777930161286d726a2bcc",
+      "title": "青海省人民代表大会常务委员会任免国家机关工作人员办法",
+      "change_type": "removed",
+      "old_value": "已修改",
+      "new_value": "",
+      "detected_on": "2026-11-20"
+    },
+    {
+      "law_id": "4028abcc612777930161280b9a614c70",
+      "title": "西宁市建设工程抗震设防要求和地震安全性评价管理条例",
+      "change_type": "removed",
+      "old_value": "已修改",
+      "new_value": "",
+      "detected_on": "2026-11-20"
     }
   ]
 }
