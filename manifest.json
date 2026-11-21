@@ -1,7 +1,7 @@
 {
-  "snapshot_date": "2026-11-21",
+  "snapshot_date": "2026-11-22",
   "laws": 32337,
-  "listed": 32242,
+  "listed": 32261,
   "with_content": 27513,
   "unreadable": 4795,
   "by_source": {
@@ -14,334 +14,6 @@
     "samr": 253
   },
   "recent_changes": [
-    {
-      "law_id": "4028abcc61277793016127eb9dfc2b44",
-      "title": "厦门市人民代表大会常务委员会关于发展循环经济的决定",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已废止",
-      "detected_on": "2026-11-21"
-    },
-    {
-      "law_id": "4028abcc61277793016127fd8b383e8d",
-      "title": "福建省实施《中华人民共和国各级人民代表大会常务委员会监督法》办法",
-      "change_type": "status",
-      "old_value": "有效",
-      "new_value": "已修改",
-      "detected_on": "2026-11-21"
-    },
-    {
-      "law_id": "4028abcc61277793016128206a0b6204",
-      "title": "四川省预防职务犯罪工作条例",
-      "change_type": "restored",
-      "old_value": "",
-      "new_value": "已废止",
-      "detected_on": "2026-11-21"
-    },
-    {
-      "law_id": "4028abcc612777930161282162f76323",
-      "title": "四川省人民代表大会常务委员会关于严厉查处生产、销售假冒伪劣商品违法行为的决定",
-      "change_type": "restored",
-      "old_value": "",
-      "new_value": "已废止",
-      "detected_on": "2026-11-21"
-    },
-    {
-      "law_id": "4028abcc612777930161285dcaa21d01",
-      "title": "青海省实施《中华人民共和国归侨侨眷权益保护法》办法",
-      "change_type": "restored",
-      "old_value": "",
-      "new_value": "已修改",
-      "detected_on": "2026-11-21"
-    },
-    {
-      "law_id": "4028abcc61277793016128667b502545",
-      "title": "青海省实施《中华人民共和国全国人民代表大会和地方各级人民代表大会代表法》办法",
-      "change_type": "restored",
-      "old_value": "",
-      "new_value": "已修改",
-      "detected_on": "2026-11-21"
-    },
-    {
-      "law_id": "4028abcc612777930161286d726a2bcc",
-      "title": "青海省人民代表大会常务委员会任免国家机关工作人员办法",
-      "change_type": "restored",
-      "old_value": "",
-      "new_value": "已修改",
-      "detected_on": "2026-11-21"
-    },
-    {
-      "law_id": "4028abcc612777930161280b9a614c70",
-      "title": "西宁市建设工程抗震设防要求和地震安全性评价管理条例",
-      "change_type": "restored",
-      "old_value": "",
-      "new_value": "已修改",
-      "detected_on": "2026-11-21"
-    },
-    {
-      "law_id": "4028abcc6127779301612801e305436d",
-      "title": "青海省饮用水水源保护条例",
-      "change_type": "restored",
-      "old_value": "",
-      "new_value": "已修改",
-      "detected_on": "2026-11-21"
-    },
-    {
-      "law_id": "4028abcc61277793016127f55f1b358f",
-      "title": "西宁市人民代表大会及其常务委员会立法程序规定",
-      "change_type": "restored",
-      "old_value": "",
-      "new_value": "已修改",
-      "detected_on": "2026-11-21"
-    },
-    {
-      "law_id": "4028abcc61277793016127fbfd1a3cf0",
-      "title": "青海省罚款和没收财物管理条例",
-      "change_type": "restored",
-      "old_value": "",
-      "new_value": "已修改",
-      "detected_on": "2026-11-21"
-    },
-    {
-      "law_id": "4028abcc61277793016127fea0ec3fce",
-      "title": "西宁市防御雷电灾害条例",
-      "change_type": "restored",
-      "old_value": "",
-      "new_value": "已修改",
-      "detected_on": "2026-11-21"
-    },
-    {
-      "law_id": "4028abcc61277793016127f8742e3910",
-      "title": "西宁市城乡规划管理条例",
-      "change_type": "restored",
-      "old_value": "",
-      "new_value": "已修改",
-      "detected_on": "2026-11-21"
-    },
-    {
-      "law_id": "4028abcc61277793016127f9ed663ab1",
-      "title": "西宁市养犬管理条例",
-      "change_type": "restored",
-      "old_value": "",
-      "new_value": "已修改",
-      "detected_on": "2026-11-21"
-    },
-    {
-      "law_id": "4028abcc612777930161280252f443ef",
-      "title": "青海省消防条例",
-      "change_type": "restored",
-      "old_value": "",
-      "new_value": "已修改",
-      "detected_on": "2026-11-21"
-    },
-    {
-      "law_id": "4028abcc61277793016127f96f173a26",
-      "title": "青海省出版物发行管理条例",
-      "change_type": "restored",
-      "old_value": "",
-      "new_value": "已修改",
-      "detected_on": "2026-11-21"
-    },
-    {
-      "law_id": "4028abcc61277793016127facafc3ba6",
-      "title": "青海省实施《中华人民共和国集会游行示威法》办法",
-      "change_type": "restored",
-      "old_value": "",
-      "new_value": "已修改",
-      "detected_on": "2026-11-21"
-    },
-    {
-      "law_id": "4028abcc61277793016128013a5142ad",
-      "title": "青海省劳动保障监察条例",
-      "change_type": "restored",
-      "old_value": "",
-      "new_value": "已修改",
-      "detected_on": "2026-11-21"
-    },
-    {
-      "law_id": "ff8081819ff541ea01a080880aa91dff",
-      "title": "开封市城市市容和环境卫生管理条例",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-21"
-    },
-    {
-      "law_id": "ff8081819ff54a6401a08df4bb1447da",
-      "title": "鄂州市建筑垃圾管理条例",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-21"
-    },
-    {
-      "law_id": "ff8081819ff54ab801a08df582a45fed",
-      "title": "鄂州市长港河保护条例",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-21"
-    },
-    {
-      "law_id": "ff8081819ff541ea01a08df547be6ae0",
-      "title": "鄂州市餐饮服务业油烟污染防治条例",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-21"
-    },
-    {
-      "law_id": "ff8081819ff54ab801a08df46c325fd5",
-      "title": "鄂州市湖泊保护条例",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-21"
-    },
-    {
-      "law_id": "ff8081819ff541ea01a047cfe8730f2b",
-      "title": "漳州市生活垃圾管理办法",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-21"
-    },
-    {
-      "law_id": "ff8081819ff54ab801a047d0c7fd021f",
-      "title": "漳州市建筑垃圾管理办法",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-21"
-    },
-    {
-      "law_id": "ff8081819ff54a6401a047cf1d1140af",
-      "title": "漳州市饮用水水源保护办法",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-21"
-    },
-    {
-      "law_id": "ff8081819ff54ab801a047cc0266020b",
-      "title": "漳州市市容和环境卫生“门前三包”责任区管理若干规定",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-21"
-    },
-    {
-      "law_id": "ff8081819ff54a6401a0558ace1567eb",
-      "title": "莆田市城市内河管理条例",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-21"
-    },
-    {
-      "law_id": "ff8081819ff54ab801a047d15e680226",
-      "title": "漳州市大气污染防治条例",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-21"
-    },
-    {
-      "law_id": "ff8081819ff541ea01a047ce0a150f22",
-      "title": "漳州市市区内河管理规定",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-21"
-    },
-    {
-      "law_id": "ff8081819b697220019bde326b555f68",
-      "title": "广州市停车场条例",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-21"
-    },
-    {
-      "law_id": "582a364f34b64e1bbcb7c155e44962c3",
-      "title": "广东省人民代表大会常务委员会关于废止《广东省农民负担管理条例》和《广东省行政执法队伍管理条例》两项地方性法规的决定",
-      "change_type": "removed",
-      "old_value": "",
-      "new_value": "",
-      "detected_on": "2026-11-21"
-    },
-    {
-      "law_id": "ff8080816eb1afb8016ebb48d31a02c8",
-      "title": "青岛市建筑废弃物资源化利用条例",
-      "change_type": "removed",
-      "old_value": "已修改",
-      "new_value": "",
-      "detected_on": "2026-11-21"
-    },
-    {
-      "law_id": "4028abcc61277793016128728807308c",
-      "title": "山西省人民代表大会常务委员会工作条例",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-21"
-    },
-    {
-      "law_id": "4028abcc61277793016128795f6b36a7",
-      "title": "太原市天然林保护条例",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-21"
-    },
-    {
-      "law_id": "4028abcc612777930161287841ba3611",
-      "title": "太原市商业网点管理办法",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-21"
-    },
-    {
-      "law_id": "4028abcc6127779301612879251c3686",
-      "title": "太原市市容和环境卫生管理办法",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-21"
-    },
-    {
-      "law_id": "4028abcc61277793016128713cad2f54",
-      "title": "太原市城市道路管理条例",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-21"
-    },
-    {
-      "law_id": "4028abcc6127779301612871ea872ff8",
-      "title": "太原市奖励和保护见义勇为人员条例",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-21"
-    },
-    {
-      "law_id": "4028abcc612777930161287a62003711",
-      "title": "大同市人民代表大会常务委员会讨论决定重大事项的规定",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-21"
-    },
-    {
-      "law_id": "4028abcc612777930161284851cf0760",
-      "title": "郑州市公路路政管理条例",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-21"
-    },
     {
       "law_id": "4028abcc61277793016127e7f5fc272e",
       "title": "河南省人民代表大会常务委员会关于加强结核病防治工作的决定",
@@ -413,6 +85,334 @@
       "old_value": "",
       "new_value": "尚未生效",
       "detected_on": "2026-11-21"
+    },
+    {
+      "law_id": "ff8081819ff541ea01a080880aa91dff",
+      "title": "开封市城市市容和环境卫生管理条例",
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-22"
+    },
+    {
+      "law_id": "ff8081819ff54a6401a08df4bb1447da",
+      "title": "鄂州市建筑垃圾管理条例",
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-22"
+    },
+    {
+      "law_id": "ff8081819ff54ab801a08df582a45fed",
+      "title": "鄂州市长港河保护条例",
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-22"
+    },
+    {
+      "law_id": "ff8081819ff541ea01a08df547be6ae0",
+      "title": "鄂州市餐饮服务业油烟污染防治条例",
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-22"
+    },
+    {
+      "law_id": "ff8081819ff54ab801a08df46c325fd5",
+      "title": "鄂州市湖泊保护条例",
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-22"
+    },
+    {
+      "law_id": "ff8081819ff541ea01a047cfe8730f2b",
+      "title": "漳州市生活垃圾管理办法",
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-22"
+    },
+    {
+      "law_id": "ff8081819ff54ab801a047d0c7fd021f",
+      "title": "漳州市建筑垃圾管理办法",
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-22"
+    },
+    {
+      "law_id": "ff8081819ff54a6401a047cf1d1140af",
+      "title": "漳州市饮用水水源保护办法",
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-22"
+    },
+    {
+      "law_id": "ff8081819ff54ab801a047cc0266020b",
+      "title": "漳州市市容和环境卫生“门前三包”责任区管理若干规定",
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-22"
+    },
+    {
+      "law_id": "ff8081819ff54a6401a0558ace1567eb",
+      "title": "莆田市城市内河管理条例",
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-22"
+    },
+    {
+      "law_id": "ff8081819ff54ab801a047d15e680226",
+      "title": "漳州市大气污染防治条例",
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-22"
+    },
+    {
+      "law_id": "ff8081819ff541ea01a047ce0a150f22",
+      "title": "漳州市市区内河管理规定",
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-22"
+    },
+    {
+      "law_id": "582a364f34b64e1bbcb7c155e44962c3",
+      "title": "广东省人民代表大会常务委员会关于废止《广东省农民负担管理条例》和《广东省行政执法队伍管理条例》两项地方性法规的决定",
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "",
+      "detected_on": "2026-11-22"
+    },
+    {
+      "law_id": "ff8080816eb1afb8016ebb48d31a02c8",
+      "title": "青岛市建筑废弃物资源化利用条例",
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "已修改",
+      "detected_on": "2026-11-22"
+    },
+    {
+      "law_id": "4028abcc61277793016128728807308c",
+      "title": "山西省人民代表大会常务委员会工作条例",
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-22"
+    },
+    {
+      "law_id": "4028abcc61277793016128795f6b36a7",
+      "title": "太原市天然林保护条例",
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-22"
+    },
+    {
+      "law_id": "4028abcc612777930161287841ba3611",
+      "title": "太原市商业网点管理办法",
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-22"
+    },
+    {
+      "law_id": "4028abcc6127779301612879251c3686",
+      "title": "太原市市容和环境卫生管理办法",
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-22"
+    },
+    {
+      "law_id": "4028abcc61277793016128713cad2f54",
+      "title": "太原市城市道路管理条例",
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-22"
+    },
+    {
+      "law_id": "4028abcc6127779301612871ea872ff8",
+      "title": "太原市奖励和保护见义勇为人员条例",
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-22"
+    },
+    {
+      "law_id": "4028abcc612777930161287a62003711",
+      "title": "大同市人民代表大会常务委员会讨论决定重大事项的规定",
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-22"
+    },
+    {
+      "law_id": "4028abcc612777930161284851cf0760",
+      "title": "郑州市公路路政管理条例",
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-22"
+    },
+    {
+      "law_id": "4028abcc61277793016127e7f5fc272e",
+      "title": "河南省人民代表大会常务委员会关于加强结核病防治工作的决定",
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-22"
+    },
+    {
+      "law_id": "4028abcc61277793016127ec0bfc2bbe",
+      "title": "河南省人大常委会关于进一步加强城乡规划监督工作的决定",
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-22"
+    },
+    {
+      "law_id": "4028abcc61277793016127de43221d07",
+      "title": "河南省人民代表大会常务委员会关于进一步加快我省旅游业发展的决议",
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-22"
+    },
+    {
+      "law_id": "4028abcc6127779301612853ee1d137d",
+      "title": "洛阳市森林公园管理条例",
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-22"
+    },
+    {
+      "law_id": "4028abcc612777930161284bcdaa0aa0",
+      "title": "洛阳市旅游条例",
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-22"
+    },
+    {
+      "law_id": "4028abcc612777930161285ce6971c20",
+      "title": "洛阳市城市中小学校幼儿园规划建设管理条例",
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-22"
+    },
+    {
+      "law_id": "2c90e5b9688824190168ffe8e4f7143e",
+      "title": "河南省人民代表大会常务委员会关于办理省人大代表建议、批评和意见的办法",
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-22"
+    },
+    {
+      "law_id": "4028abcc6127779301612805539546f1",
+      "title": "海南经济特区森林旅游资源保护和开发规定",
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-22"
+    },
+    {
+      "law_id": "ff8081819ff54ab801a056a7ed6a311c",
+      "title": "内蒙古自治区实施《中华人民共和国残疾人保障法》办法",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-22"
+    },
+    {
+      "law_id": "ff8081818d736ac1018d784e8b281887",
+      "title": "上海市罢免和补选各级人民代表大会代表程序的规定",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-22"
+    },
+    {
+      "law_id": "38eb6425f17144568e5d910ab75e71d6",
+      "title": "广东省人民代表大会常务委员会关于修改《广东省机动车排气污染防治条例》等六项地方性法规的决定",
+      "change_type": "removed",
+      "old_value": "",
+      "new_value": "",
+      "detected_on": "2026-11-22"
+    },
+    {
+      "law_id": "ff8080816eb1afb8016ebb59be8407b9",
+      "title": "青岛市胶州湾保护条例",
+      "change_type": "removed",
+      "old_value": "已修改",
+      "new_value": "",
+      "detected_on": "2026-11-22"
+    },
+    {
+      "law_id": "4028abcc6127779301612812e0585369",
+      "title": "太原市农业资源综合管理条例",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-22"
+    },
+    {
+      "law_id": "4028abcc6127779301612871f3143000",
+      "title": "太原市科学技术经费投入和管理条例",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-22"
+    },
+    {
+      "law_id": "4028abcc6127779301612870f0e02f06",
+      "title": "大同市农村公路养护管理条例",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-22"
+    },
+    {
+      "law_id": "4028abcc612777930161281872db5928",
+      "title": "大同市预防和制止家庭暴力条例",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-22"
+    },
+    {
+      "law_id": "4028abcc612777930161287659fe3444",
+      "title": "大同市城市节约用水管理条例",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-22"
+    },
+    {
+      "law_id": "4028abcc612777930161281990755a6c",
+      "title": "运城市关圣文化建筑群保护条例",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-22"
+    },
+    {
+      "law_id": "4028abcc6127779301612813346053c2",
+      "title": "大同市城市供水条例",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-22"
     }
   ]
 }
