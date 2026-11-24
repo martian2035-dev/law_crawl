@@ -1,11 +1,11 @@
 {
-  "snapshot_date": "2026-11-24",
-  "laws": 32387,
-  "listed": 32283,
-  "with_content": 27563,
+  "snapshot_date": "2026-11-25",
+  "laws": 32408,
+  "listed": 32323,
+  "with_content": 27584,
   "unreadable": 4795,
   "by_source": {
-    "flk": 31571,
+    "flk": 31592,
     "mee": 72,
     "mem": 76,
     "mohurd": 88,
@@ -15,404 +15,404 @@
   },
   "recent_changes": [
     {
-      "law_id": "4028abcc6127779301612853ee1d137d",
-      "title": "洛阳市森林公园管理条例",
-      "change_type": "restored",
-      "old_value": "",
-      "new_value": "有效",
-      "detected_on": "2026-11-24"
-    },
-    {
-      "law_id": "4028abcc612777930161284bcdaa0aa0",
-      "title": "洛阳市旅游条例",
-      "change_type": "restored",
-      "old_value": "",
-      "new_value": "有效",
-      "detected_on": "2026-11-24"
-    },
-    {
-      "law_id": "4028abcc612777930161285ce6971c20",
-      "title": "洛阳市城市中小学校幼儿园规划建设管理条例",
-      "change_type": "restored",
-      "old_value": "",
-      "new_value": "有效",
-      "detected_on": "2026-11-24"
-    },
-    {
-      "law_id": "2c90e5b9688824190168ffe8e4f7143e",
-      "title": "河南省人民代表大会常务委员会关于办理省人大代表建议、批评和意见的办法",
-      "change_type": "restored",
-      "old_value": "",
-      "new_value": "有效",
-      "detected_on": "2026-11-24"
-    },
-    {
-      "law_id": "4028abcc61277793016127fe940a3fbf",
-      "title": "西宁市城市建设档案管理条例",
-      "change_type": "restored",
-      "old_value": "",
-      "new_value": "有效",
-      "detected_on": "2026-11-24"
-    },
-    {
-      "law_id": "4028abcc612777930161286165af2081",
-      "title": "青海省人民代表大会常务委员会组成人员守则",
-      "change_type": "restored",
-      "old_value": "",
-      "new_value": "有效",
-      "detected_on": "2026-11-24"
-    },
-    {
-      "law_id": "4028abcc612777930161285edfe21e12",
-      "title": "青海省户外广告管理条例",
-      "change_type": "restored",
-      "old_value": "",
-      "new_value": "有效",
-      "detected_on": "2026-11-24"
-    },
-    {
-      "law_id": "4028abcc612777930161285f3a9b1e6d",
-      "title": "青海省征兵工作条例",
-      "change_type": "restored",
-      "old_value": "",
-      "new_value": "有效",
-      "detected_on": "2026-11-24"
-    },
-    {
-      "law_id": "4028abcc6127779301612864c11423ae",
-      "title": "海南经济特区工伤保险若干规定",
-      "change_type": "restored",
-      "old_value": "",
-      "new_value": "有效",
-      "detected_on": "2026-11-24"
-    },
-    {
-      "law_id": "ff8081819fad31e2019feada49ad7fcf",
-      "title": "商洛市城市排水管理条例",
-      "change_type": "removed",
+      "law_id": "ff80808175265dd40175e39ade700dec",
+      "title": "赣州市文明行为促进条例",
+      "change_type": "status",
       "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-24"
+      "new_value": "已修改",
+      "detected_on": "2026-11-25"
     },
     {
-      "law_id": "ff8081819fad4019019feae26cc81ac9",
-      "title": "商洛市大气污染防治条例",
-      "change_type": "removed",
+      "law_id": "ff80808175265dd401766a2fe33d71ba",
+      "title": "郴州市文明行为促进条例",
+      "change_type": "status",
       "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-24"
+      "new_value": "已修改",
+      "detected_on": "2026-11-25"
     },
     {
-      "law_id": "ff8081819fad4019019feada332b1a8b",
-      "title": "商洛市农村居民饮水安全管理条例",
-      "change_type": "removed",
+      "law_id": "2c90e5b9617a3e490161bb680f4f04b8",
+      "title": "邵阳市城市公园广场管理条例",
+      "change_type": "status",
       "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-24"
-    },
-    {
-      "law_id": "ff8081819fad31e2019feada5a687fd1",
-      "title": "商洛市烟花爆竹燃放管理条例",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-24"
-    },
-    {
-      "law_id": "ff8081819ff54ab801a0427203e753e3",
-      "title": "广元市白龙湖亭子湖保护条例",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-24"
-    },
-    {
-      "law_id": "ff8081819aedd494019b3492f2637f67",
-      "title": "山东省预防未成年人犯罪条例",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-24"
-    },
-    {
-      "law_id": "ff8081817f420ac8017f8baa4b144dc9",
-      "title": "云南省园艺植物新品种注册保护条例",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-24"
-    },
-    {
-      "law_id": "ff808181799df6140179b104dcd12d36",
-      "title": "最高人民法院关于涉外民事或商事案件司法文书送达问题若干规定",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-24"
-    },
-    {
-      "law_id": "ff808181799df4000179b0988b7717e5",
-      "title": "最高人民法院关于审理民间借贷案件适用法律若干问题的规定",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-24"
-    },
-    {
-      "law_id": "ff808181799df4000179b09d7fb4181e",
-      "title": "最高人民法院关于审理涉及国有土地使用权合同纠纷案件适用法律问题的解释",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-24"
-    },
-    {
-      "law_id": "ff808181799df4000179abe90d9f1091",
-      "title": "最高人民法院关于审理期货纠纷案件若干问题的规定（二）",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-24"
-    },
-    {
-      "law_id": "ff80818179f5d2480179fa3186d503e4",
-      "title": "最高人民法院关于民事执行中财产调查若干问题的规定",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-24"
-    },
-    {
-      "law_id": "ff808181799def980179b0a439a318c3",
-      "title": "最高人民法院关于审理物业服务纠纷案件适用法律若干问题的解释",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-24"
-    },
-    {
-      "law_id": "ff808181799def980179b09e4de11866",
-      "title": "最高人民法院关于审理涉及农村土地承包经营纠纷调解仲裁案件适用法律若干问题的解释",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-24"
-    },
-    {
-      "law_id": "ff80818179f5d3e70179fa4da97e04c5",
-      "title": "最高人民法院关于委托执行若干问题的规定",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-24"
-    },
-    {
-      "law_id": "ff808181799df6140179b1b2d5932f91",
-      "title": "最高人民法院关于中国公民申请承认外国法院离婚判决程序问题的规定",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-24"
+      "new_value": "已修改",
+      "detected_on": "2026-11-25"
     },
     {
       "law_id": "ff8080816f3e98bd016f4205c511030c",
       "title": "国家重点建设项目管理办法",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-24"
-    },
-    {
-      "law_id": "ff8080816f3e9784016f420ad7e00315",
-      "title": "中华人民共和国测量标志保护条例",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-24"
-    },
-    {
-      "law_id": "ff8080816f3e98bd016f4256565b0528",
-      "title": "总会计师条例",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-24"
-    },
-    {
-      "law_id": "ff8080816f3cbb3c016f41393c2f1db0",
-      "title": "中华人民共和国海关总署关于外国驻中国使馆和使馆人员进出境物品的规定",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-24"
-    },
-    {
-      "law_id": "ff8080816f3cbb3c016f40d3cbfc05fe",
-      "title": "票据管理实施办法",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-24"
-    },
-    {
-      "law_id": "ff8080816f3cbb3c016f40f6b8170e88",
-      "title": "基本农田保护条例",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-24"
-    },
-    {
-      "law_id": "ff8080816f3cbb3c016f4030eb5e014c",
-      "title": "海关工作人员使用武器和警械的规定",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-24"
-    },
-    {
-      "law_id": "ff8080816f3cbb3c016f411e99ab1864",
-      "title": "长江三峡工程建设移民条例",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-24"
-    },
-    {
-      "law_id": "ff8080816f3cbb3c016f4130e3f91bfc",
-      "title": "中华人民共和国房产税暂行条例",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-24"
-    },
-    {
-      "law_id": "ff8080816f3cbb3c016f40d6fd3c06a0",
-      "title": "突发公共卫生事件应急条例",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-24"
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-25"
     },
     {
       "law_id": "ff8080816f3cbb3c016f4100376a10b8",
       "title": "电网调度管理条例",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-24"
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-25"
     },
     {
       "law_id": "ff8080816f3cbb3c016f4106f07d1215",
       "title": "企业债券管理条例",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-24"
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-25"
+    },
+    {
+      "law_id": "ff8080816f3cbb3c016f41393c2f1db0",
+      "title": "中华人民共和国海关总署关于外国驻中国使馆和使馆人员进出境物品的规定",
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-25"
+    },
+    {
+      "law_id": "ff8080816f3cbb3c016f40d6fd3c06a0",
+      "title": "突发公共卫生事件应急条例",
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-25"
+    },
+    {
+      "law_id": "ff8080816f3cbb3c016f4030eb5e014c",
+      "title": "海关工作人员使用武器和警械的规定",
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-25"
+    },
+    {
+      "law_id": "ff8080816f3cbb3c016f411e99ab1864",
+      "title": "长江三峡工程建设移民条例",
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-25"
+    },
+    {
+      "law_id": "ff8080816f3cbb3c016f4130e3f91bfc",
+      "title": "中华人民共和国房产税暂行条例",
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-25"
+    },
+    {
+      "law_id": "ff8080816f3e9784016f420ad7e00315",
+      "title": "中华人民共和国测量标志保护条例",
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-25"
+    },
+    {
+      "law_id": "ff8080816f3e98bd016f4256565b0528",
+      "title": "总会计师条例",
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-25"
+    },
+    {
+      "law_id": "ff8080816f3cbb3c016f40d3cbfc05fe",
+      "title": "票据管理实施办法",
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-25"
+    },
+    {
+      "law_id": "ff8080816f3cbb3c016f40f6b8170e88",
+      "title": "基本农田保护条例",
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "有效",
+      "detected_on": "2026-11-25"
     },
     {
       "law_id": "4028abcc612777930161281caa5a5ddb",
       "title": "石家庄市城市居民委员会组织条例",
-      "change_type": "removed",
-      "old_value": "已废止",
-      "new_value": "",
-      "detected_on": "2026-11-24"
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "已废止",
+      "detected_on": "2026-11-25"
     },
     {
       "law_id": "4028abcc612777930161287cac993831",
       "title": "邯郸市矿产资源管理条例",
-      "change_type": "removed",
-      "old_value": "已废止",
-      "new_value": "",
-      "detected_on": "2026-11-24"
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "已废止",
+      "detected_on": "2026-11-25"
     },
     {
       "law_id": "4028abcc61277793016128641793230d",
       "title": "辽宁省城镇企业职工养老保险条例",
-      "change_type": "removed",
-      "old_value": "已废止",
-      "new_value": "",
-      "detected_on": "2026-11-24"
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "已废止",
+      "detected_on": "2026-11-25"
     },
     {
       "law_id": "4028abcc612777930161286200222114",
       "title": "辽宁省禁止赌博条例",
-      "change_type": "removed",
-      "old_value": "已废止",
-      "new_value": "",
-      "detected_on": "2026-11-24"
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "已废止",
+      "detected_on": "2026-11-25"
     },
     {
       "law_id": "4028abcc61277793016128629d2321a8",
       "title": "辽宁省个体工商户和私营企业权益保护条例",
-      "change_type": "removed",
-      "old_value": "已废止",
-      "new_value": "",
-      "detected_on": "2026-11-24"
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "已废止",
+      "detected_on": "2026-11-25"
     },
     {
       "law_id": "4028abcc612777930161286a00252892",
       "title": "辽宁省盐业管理条例",
-      "change_type": "removed",
-      "old_value": "已废止",
-      "new_value": "",
-      "detected_on": "2026-11-24"
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "已废止",
+      "detected_on": "2026-11-25"
     },
     {
       "law_id": "4028abcc61277793016128676cdb2626",
       "title": "辽宁省人民警察巡察条例",
-      "change_type": "removed",
-      "old_value": "已废止",
-      "new_value": "",
-      "detected_on": "2026-11-24"
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "已废止",
+      "detected_on": "2026-11-25"
     },
     {
       "law_id": "4028abcc61277793016128646feb235f",
       "title": "辽宁省宗教事务条例",
-      "change_type": "removed",
-      "old_value": "已废止",
-      "new_value": "",
-      "detected_on": "2026-11-24"
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "已废止",
+      "detected_on": "2026-11-25"
     },
     {
       "law_id": "4028abcc61277793016128874d403eba",
       "title": "四川省《中华人民共和国集会游行示威法》实施办法",
-      "change_type": "removed",
-      "old_value": "已修改",
-      "new_value": "",
-      "detected_on": "2026-11-24"
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "已修改",
+      "detected_on": "2026-11-25"
     },
     {
       "law_id": "4028abcc61277793016128225bda6447",
       "title": "成都市养犬管理条例",
-      "change_type": "removed",
-      "old_value": "已修改",
-      "new_value": "",
-      "detected_on": "2026-11-24"
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "已修改",
+      "detected_on": "2026-11-25"
     },
     {
       "law_id": "4028abcc6127779301612816ba8f575c",
       "title": "四川省气象灾害防御条例",
-      "change_type": "removed",
-      "old_value": "已修改",
-      "new_value": "",
-      "detected_on": "2026-11-24"
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "已修改",
+      "detected_on": "2026-11-25"
     },
     {
       "law_id": "4028abcc6127779301612815f6f056c3",
       "title": "四川省建设工程勘察设计管理条例",
-      "change_type": "removed",
-      "old_value": "已修改",
-      "new_value": "",
-      "detected_on": "2026-11-24"
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "已修改",
+      "detected_on": "2026-11-25"
     },
     {
       "law_id": "4028abcc6127779301612827ec2b6ab8",
       "title": "察布查尔锡伯自治县促进宗教和谐条例",
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "已废止",
+      "detected_on": "2026-11-25"
+    },
+    {
+      "law_id": "ff808181927f0e7b0193b967598f7b0f",
+      "title": "广州市公共汽车电车客运管理条例",
       "change_type": "removed",
-      "old_value": "已废止",
+      "old_value": "有效",
       "new_value": "",
-      "detected_on": "2026-11-24"
+      "detected_on": "2026-11-25"
+    },
+    {
+      "law_id": "ff808181927f0e7b0193b95b2c4a7ab7",
+      "title": "广州市白云山风景名胜区保护条例",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-25"
+    },
+    {
+      "law_id": "ff808181927f09310193b962cec14ddc",
+      "title": "广州市城镇房地产登记办法",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-25"
+    },
+    {
+      "law_id": "ff808181927f0e7b0193b972234a7b77",
+      "title": "广州市全民健身条例",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-25"
+    },
+    {
+      "law_id": "ff808181927f0e7b0193b976cfa47bab",
+      "title": "广州市生活垃圾分类管理条例",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-25"
+    },
+    {
+      "law_id": "ff808181927f0e7b0193b97839757bae",
+      "title": "广州市生态公益林条例",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-25"
+    },
+    {
+      "law_id": "ff8081819b697220019b87dc3df972e5",
+      "title": "广州市控制吸烟条例",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-25"
+    },
+    {
+      "law_id": "ff8080816f3cbb3c016f40a4d55d05a8",
+      "title": "保税区海关监管办法",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-25"
+    },
+    {
+      "law_id": "ff8080816f3cbb3c016f415440e22252",
+      "title": "中国人民武装警察部队实行警官警衔制度的具体办法",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-25"
+    },
+    {
+      "law_id": "402881e46000e279016001d0c63b0bf6",
+      "title": "最高人民法院关于定期宣判的案件人民陪审员因故不能参加审判时可否由审判员开庭宣判问题的批复",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-25"
+    },
+    {
+      "law_id": "4028abcc612777930161282704ce69b2",
+      "title": "四川省《中华人民共和国农村土地承包法》实施办法",
+      "change_type": "removed",
+      "old_value": "已修改",
+      "new_value": "",
+      "detected_on": "2026-11-25"
+    },
+    {
+      "law_id": "4028abcc612777930161287f973039a2",
+      "title": "四川省科学技术进步条例",
+      "change_type": "removed",
+      "old_value": "已修改",
+      "new_value": "",
+      "detected_on": "2026-11-25"
+    },
+    {
+      "law_id": "4028abcc6127779301612883aa1e3c0b",
+      "title": "成都市《中华人民共和国河道管理条例》实施办法",
+      "change_type": "removed",
+      "old_value": "已修改",
+      "new_value": "",
+      "detected_on": "2026-11-25"
+    },
+    {
+      "law_id": "4028abcc612777930161288560473d44",
+      "title": "成都市科学技术进步条例",
+      "change_type": "removed",
+      "old_value": "已修改",
+      "new_value": "",
+      "detected_on": "2026-11-25"
+    },
+    {
+      "law_id": "4028abcc612777930161288617523dc1",
+      "title": "成都市邮政管理条例",
+      "change_type": "removed",
+      "old_value": "已修改",
+      "new_value": "",
+      "detected_on": "2026-11-25"
+    },
+    {
+      "law_id": "4028abcc6127779301612885e22c3d99",
+      "title": "成都市燃气管理条例",
+      "change_type": "removed",
+      "old_value": "已修改",
+      "new_value": "",
+      "detected_on": "2026-11-25"
+    },
+    {
+      "law_id": "4028abcc61277793016128870a243e83",
+      "title": "成都市城乡规划条例",
+      "change_type": "removed",
+      "old_value": "已修改",
+      "new_value": "",
+      "detected_on": "2026-11-25"
+    },
+    {
+      "law_id": "4028abcc612777930161287fe42939d5",
+      "title": "四川省村民委员会选举条例",
+      "change_type": "removed",
+      "old_value": "已修改",
+      "new_value": "",
+      "detected_on": "2026-11-25"
+    },
+    {
+      "law_id": "4028abcc6127779301612806a20e485a",
+      "title": "酒泉市人民代表大会及其常务委员会立法程序规则",
+      "change_type": "removed",
+      "old_value": "已修改",
+      "new_value": "",
+      "detected_on": "2026-11-25"
+    },
+    {
+      "law_id": "4028abcc61277793016127cb100d0b67",
+      "title": "伊犁哈萨克自治州城镇供热条例",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-25"
+    },
+    {
+      "law_id": "2c90e5b96c128b4c016d7ae4b8532e45",
+      "title": "伊宁市边境经济合作区管理条例",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-25"
+    },
+    {
+      "law_id": "2c90e5ba6a291d8f016d7c2a280c630d",
+      "title": "伊犁河流域土地开发管理条例",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-25"
     }
   ]
 }
