@@ -1,11 +1,11 @@
 {
-  "snapshot_date": "2026-11-27",
-  "laws": 32430,
-  "listed": 32335,
-  "with_content": 27606,
+  "snapshot_date": "2026-11-28",
+  "laws": 32478,
+  "listed": 32378,
+  "with_content": 27654,
   "unreadable": 4795,
   "by_source": {
-    "flk": 31614,
+    "flk": 31662,
     "mee": 72,
     "mem": 76,
     "mohurd": 88,
@@ -15,404 +15,404 @@
   },
   "recent_changes": [
     {
-      "law_id": "4028abcc612777930161287042372e5c",
-      "title": "辽宁省禁止选择胎儿性别终止妊娠规定",
-      "change_type": "restored",
-      "old_value": "",
-      "new_value": "已废止",
-      "detected_on": "2026-11-27"
-    },
-    {
-      "law_id": "4028abcc6127779301612862a52c21b0",
-      "title": "辽宁省合同监督条例",
-      "change_type": "restored",
-      "old_value": "",
-      "new_value": "已废止",
-      "detected_on": "2026-11-27"
-    },
-    {
-      "law_id": "4028abcc6127779301612865bf532498",
-      "title": "鞍山市城市绿化管理条例",
-      "change_type": "restored",
-      "old_value": "",
-      "new_value": "已废止",
-      "detected_on": "2026-11-27"
-    },
-    {
-      "law_id": "4028abcc6127779301612873280b3120",
-      "title": "本溪市基本农田保护条例",
-      "change_type": "restored",
-      "old_value": "",
-      "new_value": "已废止",
-      "detected_on": "2026-11-27"
-    },
-    {
-      "law_id": "4028abcc612777930161286ca0572b06",
-      "title": "辽宁省环境保护条例",
-      "change_type": "restored",
-      "old_value": "",
-      "new_value": "已废止",
-      "detected_on": "2026-11-27"
-    },
-    {
-      "law_id": "4028abcc61277793016127fc31553d2b",
-      "title": "辽宁省自主创新促进条例",
-      "change_type": "restored",
-      "old_value": "",
-      "new_value": "已废止",
-      "detected_on": "2026-11-27"
-    },
-    {
-      "law_id": "4028abcc61277793016127fa5adf3b22",
-      "title": "鞍山市预防职务犯罪工作条例",
-      "change_type": "restored",
-      "old_value": "",
-      "new_value": "已废止",
-      "detected_on": "2026-11-27"
-    },
-    {
-      "law_id": "4028abcc612777930161280127e94296",
-      "title": "本溪市拍卖管理条例",
-      "change_type": "restored",
-      "old_value": "",
-      "new_value": "已废止",
-      "detected_on": "2026-11-27"
-    },
-    {
-      "law_id": "4028abcc61277793016127fb62db3c4c",
-      "title": "本溪市审计监督条例",
-      "change_type": "restored",
-      "old_value": "",
-      "new_value": "已废止",
-      "detected_on": "2026-11-27"
-    },
-    {
-      "law_id": "4028abcc61277793016127f74c3037cb",
-      "title": "本溪市无规定动物疫病区管理条例",
-      "change_type": "restored",
-      "old_value": "",
-      "new_value": "已废止",
-      "detected_on": "2026-11-27"
-    },
-    {
-      "law_id": "4028abcc61277793016127fd14943e18",
-      "title": "辽宁省帮助教育安置刑满释放解除劳动教养人员工作条例",
-      "change_type": "restored",
-      "old_value": "",
-      "new_value": "已废止",
-      "detected_on": "2026-11-27"
-    },
-    {
-      "law_id": "4028abcc61277793016127f6ddf0374b",
-      "title": "抚顺市促进中小企业发展条例",
-      "change_type": "restored",
-      "old_value": "",
-      "new_value": "已废止",
-      "detected_on": "2026-11-27"
-    },
-    {
-      "law_id": "4028abcc612777930161286744872604",
-      "title": "辽宁省实施《中华人民共和国渔业法》办法",
-      "change_type": "restored",
-      "old_value": "",
-      "new_value": "已废止",
-      "detected_on": "2026-11-27"
-    },
-    {
-      "law_id": "4028abcc612777930161286a6e2e28fd",
-      "title": "沈阳市建设工程监理条例",
-      "change_type": "restored",
-      "old_value": "",
-      "new_value": "已废止",
-      "detected_on": "2026-11-27"
-    },
-    {
-      "law_id": "4028abcc612777930161286b4ed529d1",
-      "title": "辽宁省农民承担费用和劳务管理条例",
-      "change_type": "restored",
-      "old_value": "",
-      "new_value": "已废止",
-      "detected_on": "2026-11-27"
-    },
-    {
-      "law_id": "4028abcc612777930161286737e125f8",
-      "title": "辽宁省行政复议规定",
-      "change_type": "restored",
-      "old_value": "",
-      "new_value": "已废止",
-      "detected_on": "2026-11-27"
-    },
-    {
-      "law_id": "4028abcc612777930161286304dd220f",
-      "title": "辽宁省反窃电条例",
-      "change_type": "restored",
-      "old_value": "",
-      "new_value": "已废止",
-      "detected_on": "2026-11-27"
-    },
-    {
-      "law_id": "ff8080816f135f46016f178df36808f9",
-      "title": "木垒哈萨克自治县水资源保护条例",
-      "change_type": "restored",
-      "old_value": "",
-      "new_value": "有效",
-      "detected_on": "2026-11-27"
-    },
-    {
-      "law_id": "4028abcc6127779301612825c7e46835",
-      "title": "伊犁哈萨克自治州城乡规划实施条例",
-      "change_type": "restored",
-      "old_value": "",
-      "new_value": "有效",
-      "detected_on": "2026-11-27"
-    },
-    {
-      "law_id": "4028abcc61277793016128262d5868ae",
-      "title": "新疆玛纳斯国家湿地公园保护条例",
-      "change_type": "restored",
-      "old_value": "",
-      "new_value": "有效",
-      "detected_on": "2026-11-27"
-    },
-    {
-      "law_id": "5c4488dec6434d81ab7e54dc8855805a",
-      "title": "沈阳市人民代表大会常务委员会关于修改《沈阳市湿地保护条例》的决定",
-      "change_type": "removed",
-      "old_value": "",
-      "new_value": "",
-      "detected_on": "2026-11-27"
-    },
-    {
-      "law_id": "ff8081819ff54a6401a05ac09f1f1192",
-      "title": "重庆市轨道交通条例",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-27"
-    },
-    {
-      "law_id": "ff8081819b697249019bc4cdbb9035a0",
-      "title": "江西省河道采砂管理条例",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-27"
-    },
-    {
-      "law_id": "ff8081819b697249019bc4bbd3573463",
-      "title": "江西省促进散装水泥和预拌混凝土发展条例",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-27"
-    },
-    {
-      "law_id": "ff808181927f0e7b0192b743b20302e3",
-      "title": "甘肃省无障碍环境建设条例",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-27"
-    },
-    {
-      "law_id": "ff80808176d5d4d80176d603836f001f",
-      "title": "辽宁省城镇房地产交易管理条例",
-      "change_type": "removed",
-      "old_value": "已废止",
-      "new_value": "",
-      "detected_on": "2026-11-27"
-    },
-    {
-      "law_id": "ff80808175265dd40176939ff72e1863",
-      "title": "湖南省植物园条例",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-27"
-    },
-    {
-      "law_id": "ff8080816ecb2302016ed02435812dec",
-      "title": "淮南市城市管理条例",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-27"
-    },
-    {
-      "law_id": "ff8080816ecb2302016ed02dde4b2eec",
-      "title": "淮南市城市市容和环境卫生管理条例",
-      "change_type": "removed",
-      "old_value": "有效",
-      "new_value": "",
-      "detected_on": "2026-11-27"
-    },
-    {
-      "law_id": "4028abcc612777930161284bb4860a84",
-      "title": "广州市促进科技成果转化条例",
-      "change_type": "removed",
-      "old_value": "已废止",
-      "new_value": "",
-      "detected_on": "2026-11-27"
-    },
-    {
-      "law_id": "4028abcc61277793016128556c8014d0",
-      "title": "广州市募捐条例",
-      "change_type": "removed",
-      "old_value": "已废止",
-      "new_value": "",
-      "detected_on": "2026-11-27"
-    },
-    {
-      "law_id": "4028abcc6127779301612858856717d8",
-      "title": "广州市政府投资管理条例",
-      "change_type": "removed",
-      "old_value": "已废止",
-      "new_value": "",
-      "detected_on": "2026-11-27"
-    },
-    {
-      "law_id": "4028abcc612777930161286ec27b2cf5",
-      "title": "辽宁省标准化监督管理条例",
-      "change_type": "removed",
-      "old_value": "已废止",
-      "new_value": "",
-      "detected_on": "2026-11-27"
-    },
-    {
-      "law_id": "4028abcc612777930161286319952225",
-      "title": "辽宁省经济技术开发区管理规定",
-      "change_type": "removed",
-      "old_value": "已废止",
-      "new_value": "",
-      "detected_on": "2026-11-27"
-    },
-    {
-      "law_id": "4028abcc61277793016128642d312322",
-      "title": "辽宁省民用液化石油气管理条例",
-      "change_type": "removed",
-      "old_value": "已废止",
-      "new_value": "",
-      "detected_on": "2026-11-27"
-    },
-    {
-      "law_id": "4028abcc61277793016128608d461fac",
-      "title": "辽宁省城乡集贸市场管理条例",
-      "change_type": "removed",
-      "old_value": "已废止",
-      "new_value": "",
-      "detected_on": "2026-11-27"
-    },
-    {
-      "law_id": "4028abcc61277793016128641793230d",
-      "title": "辽宁省城镇企业职工养老保险条例",
-      "change_type": "removed",
-      "old_value": "已废止",
-      "new_value": "",
-      "detected_on": "2026-11-27"
-    },
-    {
       "law_id": "4028abcc612777930161286200222114",
       "title": "辽宁省禁止赌博条例",
-      "change_type": "removed",
-      "old_value": "已废止",
-      "new_value": "",
-      "detected_on": "2026-11-27"
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "已废止",
+      "detected_on": "2026-11-28"
     },
     {
       "law_id": "4028abcc61277793016128629d2321a8",
       "title": "辽宁省个体工商户和私营企业权益保护条例",
-      "change_type": "removed",
-      "old_value": "已废止",
-      "new_value": "",
-      "detected_on": "2026-11-27"
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "已废止",
+      "detected_on": "2026-11-28"
     },
     {
       "law_id": "4028abcc612777930161286a00252892",
       "title": "辽宁省盐业管理条例",
-      "change_type": "removed",
-      "old_value": "已废止",
-      "new_value": "",
-      "detected_on": "2026-11-27"
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "已废止",
+      "detected_on": "2026-11-28"
     },
     {
       "law_id": "4028abcc61277793016128676cdb2626",
       "title": "辽宁省人民警察巡察条例",
-      "change_type": "removed",
-      "old_value": "已废止",
-      "new_value": "",
-      "detected_on": "2026-11-27"
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "已废止",
+      "detected_on": "2026-11-28"
     },
     {
       "law_id": "4028abcc61277793016128646feb235f",
       "title": "辽宁省宗教事务条例",
-      "change_type": "removed",
-      "old_value": "已废止",
-      "new_value": "",
-      "detected_on": "2026-11-27"
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "已废止",
+      "detected_on": "2026-11-28"
     },
     {
-      "law_id": "4028abcc612777930161285df71c1d2f",
-      "title": "甘肃省实施《中华人民共和国水法》办法",
-      "change_type": "removed",
-      "old_value": "已修改",
-      "new_value": "",
-      "detected_on": "2026-11-27"
-    },
-    {
-      "law_id": "4028abcc612777930161285e676b1d99",
-      "title": "甘肃省价格管理条例",
-      "change_type": "removed",
-      "old_value": "已修改",
-      "new_value": "",
-      "detected_on": "2026-11-27"
-    },
-    {
-      "law_id": "4028abcc6127779301612869c10f2853",
-      "title": "甘肃省实施《中华人民共和国森林法》办法",
-      "change_type": "removed",
-      "old_value": "已修改",
-      "new_value": "",
-      "detected_on": "2026-11-27"
-    },
-    {
-      "law_id": "4028abcc6127779301612869f612288a",
-      "title": "兰州市无公害蔬菜管理条例",
-      "change_type": "removed",
-      "old_value": "已修改",
-      "new_value": "",
-      "detected_on": "2026-11-27"
+      "law_id": "4028abcc61277793016127e2b66c21ab",
+      "title": "淮南市城市供水用水管理条例",
+      "change_type": "status",
+      "old_value": "有效",
+      "new_value": "已修改",
+      "detected_on": "2026-11-28"
     },
     {
       "law_id": "4028abcc6127779301612863d4e422d6",
       "title": "甘肃省水路交通管理条例",
-      "change_type": "removed",
-      "old_value": "已修改",
-      "new_value": "",
-      "detected_on": "2026-11-27"
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "已修改",
+      "detected_on": "2026-11-28"
     },
     {
       "law_id": "4028abcc612777930161286490e82382",
       "title": "甘肃省测绘管理条例",
-      "change_type": "removed",
-      "old_value": "已修改",
-      "new_value": "",
-      "detected_on": "2026-11-27"
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "已修改",
+      "detected_on": "2026-11-28"
     },
     {
       "law_id": "4028abcc612777930161286a971a2925",
       "title": "甘肃省技术市场条例",
-      "change_type": "removed",
-      "old_value": "已修改",
-      "new_value": "",
-      "detected_on": "2026-11-27"
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "已修改",
+      "detected_on": "2026-11-28"
     },
     {
       "law_id": "4028abcc6127779301612867a858265d",
       "title": "甘肃省人民代表大会常务委员会议事规则",
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "已修改",
+      "detected_on": "2026-11-28"
+    },
+    {
+      "law_id": "4028abcc612777930161280878c34a71",
+      "title": "兰州市客运出租汽车管理条例",
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "已修改",
+      "detected_on": "2026-11-28"
+    },
+    {
+      "law_id": "4028abcc612777930161285df71c1d2f",
+      "title": "甘肃省实施《中华人民共和国水法》办法",
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "已修改",
+      "detected_on": "2026-11-28"
+    },
+    {
+      "law_id": "4028abcc612777930161285e676b1d99",
+      "title": "甘肃省价格管理条例",
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "已修改",
+      "detected_on": "2026-11-28"
+    },
+    {
+      "law_id": "4028abcc6127779301612869c10f2853",
+      "title": "甘肃省实施《中华人民共和国森林法》办法",
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "已修改",
+      "detected_on": "2026-11-28"
+    },
+    {
+      "law_id": "4028abcc6127779301612869f612288a",
+      "title": "兰州市无公害蔬菜管理条例",
+      "change_type": "restored",
+      "old_value": "",
+      "new_value": "已修改",
+      "detected_on": "2026-11-28"
+    },
+    {
+      "law_id": "ff808181a1cf065401a1f7e1215c2e5a",
+      "title": "杭州市市政设施管理条例",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-28"
+    },
+    {
+      "law_id": "ff8081819ff54ab801a065a2612b0ff2",
+      "title": "陇南市城乡环境卫生综合治理条例",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-28"
+    },
+    {
+      "law_id": "ff8081819ff54a6401a065a085216769",
+      "title": "陇南市饮用水水源地保护条例",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-28"
+    },
+    {
+      "law_id": "ff8081819ff54a6401a0c2bc858f20b1",
+      "title": "鞍山市生活垃圾分类管理条例",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-28"
+    },
+    {
+      "law_id": "ff8081819ff54ab801a06f745b7747b7",
+      "title": "周口市淮阳龙湖保护条例",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-28"
+    },
+    {
+      "law_id": "ff808181a0bc9b0a01a0c2bb0fbc1759",
+      "title": "鞍山市扬尘污染防治条例",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-28"
+    },
+    {
+      "law_id": "ff8081819ff54a6401a08e006dec4953",
+      "title": "恩施土家族苗族自治州爱国卫生工作条例",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-28"
+    },
+    {
+      "law_id": "ff8081819ff541ea01a08e00b6e16c30",
+      "title": "恩施土家族苗族自治州传统村落和民族村寨保护条例",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-28"
+    },
+    {
+      "law_id": "ff8081819ff541ea01a08e013e446c47",
+      "title": "恩施土家族苗族自治州饮用水水源地保护条例",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-28"
+    },
+    {
+      "law_id": "ff8081819ff541ea01a08e017d586c51",
+      "title": "恩施土家族苗族自治州酉水河保护条例",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-28"
+    },
+    {
+      "law_id": "ff8081819ff54a6401a08e00fcd44961",
+      "title": "恩施土家族苗族自治州硒资源保护与利用条例",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-28"
+    },
+    {
+      "law_id": "ff8081819ff54ab801a06f7656eb47cb",
+      "title": "周口市贾鲁河保护条例",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-28"
+    },
+    {
+      "law_id": "ff8081819ff541ea01a040cf1be0516e",
+      "title": "湖北省安全生产条例",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-28"
+    },
+    {
+      "law_id": "ff808181791904c60179205ab8cd02cc",
+      "title": "中华人民共和国反食品浪费法",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-28"
+    },
+    {
+      "law_id": "ff8080816eea6bee016ef8ba819e2f67",
+      "title": "天津市统计管理条例",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-28"
+    },
+    {
+      "law_id": "4028abcc612777930161286b9fcb2a1a",
+      "title": "宁波市城市绿化条例",
       "change_type": "removed",
       "old_value": "已修改",
       "new_value": "",
-      "detected_on": "2026-11-27"
+      "detected_on": "2026-11-28"
+    },
+    {
+      "law_id": "4028abcc612777930161286c04002a74",
+      "title": "宁波市档案工作条例",
+      "change_type": "removed",
+      "old_value": "已修改",
+      "new_value": "",
+      "detected_on": "2026-11-28"
+    },
+    {
+      "law_id": "4028abcc612777930161281f1c5c6082",
+      "title": "四川省农村扶贫开发条例",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-28"
+    },
+    {
+      "law_id": "4028abcc6127779301612873f14c31e3",
+      "title": "四川省财政收支审计条例",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-28"
+    },
+    {
+      "law_id": "4028abcc6127779301612874981f3282",
+      "title": "四川省广播电视管理条例",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-28"
+    },
+    {
+      "law_id": "4028abcc6127779301612873476b313f",
+      "title": "四川省全民健身条例",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-28"
+    },
+    {
+      "law_id": "4028abcc612777930161287f9eb239a7",
+      "title": "四川省地质环境管理条例",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-28"
+    },
+    {
+      "law_id": "4028abcc61277793016128856ee83d4e",
+      "title": "四川省水路交通管理条例",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-28"
+    },
+    {
+      "law_id": "4028abcc612777930161288cfbca4361",
+      "title": "四川省《中华人民共和国村民委员会组织法》实施办法",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-28"
+    },
+    {
+      "law_id": "4028abcc6127779301612873be7431b1",
+      "title": "四川省土地监察条例",
+      "change_type": "removed",
+      "old_value": "有效",
+      "new_value": "",
+      "detected_on": "2026-11-28"
+    },
+    {
+      "law_id": "4028abcc612777930161284938160834",
+      "title": "西安市家畜家禽屠宰检疫条例",
+      "change_type": "removed",
+      "old_value": "已废止",
+      "new_value": "",
+      "detected_on": "2026-11-28"
+    },
+    {
+      "law_id": "4028abcc61277793016128491c05081f",
+      "title": "西安市预防职务犯罪条例",
+      "change_type": "removed",
+      "old_value": "已废止",
+      "new_value": "",
+      "detected_on": "2026-11-28"
+    },
+    {
+      "law_id": "4028abcc6127779301612839be54792e",
+      "title": "陕西省人才市场条例",
+      "change_type": "removed",
+      "old_value": "已废止",
+      "new_value": "",
+      "detected_on": "2026-11-28"
+    },
+    {
+      "law_id": "4028abcc6127779301612849fbb608e8",
+      "title": "西安市制止价格欺诈和牟取暴利条例",
+      "change_type": "removed",
+      "old_value": "已废止",
+      "new_value": "",
+      "detected_on": "2026-11-28"
+    },
+    {
+      "law_id": "4028abcc6127779301612855f4011550",
+      "title": "龙胜各族自治县自治条例",
+      "change_type": "removed",
+      "old_value": "已修改",
+      "new_value": "",
+      "detected_on": "2026-11-28"
+    },
+    {
+      "law_id": "4028abcc612777930161285206c411be",
+      "title": "大化瑶族自治县自治条例",
+      "change_type": "removed",
+      "old_value": "已修改",
+      "new_value": "",
+      "detected_on": "2026-11-28"
+    },
+    {
+      "law_id": "4028abcc61277793016127f5a90635e0",
+      "title": "海西蒙古族藏族自治州藏传佛教事务条例",
+      "change_type": "removed",
+      "old_value": "已修改",
+      "new_value": "",
+      "detected_on": "2026-11-28"
+    },
+    {
+      "law_id": "4028abcc6127779301612852bc7e126a",
+      "title": "黄南藏族自治州林木管护条例",
+      "change_type": "removed",
+      "old_value": "已修改",
+      "new_value": "",
+      "detected_on": "2026-11-28"
+    },
+    {
+      "law_id": "4028abcc612777930161286fb8202dd8",
+      "title": "海北藏族自治州城镇绿化管理条例",
+      "change_type": "removed",
+      "old_value": "已修改",
+      "new_value": "",
+      "detected_on": "2026-11-28"
+    },
+    {
+      "law_id": "4028abcc6127779301612802216843b4",
+      "title": "海南藏族自治州城镇市容和环境卫生管理条例",
+      "change_type": "removed",
+      "old_value": "已修改",
+      "new_value": "",
+      "detected_on": "2026-11-28"
     }
   ]
 }
